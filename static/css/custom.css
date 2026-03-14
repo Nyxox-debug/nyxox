@@ -1,0 +1,8 @@
+body {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+header img {
+  display: inline !important;
+  margin: 0 10px 0 0 !important;
+}

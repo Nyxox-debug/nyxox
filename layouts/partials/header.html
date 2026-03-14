@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+<header>
+  {{ $img := resources.Get "KingSolomon.jpg" }}
+  {{ $resized := $img.Resize "50x50 q80" }}
+  <span style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
+    <img id="profile-img" 
+         src="https://avatars.githubusercontent.com/u/142261493?v=4&size=64" 
+         alt="Profile"
+         style="border-radius: 50%; margin-right: 10px; object-fit: cover;"
+         onerror="this.src='{{ $resized.RelPermalink }}'">
+    <a href="{{ .Site.BaseURL }}" style="line-height: 50px; text-decoration: none; color: white;">{{ .Site.Title }}</a>
+  </span>
+  <br>
+  <div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
+  <p>
+  <nav>
+    <a href="/"><b>Start</b></a>.
+    {{ with .Site.Menus.main }}
+    {{ range . }}
+    <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+    {{ end }}
+  </nav>
+  </p>
+  {{ end }}
+</header>
+<p>Root Header</p>

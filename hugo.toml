@@ -1,0 +1,51 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'Nyxox'
+
+theme = 'smol'
+
+# Parameters
+[params]
+    subtitle = "A Time for Every Purpose"
+    dateFmt = "02.01.2006 15:04"
+    [params.contact]
+        email = 'info@example.org'
+        phone = '+1 202-555-1212'
+
+# Header
+[menu]
+  [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1 
+
+  [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories/"
+        weight = 2 
+
+  [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 3
+
+# Footer
+  [[menu.footer]]
+        name = "Github"
+        url = "https://github.com/example"
+        weight = 1 
+
+    [[menu.footer]]
+        name = "Mastodon"
+        url = "https://example.com/@user"
+        weight = 2 
+
+    [[menu.footer]]
+        name = "Imprint"
+        url = "/imprint"
+        weight = 3 
+
+copyright = "Fuck'em"
