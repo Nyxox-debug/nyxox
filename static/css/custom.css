@@ -6,3 +6,25 @@ header img {
   display: inline !important;
   margin: 0 10px 0 0 !important;
 }
+
+a {
+  color: #888888 !important;              /* soft light blue */
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  display: inline-block;
+  margin-left: 10px;
+  color: white !important;
+}
+
+.links a svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
