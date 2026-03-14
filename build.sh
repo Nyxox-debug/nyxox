@@ -1,4 +1,4 @@
 #!/bin/bash
 rm -rf docs
-hugo --minify --destination docs
+cp -r public docs
 echo "✓ Build complete! Output in docs/"
