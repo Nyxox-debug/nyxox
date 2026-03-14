@@ -1,5 +1,5 @@
 ---
-title: "My Firstt Post"
+title: "My First Post"
 date: 2026-03-13T16:22:24+01:00
 slug: 2026-03-13-my-first-post
 type: posts
