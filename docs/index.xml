@@ -1,26 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Nyxox</title>
-    <link>http://localhost:1313/nyxox/</link>
-    <description>Recent content on Nyxox</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:33:48 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/nyxox/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/nyxox/test/</link>
-      <pubDate>Fri, 13 Mar 2026 16:33:48 +0100</pubDate>
-      <guid>http://localhost:1313/nyxox/test/</guid>
-      <description>&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;&#xA;&lt;p&gt;Test blog&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/nyxox/posts/2026-03-13-my-first-post/</link>
-      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
-      <guid>http://localhost:1313/nyxox/posts/2026-03-13-my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nyxox</title><link>https://nyxox-debug.github.io/nyxox/</link><description>Recent content on Nyxox</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 13 Mar 2026 16:33:48 +0100</lastBuildDate><atom:link href="https://nyxox-debug.github.io/nyxox/index.xml" rel="self" type="application/rss+xml"/><item><title>Test</title><link>https://nyxox-debug.github.io/nyxox/test/</link><pubDate>Fri, 13 Mar 2026 16:33:48 +0100</pubDate><guid>https://nyxox-debug.github.io/nyxox/test/</guid><description>&lt;h2 id="test"&gt;Test&lt;/h2&gt;
+&lt;p&gt;Test blog&lt;/p&gt;</description></item><item><title>My First Post</title><link>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</link><pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate><guid>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href="https://gohugo.io"&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description></item></channel></rss>
