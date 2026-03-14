@@ -28,7 +28,8 @@ body {
   padding: 0 10px;
   font: 14px/1.5 monospace;
   color: var(--fontcolor);
-  background: var(--bgcolor)
+  background: var(--bgcolor);
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 a:link {
@@ -96,18 +97,13 @@ img {
   margin: auto
 }
 
-
-body {
-  font-family: 'JetBrains Mono', monospace !important;
-}
-
 header img {
   display: inline !important;
   margin: 0 10px 0 0 !important;
 }
 
 a {
-  color: #888888 !important;              /* soft light blue */
+  color: #888888 !important;
   text-decoration: none;
   transition: color 0.25s ease, text-decoration-color 0.25s ease;
 }
