@@ -2,7 +2,9 @@
 	<main>
 		<article>
 			<h1>{{ .Title }}</h1>
+			{{ if ne .RelPermalink "/nyxox/portfolio/" }}
 			<b>Posted on {{ .Date.Format "2 Jan 2006" }}</b>
+			{{ end }}
 		       {{ range .Params.tags }}
 		           <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
         	       {{ end }}

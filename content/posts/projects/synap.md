@@ -1,5 +1,5 @@
 ---
-title: "Building a Deep Learning Framework from Scratch"
+title: "Building a Neural Network Framework from Scratch"
 date: 2026-02-24
 slug: deep-learning-framework-scratch
 categories:
