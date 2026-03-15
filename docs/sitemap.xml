@@ -3,13 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nyxox-debug.github.io/nyxox/</loc>
-    <lastmod>2026-03-13T16:33:48+01:00</lastmod>
-  </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/test/</loc>
-    <lastmod>2026-03-13T16:33:48+01:00</lastmod>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
   </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/categories/</loc>
-    <lastmod>2026-03-13T16:22:24+01:00</lastmod>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/cheatsheet/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/git/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/categories/notes/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/notes/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/notes/useful-git-commands/</loc>
+    <lastmod>2026-03-15T11:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/blogging/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/categories/life/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/life/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/personal/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</loc>
+    <lastmod>2026-03-15T10:00:00+01:00</lastmod>
   </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/categories/default/</loc>
     <lastmod>2026-03-13T16:22:24+01:00</lastmod>
@@ -20,13 +53,23 @@
     <loc>https://nyxox-debug.github.io/nyxox/tags/first/</loc>
     <lastmod>2026-03-13T16:22:24+01:00</lastmod>
   </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</loc>
+    <lastmod>2026-03-13T16:22:24+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/intro/</loc>
+    <lastmod>2026-03-13T16:22:24+01:00</lastmod>
+  </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</loc>
     <lastmod>2026-03-13T16:22:24+01:00</lastmod>
   </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/posts/</loc>
+    <loc>https://nyxox-debug.github.io/nyxox/categories/projects/</loc>
     <lastmod>2026-03-13T16:22:24+01:00</lastmod>
   </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/tags/</loc>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/projects/</loc>
     <lastmod>2026-03-13T16:22:24+01:00</lastmod>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/about/</loc>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/portfolio/</loc>
   </url>
 </urlset>

@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:22:24 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 11:00:00 +0100</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cheatsheet</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/cheatsheet/</link>
+      <pubDate>Sun, 15 Mar 2026 11:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/git/</link>
+      <pubDate>Sun, 15 Mar 2026 11:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/blogging/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/personal/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/personal/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Default</title>
       <link>https://nyxox-debug.github.io/nyxox/tags/default/</link>
@@ -20,6 +48,13 @@
       <link>https://nyxox-debug.github.io/nyxox/tags/first/</link>
       <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
       <guid>https://nyxox-debug.github.io/nyxox/tags/first/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intro</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/intro/</link>
+      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/intro/</guid>
       <description></description>
     </item>
   </channel>

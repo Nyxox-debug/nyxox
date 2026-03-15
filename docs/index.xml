@@ -6,14 +6,28 @@
     <description>Recent content on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:33:48 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 11:00:00 +0100</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://nyxox-debug.github.io/nyxox/test/</link>
-      <pubDate>Fri, 13 Mar 2026 16:33:48 +0100</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/test/</guid>
-      <description>&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;&#xA;&lt;p&gt;Test blog&lt;/p&gt;</description>
+      <title>Useful Git Commands</title>
+      <link>https://nyxox-debug.github.io/nyxox/notes/useful-git-commands/</link>
+      <pubDate>Sun, 15 Mar 2026 11:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/notes/useful-git-commands/</guid>
+      <description>&lt;p&gt;Quick git commands I keep forgetting:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Undo last commit (keep changes)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git reset --soft HEAD~1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Stash changes&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;work in progress&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Interactive rebase&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i HEAD~5&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Why I Started This Blog</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</guid>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web development projects&lt;/li&gt;&#xA;&lt;li&gt;Learning new technologies&lt;/li&gt;&#xA;&lt;li&gt;Life updates and thoughts&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hello World - My First Post</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</link>
+      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my blog! This is where I&amp;rsquo;ll be documenting my learning journey.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-to-expect&#34;&gt;What to expect&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Posts about projects I&amp;rsquo;m building&lt;/li&gt;&#xA;&lt;li&gt;Things I learn along the way&lt;/li&gt;&#xA;&lt;li&gt;Maybe some random life posts too&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned!&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
@@ -21,6 +35,20 @@
       <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
       <guid>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://nyxox-debug.github.io/nyxox/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/about/</guid>
+      <description>&lt;h2 id=&#34;who-am-i&#34;&gt;Who Am I&lt;/h2&gt;&#xA;&lt;p&gt;Hi! I&amp;rsquo;m Nyxox - a developer on a journey of continuous learning and building.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-background&#34;&gt;My Background&lt;/h2&gt;&#xA;&lt;p&gt;I started my coding journey because I wanted to understand how things work under the hood. What started as curiosity has grown into a passion for building useful things.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-do&#34;&gt;What I Do&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Web Development&lt;/strong&gt; - Building modern, responsive websites&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learning&lt;/strong&gt; - Always exploring new technologies and frameworks&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Problem Solving&lt;/strong&gt; - Breaking down complex problems into manageable pieces&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;skills&#34;&gt;Skills&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;JavaScript / TypeScript&lt;/li&gt;&#xA;&lt;li&gt;Python&lt;/li&gt;&#xA;&lt;li&gt;Hugo (this blog!)&lt;/li&gt;&#xA;&lt;li&gt;HTML &amp;amp; CSS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;interests&#34;&gt;Interests&lt;/h2&gt;&#xA;&lt;p&gt;When I&amp;rsquo;m not coding, you can find me:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>https://nyxox-debug.github.io/nyxox/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/portfolio/</guid>
+      <description>&lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my portfolio! Here you&amp;rsquo;ll find a collection of projects I&amp;rsquo;ve worked on.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;project-1-this-blog&#34;&gt;Project 1: This Blog&lt;/h3&gt;&#xA;&lt;p&gt;A personal blog built with Hugo to document my learning journey.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tech Stack:&lt;/strong&gt; Hugo, HTML, CSS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Features:&lt;/strong&gt; Markdown content, responsive design, taxonomy organization&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learnings:&lt;/strong&gt; Static site generation, templating&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;project-2-coming-soon&#34;&gt;Project 2: Coming Soon&lt;/h3&gt;&#xA;&lt;p&gt;More projects to be added as I build them!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;in-progress&#34;&gt;In Progress&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Learning new frameworks&lt;/li&gt;&#xA;&lt;li&gt;Building side projects&lt;/li&gt;&#xA;&lt;li&gt;Contributing to open source&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;want-to-collaborate&#34;&gt;Want to Collaborate?&lt;/h2&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re interested in collaborating or have any questions about my work, feel free to reach out through GitHub or email.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
