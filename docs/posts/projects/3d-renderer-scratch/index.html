@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>Building a 3D Renderer from Scratch</title>
+	
+	
+	<link rel="stylesheet" href="/nyxox/css/style.css">
+	
+	
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css3?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<header>
+  
+  
+  <span style="display: flex; align-items: center; justify-content: flex-start; width: 101%;">
+    <img id="profile-img" src='/nyxox/KingSolomon_hu_8f44ae6565bcc694.jpg' alt="Profile"
+      style="border-radius: 51%; margin-right: 10px; object-fit: cover;">
+    <a href="https://nyxox-debug.github.io/nyxox/" style="line-height: 51px; text-decoration: none; color: white;">Nyxox</a>
+  </span>
+  <br>
+  <div style="float: right;">A Time for Every Purpose</div><br>
+  <div class="links">
+    
+    
+    
+    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
+      <svg aria-hidden="true" class="bi bi-github hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <p>
+  <nav>
+    
+    <a href="/nyxox/posts/"><b>
+      <svg aria-hidden="true" class="bi bi-file-text hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+</svg>
+      Posts</b></a>ء
+    <a href="/nyxox/categories/"><b>
+      <svg aria-hidden="true" class="bi bi-folder hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"/>
+</svg>
+      Categories</b></a>ء
+    <a href="/nyxox/tags/"><b>
+      <svg aria-hidden="true" class="bi bi-tag hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+  <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+</svg>
+      Tags</b></a>ء
+    <a href="/nyxox/about/"><b>
+      <svg aria-hidden="true" class="bi bi-person hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg>
+      About</b></a>ء
+    <a href="/nyxox/portfolio/"><b>
+      <svg aria-hidden="true" class="bi bi-briefcase hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+</svg>
+      Portfolio</b></a>ء
+  </nav>
+  </p>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Building a 3D Renderer from Scratch</h1>
+			
+			<b>Posted on 27 Jan 2026</b>
+			
+		       
+		           <a href="/tags/c&#43;&#43;">c&#43;&#43;</a>
+        	       
+		           <a href="/tags/opengl">opengl</a>
+        	       
+		           <a href="/tags/graphics">graphics</a>
+        	       
+		           <a href="/tags/shaders">shaders</a>
+        	       
+
+			<div>
+				<p>I&rsquo;ve always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what&rsquo;s actually happening on the GPU? That&rsquo;s exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.</p>
+<p>No engines. No magic. Just raw graphics programming.</p>
+<h2 id="why-build-a-renderer">Why Build a Renderer?</h2>
+<p>Here&rsquo;s the thing - I&rsquo;ve used game engines for years, but I never really understood how a 3D model actually gets converted into pixels on my screen. How do textures get applied? How does the camera move through space?</p>
+<p>So I thought, why not build one myself? The goal wasn&rsquo;t to compete with Unity or Unreal. It was to understand the fundamentals - to demystify what&rsquo;s actually happening when you call <code>Draw()</code> on a mesh.</p>
+<h2 id="what-i-built">What I Built</h2>
+<p>The result is a real-time 3D model renderer that can:</p>
+<ul>
+<li>Load 3D models in OBJ format (using Assimp)</li>
+<li>Apply textures - diffuse, specular, and normal maps</li>
+<li>Compile custom GLSL shaders</li>
+<li>Move around with WASD + mouse look (first-person camera)</li>
+<li>Handle the complete rendering pipeline</li>
+</ul>
+<p>The renderer runs at 60 FPS and shows a textured 3D model. That&rsquo;s it. But the journey to get there taught me more about graphics programming than years of using game engines.</p>
+<h2 id="the-core-concepts">The Core Concepts</h2>
+<p>Let me walk you through what I learned along the way.</p>
+<h3 id="how-a-3d-model-gets-rendered">How a 3D Model Gets Rendered</h3>
+<p>It starts with vertices - points in 3D space that define a shape. These vertices get processed through what&rsquo;s called the <strong>rendering pipeline</strong>:</p>
+<ol>
+<li><strong>Model transformation</strong> - Move vertices from model space to world space</li>
+<li><strong>View transformation</strong> - Move vertices to camera space</li>
+<li><strong>Projection transformation</strong> - Apply perspective (things get smaller as they get farther)</li>
+<li><strong>Rasterization</strong> - Convert those 3D points into 2D pixels on your screen</li>
+</ol>
+<p>The magic happens in the shaders - little programs that run on your GPU for each vertex and each pixel.</p>
+<h3 id="the-code">The Code</h3>
+<p>Here&rsquo;s how the main render loop looks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>glfwWindowShouldClose(window)) {
+</span></span><span style="display:flex;"><span>    glClear(GL_COLOR_BUFFER_BIT <span style="color:#f92672">|</span> GL_DEPTH_BUFFER_BIT);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Calculate matrices
+</span></span></span><span style="display:flex;"><span>    glm<span style="color:#f92672">::</span>mat4 view <span style="color:#f92672">=</span> glm<span style="color:#f92672">::</span>lookAt(cameraPos, cameraPos <span style="color:#f92672">+</span> cameraFront, cameraUp);
+</span></span><span style="display:flex;"><span>    glm<span style="color:#f92672">::</span>mat4 projection <span style="color:#f92672">=</span> glm<span style="color:#f92672">::</span>perspective(<span style="color:#ae81ff">45.f</span>, ratio, <span style="color:#ae81ff">0.1f</span>, <span style="color:#ae81ff">100.f</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Upload to GPU
+</span></span></span><span style="display:flex;"><span>    shader<span style="color:#f92672">-&gt;</span>setMat4(<span style="color:#e6db74">&#34;view&#34;</span>, view);
+</span></span><span style="display:flex;"><span>    shader<span style="color:#f92672">-&gt;</span>setMat4(<span style="color:#e6db74">&#34;projection&#34;</span>, projection);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Draw!
+</span></span></span><span style="display:flex;"><span>    model<span style="color:#f92672">-&gt;</span>Draw(<span style="color:#f92672">*</span>shader);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    glfwSwapBuffers(window);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The key insight? Every frame, we&rsquo;re recalculating matrices based on camera position, then uploading them to the GPU as &ldquo;uniform variables&rdquo; - values that stay the same for all vertices in that frame.</p>
+<h3 id="the-camera-system">The Camera System</h3>
+<p>First-person camera control is actually pretty interesting math. You have:</p>
+<ul>
+<li><strong>Yaw</strong> - rotation left/right</li>
+<li><strong>Pitch</strong> - rotation up/down</li>
+</ul>
+<p>And you convert those angles into a direction vector using spherical coordinates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>front.x <span style="color:#f92672">=</span> cos(yaw) <span style="color:#f92672">*</span> cos(pitch);
+</span></span><span style="display:flex;"><span>front.y <span style="color:#f92672">=</span> sin(pitch);  
+</span></span><span style="display:flex;"><span>front.z <span style="color:#f92672">=</span> sin(yaw) <span style="color:#f92672">*</span> cos(pitch);
+</span></span></code></pre></div><p>Simple, but it works perfectly for WASD movement.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Building this renderer taught me several important things:</p>
+<ol>
+<li>
+<p><strong>OpenGL is just an API</strong> - It&rsquo;s not magic, it&rsquo;s a standardized way to talk to your GPU. You give it data, it gives you pixels.</p>
+</li>
+<li>
+<p><strong>The rendering pipeline is everywhere</strong> - Model→View→Projection isn&rsquo;t just for games. It&rsquo;s the foundation of all 3D graphics.</p>
+</li>
+<li>
+<p><strong>Shaders are powerful</strong> - Those little GLSL programs are where all the visual magic happens.</p>
+</li>
+<li>
+<p><strong>Game engines hide a lot</strong> - Unity and Unreal do incredible things, but they hide all this complexity. There&rsquo;s nothing wrong with that, but understanding it gives you more control.</p>
+</li>
+</ol>
+<h2 id="what-would-i-do-differently">What Would I Do Differently?</h2>
+<p>If I were to build this again, I&rsquo;d:</p>
+<ul>
+<li>Add Blinn-Phong lighting earlier (makes models look much better)</li>
+<li>Use a proper scene graph instead of single-model rendering</li>
+<li>Add shadow mapping (still haven&rsquo;t tackled that!)</li>
+</ul>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This project took about 2 weeks of evenings to complete. It&rsquo;s not perfect, but it works - and more importantly, I now understand what&rsquo;s happening when I use any 3D engine.</p>
+<p>If you&rsquo;re curious about graphics programming, I&rsquo;d highly recommend building something similar. You don&rsquo;t need to write a full engine. Just start with rendering a single triangle, then add textures, then add a camera. Each step teaches you something new.</p>
+<p>The code is available if you want to take a look. Happy rendering!</p>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/nyxox/posts/projects/deep-learning-framework-scratch/">Building a Neural Network Framework from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/3d-renderer-scratch/">Building a 3D Renderer from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/programming-language-go/">I Built a Programming Language in Go</a></li>
+				
+				<li><a href="/nyxox/posts/projects/github-analyzer-go-python/">Building a GitHub Analyzer with Go and Python</a></li>
+				
+				<li><a href="/nyxox/posts/life/why-i-started-this-blog/">Why I Started This Blog</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+  <p>&copy; 2026
+    
+    Nyxox.
+    <a href="https://github.com/Nyxox-debug"><b>Github</b></a>.
+  </p>
+</footer>
+
+</body>
+</html>

@@ -6,35 +6,42 @@
     <description>Recent content on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2026 11:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Useful Git Commands</title>
-      <link>https://nyxox-debug.github.io/nyxox/notes/useful-git-commands/</link>
-      <pubDate>Sun, 15 Mar 2026 11:00:00 +0100</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/notes/useful-git-commands/</guid>
-      <description>&lt;p&gt;Quick git commands I keep forgetting:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Undo last commit (keep changes)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git reset --soft HEAD~1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Stash changes&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;work in progress&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Interactive rebase&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i HEAD~5&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <title>Building a Neural Network Framework from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</guid>
+      <description>&lt;p&gt;I use PyTorch every day at work. It&amp;rsquo;s incredible - but I&amp;rsquo;ve always wondered: how does it actually work under the hood? How does &lt;code&gt;backward()&lt;/code&gt; actually compute gradients through a neural network?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own minimal deep learning framework called &lt;strong&gt;Synap&lt;/strong&gt;. It&amp;rsquo;s written in C++ for performance, with Python bindings via pybind11. No external ML libraries - just raw tensor operations and automatic differentiation from scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a 3D Renderer from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what&amp;rsquo;s actually happening on the GPU? That&amp;rsquo;s exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.&lt;/p&gt;&#xA;&lt;p&gt;No engines. No magic. Just raw graphics programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Built a Programming Language in Go</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been fascinated by programming languages. How does code actually become a running program? What happens when you type &lt;code&gt;let x = 5;&lt;/code&gt; in a REPL?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own. Meet &lt;strong&gt;Bat&lt;/strong&gt; - a tiny interpreted programming language written entirely in Go. It&amp;rsquo;s not useful for production, but it taught me how interpreters actually work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a GitHub Analyzer with Go and Python</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</guid>
+      <description>&lt;p&gt;Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.&lt;/p&gt;&#xA;&lt;p&gt;The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why I Started This Blog</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</link>
-      <pubDate>Sun, 15 Mar 2026 10:00:00 +0100</pubDate>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</guid>
       <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web development projects&lt;/li&gt;&#xA;&lt;li&gt;Learning new technologies&lt;/li&gt;&#xA;&lt;li&gt;Life updates and thoughts&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Hello World - My First Post</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</link>
-      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my blog! This is where I&amp;rsquo;ll be documenting my learning journey.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-to-expect&#34;&gt;What to expect&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Posts about projects I&amp;rsquo;m building&lt;/li&gt;&#xA;&lt;li&gt;Things I learn along the way&lt;/li&gt;&#xA;&lt;li&gt;Maybe some random life posts too&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First Post</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</link>
-      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/2026-03-13-my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
@@ -48,7 +55,7 @@
       <link>https://nyxox-debug.github.io/nyxox/portfolio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nyxox-debug.github.io/nyxox/portfolio/</guid>
-      <description>&lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my portfolio! Here you&amp;rsquo;ll find a collection of projects I&amp;rsquo;ve worked on.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;project-1-this-blog&#34;&gt;Project 1: This Blog&lt;/h3&gt;&#xA;&lt;p&gt;A personal blog built with Hugo to document my learning journey.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tech Stack:&lt;/strong&gt; Hugo, HTML, CSS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Features:&lt;/strong&gt; Markdown content, responsive design, taxonomy organization&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learnings:&lt;/strong&gt; Static site generation, templating&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;project-2-coming-soon&#34;&gt;Project 2: Coming Soon&lt;/h3&gt;&#xA;&lt;p&gt;More projects to be added as I build them!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;in-progress&#34;&gt;In Progress&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Learning new frameworks&lt;/li&gt;&#xA;&lt;li&gt;Building side projects&lt;/li&gt;&#xA;&lt;li&gt;Contributing to open source&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;want-to-collaborate&#34;&gt;Want to Collaborate?&lt;/h2&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re interested in collaborating or have any questions about my work, feel free to reach out through GitHub or email.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;nyxox&#34;&gt;Nyxox&lt;/h1&gt;&#xA;&lt;p&gt;Full-stack engineer · Backend architecture · Systems programming · Modern web&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://itserviceafrica.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ITSA&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Hackathon&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, Node.js, Backend Development, Testing&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Competed in the IT Services Desk Africa hackathon, enhancing ITSA’s device health management system.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Collaborated with a cross-functional team to improve system performance&lt;/li&gt;&#xA;&lt;li&gt;Diagnosed, reported, and resolved software issues&lt;/li&gt;&#xA;&lt;li&gt;Wrote, reviewed, and validated backend code and tests to ensure reliability&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://hireuslogistics.ng/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;HireusLogistic&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Recent&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, MongoDB, Redis, OAuth 2.0, Docker, Kubernetes&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

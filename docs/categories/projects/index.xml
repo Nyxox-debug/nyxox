@@ -6,14 +6,35 @@
     <description>Recent content in Projects on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:22:24 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World - My First Post</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</link>
-      <pubDate>Fri, 13 Mar 2026 16:22:24 +0100</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/hello-world/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my blog! This is where I&amp;rsquo;ll be documenting my learning journey.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-to-expect&#34;&gt;What to expect&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Posts about projects I&amp;rsquo;m building&lt;/li&gt;&#xA;&lt;li&gt;Things I learn along the way&lt;/li&gt;&#xA;&lt;li&gt;Maybe some random life posts too&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned!&lt;/p&gt;</description>
+      <title>Building a Neural Network Framework from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</guid>
+      <description>&lt;p&gt;I use PyTorch every day at work. It&amp;rsquo;s incredible - but I&amp;rsquo;ve always wondered: how does it actually work under the hood? How does &lt;code&gt;backward()&lt;/code&gt; actually compute gradients through a neural network?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own minimal deep learning framework called &lt;strong&gt;Synap&lt;/strong&gt;. It&amp;rsquo;s written in C++ for performance, with Python bindings via pybind11. No external ML libraries - just raw tensor operations and automatic differentiation from scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a 3D Renderer from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what&amp;rsquo;s actually happening on the GPU? That&amp;rsquo;s exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.&lt;/p&gt;&#xA;&lt;p&gt;No engines. No magic. Just raw graphics programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Built a Programming Language in Go</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been fascinated by programming languages. How does code actually become a running program? What happens when you type &lt;code&gt;let x = 5;&lt;/code&gt; in a REPL?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own. Meet &lt;strong&gt;Bat&lt;/strong&gt; - a tiny interpreted programming language written entirely in Go. It&amp;rsquo;s not useful for production, but it taught me how interpreters actually work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a GitHub Analyzer with Go and Python</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</guid>
+      <description>&lt;p&gt;Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.&lt;/p&gt;&#xA;&lt;p&gt;The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>Building a GitHub Analyzer with Go and Python</title>
+	
+	
+	<link rel="stylesheet" href="/nyxox/css/style.css">
+	
+	
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css3?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<header>
+  
+  
+  <span style="display: flex; align-items: center; justify-content: flex-start; width: 101%;">
+    <img id="profile-img" src='/nyxox/KingSolomon_hu_8f44ae6565bcc694.jpg' alt="Profile"
+      style="border-radius: 51%; margin-right: 10px; object-fit: cover;">
+    <a href="https://nyxox-debug.github.io/nyxox/" style="line-height: 51px; text-decoration: none; color: white;">Nyxox</a>
+  </span>
+  <br>
+  <div style="float: right;">A Time for Every Purpose</div><br>
+  <div class="links">
+    
+    
+    
+    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
+      <svg aria-hidden="true" class="bi bi-github hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <p>
+  <nav>
+    
+    <a href="/nyxox/posts/"><b>
+      <svg aria-hidden="true" class="bi bi-file-text hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+</svg>
+      Posts</b></a>ء
+    <a href="/nyxox/categories/"><b>
+      <svg aria-hidden="true" class="bi bi-folder hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"/>
+</svg>
+      Categories</b></a>ء
+    <a href="/nyxox/tags/"><b>
+      <svg aria-hidden="true" class="bi bi-tag hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+  <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+</svg>
+      Tags</b></a>ء
+    <a href="/nyxox/about/"><b>
+      <svg aria-hidden="true" class="bi bi-person hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg>
+      About</b></a>ء
+    <a href="/nyxox/portfolio/"><b>
+      <svg aria-hidden="true" class="bi bi-briefcase hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+</svg>
+      Portfolio</b></a>ء
+  </nav>
+  </p>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Building a GitHub Analyzer with Go and Python</h1>
+			
+			<b>Posted on 5 Dec 2025</b>
+			
+		       
+		           <a href="/tags/go">go</a>
+        	       
+		           <a href="/tags/python">python</a>
+        	       
+		           <a href="/tags/ast">ast</a>
+        	       
+		           <a href="/tags/tree-sitter">tree-sitter</a>
+        	       
+		           <a href="/tags/web-dev">web-dev</a>
+        	       
+
+			<div>
+				<p>Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.</p>
+<p>The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.</p>
+<h2 id="the-idea">The Idea</h2>
+<p>I was working on a project and needed to understand a large open-source codebase quickly. Manually exploring files and trying to understand the architecture was tedious.</p>
+<p>Wouldn&rsquo;t it be nice, I thought, if I could just paste a URL and get a report?</p>
+<ul>
+<li>How many files? How many functions?</li>
+<li>What&rsquo;s the language breakdown?</li>
+<li>Where are the complex areas?</li>
+</ul>
+<p>So I built GPR-Analyzer - a web tool that clones a repo and runs static analysis on it.</p>
+<h2 id="architecture-go--python">Architecture: Go + Python</h2>
+<p>Here&rsquo;s why I chose this hybrid approach:</p>
+<p><strong>Go</strong> handles:</p>
+<ul>
+<li>Web server (HTTP routing)</li>
+<li>Repository cloning (using go-git)</li>
+<li>Executing the Python analyzer as a subprocess</li>
+<li>Parsing JSON responses</li>
+</ul>
+<p><strong>Python</strong> handles:</p>
+<ul>
+<li>File system traversal</li>
+<li>AST generation (using tree-sitter)</li>
+<li>Code analysis and metrics</li>
+</ul>
+<p>The key design decision was keeping them decoupled. Go just executes Python and reads JSON from stdout. This means you could swap Python for anything - Ruby, Node.js, whatever - without touching Go code.</p>
+<h2 id="how-it-works">How It Works</h2>
+<p>Here&rsquo;s the flow:</p>
+<ol>
+<li>You paste a URL like <code>https://github.com/user/repo</code></li>
+<li>Go validates it&rsquo;s a valid GitHub URL</li>
+<li>Go clones the repo to a temporary directory</li>
+<li>Go spawns Python to analyze it</li>
+<li>Python walks every file, parses ASTs, counts functions/classes</li>
+<li>Python outputs JSON</li>
+<li>Go parses JSON and sends it back to the browser</li>
+</ol>
+<p>The interface is dead simple - a text input and a submit button. That&rsquo;s it.</p>
+<h2 id="the-interesting-parts">The Interesting Parts</h2>
+<h3 id="ast-analysis-with-tree-sitter">AST Analysis with tree-sitter</h3>
+<p>Tree-sitter is incredible. It generates precise Abstract Syntax Trees for code, which means you can actually understand code structure rather than just regex matching.</p>
+<p>For example, counting functions in Python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_complexity</span>(node):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">in</span> node<span style="color:#f92672">.</span>type<span style="color:#f92672">.</span>lower():
+</span></span><span style="display:flex;"><span>        function_count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> node<span style="color:#f92672">.</span>children:
+</span></span><span style="display:flex;"><span>        calculate_complexity(child)
+</span></span></code></pre></div><p>Simple recursive tree traversal. But it works across 25+ languages!</p>
+<h3 id="the-interface-between-languages">The Interface Between Languages</h3>
+<p>I kept the Go↔Python interface dead simple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python outputs JSON to stdout</span>
+</span></span><span style="display:flex;"><span>print(json<span style="color:#f92672">.</span>dumps(report))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Go captures it</span>
+</span></span><span style="display:flex;"><span>cmd <span style="color:#f92672">:=</span> exec<span style="color:#f92672">.</span>Command(<span style="color:#e6db74">&#34;python3&#34;</span>, <span style="color:#e6db74">&#34;analyzer/main.py&#34;</span>)
+</span></span><span style="display:flex;"><span>output, _ <span style="color:#f92672">:=</span> cmd<span style="color:#f92672">.</span>CombinedOutput()
+</span></span></code></pre></div><p>No sockets, no HTTP between them. Just stdout. This makes debugging easy too - you can run the Python script manually and see exactly what it outputs.</p>
+<h2 id="what-i-learned">What I Learned</h2>
+<ol>
+<li>
+<p><strong>Language mixing is practical</strong> - Using Go for orchestration and Python for analysis played to each language&rsquo;s strengths</p>
+</li>
+<li>
+<p><strong>tree-sitter is powerful</strong> - It&rsquo;s not just for editors. Any code analysis tool can benefit from precise ASTs</p>
+</li>
+<li>
+<p><strong>Simple interfaces win</strong> - The JSON-over-stdout pattern is nothing fancy, but it&rsquo;s robust and easy to debug</p>
+</li>
+</ol>
+<h2 id="whats-missing">What&rsquo;s Missing</h2>
+<p>There&rsquo;s a lot more I could add:</p>
+<ul>
+<li>Cyclomatic complexity metrics</li>
+<li>Coupling analysis between files</li>
+<li>Visualization of code structure</li>
+<li>Support for private repos</li>
+</ul>
+<p>Maybe version 2?</p>
+<h2 id="check-it-out">Check It Out</h2>
+<p>The project is ready to use if you want to try it. Clone the repo, run <code>./run</code>, and open <code>http://localhost:8081</code>. Paste any public GitHub URL and see what it finds.</p>
+<p>It&rsquo;s fascinating to see what these tools reveal about different codebases!</p>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/nyxox/posts/projects/deep-learning-framework-scratch/">Building a Neural Network Framework from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/3d-renderer-scratch/">Building a 3D Renderer from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/programming-language-go/">I Built a Programming Language in Go</a></li>
+				
+				<li><a href="/nyxox/posts/projects/github-analyzer-go-python/">Building a GitHub Analyzer with Go and Python</a></li>
+				
+				<li><a href="/nyxox/posts/life/why-i-started-this-blog/">Why I Started This Blog</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+  <p>&copy; 2026
+    
+    Nyxox.
+    <a href="https://github.com/Nyxox-debug"><b>Github</b></a>.
+  </p>
+</footer>
+
+</body>
+</html>

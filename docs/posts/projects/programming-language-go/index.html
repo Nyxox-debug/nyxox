@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>I Built a Programming Language in Go</title>
+	
+	
+	<link rel="stylesheet" href="/nyxox/css/style.css">
+	
+	
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css3?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<header>
+  
+  
+  <span style="display: flex; align-items: center; justify-content: flex-start; width: 101%;">
+    <img id="profile-img" src='/nyxox/KingSolomon_hu_8f44ae6565bcc694.jpg' alt="Profile"
+      style="border-radius: 51%; margin-right: 10px; object-fit: cover;">
+    <a href="https://nyxox-debug.github.io/nyxox/" style="line-height: 51px; text-decoration: none; color: white;">Nyxox</a>
+  </span>
+  <br>
+  <div style="float: right;">A Time for Every Purpose</div><br>
+  <div class="links">
+    
+    
+    
+    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
+      <svg aria-hidden="true" class="bi bi-github hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <p>
+  <nav>
+    
+    <a href="/nyxox/posts/"><b>
+      <svg aria-hidden="true" class="bi bi-file-text hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+</svg>
+      Posts</b></a>ء
+    <a href="/nyxox/categories/"><b>
+      <svg aria-hidden="true" class="bi bi-folder hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"/>
+</svg>
+      Categories</b></a>ء
+    <a href="/nyxox/tags/"><b>
+      <svg aria-hidden="true" class="bi bi-tag hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+  <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+</svg>
+      Tags</b></a>ء
+    <a href="/nyxox/about/"><b>
+      <svg aria-hidden="true" class="bi bi-person hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg>
+      About</b></a>ء
+    <a href="/nyxox/portfolio/"><b>
+      <svg aria-hidden="true" class="bi bi-briefcase hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+</svg>
+      Portfolio</b></a>ء
+  </nav>
+  </p>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>I Built a Programming Language in Go</h1>
+			
+			<b>Posted on 29 Dec 2025</b>
+			
+		       
+		           <a href="/tags/go">go</a>
+        	       
+		           <a href="/tags/interpreter">interpreter</a>
+        	       
+		           <a href="/tags/compiler">compiler</a>
+        	       
+		           <a href="/tags/ast">ast</a>
+        	       
+
+			<div>
+				<p>I&rsquo;ve always been fascinated by programming languages. How does code actually become a running program? What happens when you type <code>let x = 5;</code> in a REPL?</p>
+<p>So I built my own. Meet <strong>Bat</strong> - a tiny interpreted programming language written entirely in Go. It&rsquo;s not useful for production, but it taught me how interpreters actually work.</p>
+<h2 id="the-goal">The Goal</h2>
+<p>I didn&rsquo;t set out to create something practical. I wanted to understand:</p>
+<ul>
+<li>How do lexers turn text into tokens?</li>
+<li>How do parsers build syntax trees?</li>
+<li>How does the evaluator actually run code?</li>
+</ul>
+<p>Building a language from scratch is the best way to answer these questions.</p>
+<h2 id="what-bat-looks-like">What Bat Looks Like</h2>
+<p>It&rsquo;s a simple, Lisp-ish language with a REPL:</p>
+<pre tabindex="0"><code>&gt;&gt; let x = 5;
+5
+&gt;&gt; let y = 3;
+3
+&gt;&gt; let add = fn(a, b) { return a + b; };
+fn(a, b) { ... }
+&gt;&gt; add(x, y);
+8
+&gt;&gt; if (x &gt; 3) { 10 } else { 0 };
+10
+</code></pre><p>You can define functions, use conditionals, do arithmetic. Pretty standard stuff - but all implemented from scratch.</p>
+<h2 id="the-three-stages">The Three Stages</h2>
+<p>Every interpreter has three stages:</p>
+<pre tabindex="0"><code>Source Code → Lexer → Tokens → Parser → AST → Evaluator → Result
+</code></pre><p>Let me walk through each one.</p>
+<h3 id="1-lexer-breaking-text-into-tokens">1. Lexer: Breaking Text into Tokens</h3>
+<p>The lexer reads character by character and groups them into meaningful tokens.</p>
+<p>For example, <code>let x = 5;</code> becomes:</p>
+<ul>
+<li><code>LET</code> - keyword</li>
+<li><code>IDENT</code> &ldquo;x&rdquo; - variable name</li>
+<li><code>ASSIGN</code> &ldquo;=&rdquo; - operator</li>
+<li><code>INT</code> &ldquo;5&rdquo; - number</li>
+<li><code>SEMICOLON</code> &ldquo;;&rdquo; - delimiter</li>
+</ul>
+<p>The key insight is <strong>look-ahead</strong>. When the lexer sees <code>=</code>, it peeks at the next character. If it&rsquo;s another <code>=</code>, it knows it&rsquo;s <code>==</code> (equality), not assignment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">peekChar</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;=&#39;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// It&#39;s == !</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">readChar</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tok</span> = <span style="color:#a6e22e">Token</span>{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">EQ</span>, <span style="color:#a6e22e">Literal</span>: <span style="color:#e6db74">&#34;==&#34;</span>}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-parser-building-the-ast">2. Parser: Building the AST</h3>
+<p>Tokens aren&rsquo;t enough - we need to understand structure. That&rsquo;s where the parser comes in.</p>
+<p>Bat uses <strong>Pratt parsing</strong> (top-down operator precedence). It&rsquo;s a clever technique where each token type knows how to parse itself:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Parser</span>) <span style="color:#a6e22e">parseExpression</span>(<span style="color:#a6e22e">precedence</span> <span style="color:#66d9ef">int</span>) <span style="color:#a6e22e">Expression</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Get the prefix parser for current token (e.g., number, identifier)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">prefixParseFns</span>[<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">curToken</span>.<span style="color:#a6e22e">Type</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">leftExp</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">prefix</span>()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// While next operator binds tighter, let it consume more</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">precedence</span> &lt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">peekPrecedence</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">infix</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">infixParseFns</span>[<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">peekToken</span>.<span style="color:#a6e22e">Type</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">nextToken</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">leftExp</span> = <span style="color:#a6e22e">infix</span>(<span style="color:#a6e22e">leftExp</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">leftExp</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>For <code>2 + 3 * 4</code>:</p>
+<ol>
+<li>Parse <code>2</code> as a number</li>
+<li>See <code>+</code> with lower precedence than <code>*</code></li>
+<li>Parse <code>3 * 4</code> as a complete expression (multiplication binds tighter)</li>
+<li>Result: <code>Add(Int(2), Mul(Int(3), Int(4)))</code></li>
+</ol>
+<p>The AST represents this hierarchy explicitly.</p>
+<h3 id="3-evaluator-running-the-ast">3. Evaluator: Running the AST</h3>
+<p>The evaluator recursively walks the tree:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span> <span style="color:#a6e22e">Node</span>) <span style="color:#a6e22e">Object</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">node</span>.(<span style="color:#66d9ef">type</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">IntegerLiteral</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Integer</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Value</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">InfixExpression</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">left</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">right</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">evalInfix</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Operator</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">LetStatement</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">val</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Value</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Name</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">val</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... and so on</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It&rsquo;s surprisingly simple. Each node type knows how to evaluate itself. The evaluator just dispatches to the right function.</p>
+<h2 id="the-interesting-challenges">The Interesting Challenges</h2>
+<h3 id="handling-scope">Handling Scope</h3>
+<p>Bat uses a simple environment (symbol table):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Environment</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">store</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">Object</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Functions look up variables in this environment. True closures would require nested scopes - but for a minimal interpreter, a single global environment works.</p>
+<h3 id="operator-precedence">Operator Precedence</h3>
+<p>Pratt parsing made this elegant, but getting it right took trial and error. Does <code>*</code> bind tighter than <code>+</code>? What about <code>==</code> vs <code>&lt;</code>? The precedence constants encode this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">LOWEST</span> = <span style="color:#66d9ef">iota</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">EQUALS</span>      <span style="color:#75715e">// ==</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">LESSGREATER</span> <span style="color:#75715e">// &lt; or &gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SUM</span>         <span style="color:#75715e">// + or -</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PRODUCT</span>     <span style="color:#75715e">// * or /</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="error-handling">Error Handling</h3>
+<p>Errors can happen at any stage:</p>
+<ul>
+<li>Lexer: unknown character</li>
+<li>Parser: unexpected token</li>
+<li>Evaluator: undefined variable</li>
+</ul>
+<p>Each stage collects and reports errors. The REPL shows them with a friendly message (and some ASCII art bat).</p>
+<h2 id="what-i-learned">What I Learned</h2>
+<ol>
+<li>
+<p><strong>Interpreters are approachable</strong> - I expected this to be complex, but the core ideas are actually simple</p>
+</li>
+<li>
+<p><strong>Pratt parsing is elegant</strong> - No grammar files, no code generators. Just functions that know how to parse</p>
+</li>
+<li>
+<p><strong>Type switches are powerful</strong> - Go&rsquo;s switch on types (not values) is perfect for the evaluator pattern</p>
+</li>
+<li>
+<p><strong>Separation of concerns</strong> - Lexer doesn&rsquo;t know about parsing, parser doesn&rsquo;t know about evaluation. Clean interfaces.</p>
+</li>
+</ol>
+<h2 id="the-code">The Code</h2>
+<p>It&rsquo;s all in Go:</p>
+<ul>
+<li><code>lexer/</code> - tokenization</li>
+<li><code>parser/</code> - AST construction</li>
+<li><code>evaluator/</code> - execution</li>
+<li><code>repl/</code> - the interactive prompt</li>
+</ul>
+<p>Clone it, run <code>go run main.go</code>, and you get a working REPL. Try defining functions, using variables, whatever.</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>You probably won&rsquo;t use Bat in production. But understanding how languages work changes how you think about code.</p>
+<p>Now when I write Python or JavaScript, I see the lexer, parser, and evaluator underneath. It&rsquo;s a different perspective - and a useful one.</p>
+<p>The bat flies at night, and now I know how it processes your code from start to finish.</p>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/nyxox/posts/projects/deep-learning-framework-scratch/">Building a Neural Network Framework from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/3d-renderer-scratch/">Building a 3D Renderer from Scratch</a></li>
+				
+				<li><a href="/nyxox/posts/projects/programming-language-go/">I Built a Programming Language in Go</a></li>
+				
+				<li><a href="/nyxox/posts/projects/github-analyzer-go-python/">Building a GitHub Analyzer with Go and Python</a></li>
+				
+				<li><a href="/nyxox/posts/life/why-i-started-this-blog/">Why I Started This Blog</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+  <p>&copy; 2026
+    
+    Nyxox.
+    <a href="https://github.com/Nyxox-debug"><b>Github</b></a>.
+  </p>
+</footer>
+
+</body>
+</html>
