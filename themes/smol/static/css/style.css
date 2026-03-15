@@ -123,3 +123,25 @@ a:hover {
   height: 28px;
   fill: white;
 }
+
+.github-link {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.github-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #24292e;
+  color: white !important;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.github-link a:hover {
+  background: #2f363d;
+  text-decoration: none;
+}

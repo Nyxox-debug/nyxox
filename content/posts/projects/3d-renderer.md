@@ -2,6 +2,7 @@
 title: "Building a 3D Renderer from Scratch"
 date: 2026-01-27
 slug: 3d-renderer-scratch
+github: "https://github.com/Nyxox-debug/Model-render"
 categories:
   - projects
 tags:

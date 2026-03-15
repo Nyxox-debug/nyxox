@@ -2,6 +2,7 @@
 title: "Building a GitHub Analyzer with Go and Python"
 date: 2025-12-05
 slug: github-analyzer-go-python
+github: "https://github.com/Nyxox-debug/repo-scan"
 categories:
   - projects
 tags:
