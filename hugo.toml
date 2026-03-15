@@ -1,4 +1,5 @@
-baseURL = 'https://nyxox-debug.github.io/nyxox/'
+# baseURL = 'https://nyxox-debug.github.io/nyxox/'
+baseURL = 'http://localhost:1313/nyxox'
 languageCode = 'en-us'
 title = 'Nyxox'
 

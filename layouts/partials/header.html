@@ -32,7 +32,15 @@
     {{ with .Site.Menus.main }}
     {{ range . }}
     <a href="{{ .URL | relURL }}"><b>
-      {{ if eq .Identifier "about" }}
+      {{ if eq .Identifier "posts" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }}
+      {{ else if eq .Identifier "categories" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
+      {{ else if eq .Identifier "tags" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
+      {{ else if eq .Identifier "notes" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "journal") }}
+      {{ else if eq .Identifier "about" }}
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
       {{ else if eq .Identifier "portfolio" }}
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }}
