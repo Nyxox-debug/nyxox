@@ -1,8 +1,3 @@
----
-title: "Portfolio"
-description: "A showcase of my projects"
----
-
 # Software Engineer
 
 Full-stack software engineer with strong foundations in backend architecture, systems programming, and modern web development. Passionate about building reliable, performant systems and understanding how things work at every layer of the stack.

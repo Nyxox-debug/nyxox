@@ -1,6 +1,6 @@
 ---
 title: "Why I Started This Blog"
-date: 2026-03-15T10:00:00+01:00
+date: 2025-12-04
 slug: why-i-started-this-blog
 categories:
   - life

@@ -7,5 +7,5 @@ Welcome to my blog! Here I share what I'm building and learning.
 
 ## Categories
 
-- [Projects](/posts/projects/) - Things I built
-- [Life](/posts/life/) - Personal posts
+- [Projects](/nyxox/posts/projects/) - Things I built
+- [Life](/nyxox/posts/life/) - Personal posts

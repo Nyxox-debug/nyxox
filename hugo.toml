@@ -36,38 +36,23 @@ theme = 'smol'
         weight = 3
 
   [[menu.main]]
-        identifier = "notes"
-        name = "Notes"
-        url = "/notes/"
-        weight = 4
-
-  [[menu.main]]
         identifier = "about"
         name = "About"
         url = "/about/"
-        weight = 5
+        weight = 4
 
   [[menu.main]]
         identifier = "portfolio"
         name = "Portfolio"
         url = "/portfolio/"
-        weight = 6
+        weight = 5
 
 # Footer
   [[menu.footer]]
         name = "Github"
-        url = "https://github.com/example"
+        url = "https://github.com/Nyxox-debug"
         weight = 1 
 
-    [[menu.footer]]
-        name = "Mastodon"
-        url = "https://example.com/@user"
-        weight = 2 
-
-    [[menu.footer]]
-        name = "Imprint"
-        url = "/imprint"
-        weight = 3 
 
 copyright = "Fuck'em"
 
