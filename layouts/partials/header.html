@@ -31,7 +31,13 @@
     <a href="/nyxox"><b>Start</b></a>ء
     {{ with .Site.Menus.main }}
     {{ range . }}
-    <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>ء
+    <a href="{{ .URL | relURL }}"><b>
+      {{ if eq .Identifier "about" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
+      {{ else if eq .Identifier "portfolio" }}
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }}
+      {{ end }}
+      {{ .Name }}</b></a>ء
     {{ end }}
   </nav>
   </p>

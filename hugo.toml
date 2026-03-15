@@ -40,6 +40,18 @@ theme = 'smol'
         url = "/notes/"
         weight = 4
 
+  [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 5
+
+  [[menu.main]]
+        identifier = "portfolio"
+        name = "Portfolio"
+        url = "/portfolio/"
+        weight = 6
+
 # Footer
   [[menu.footer]]
         name = "Github"
