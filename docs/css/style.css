@@ -145,3 +145,52 @@ a:hover {
   background: #2f363d;
   text-decoration: none;
 }
+
+.note {
+  background: #1a1a1a;
+  border-left: 4px solid #666;
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.note-label {
+  font-weight: 700;
+  margin-right: 10px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.note-text {
+  color: #ccc;
+}
+
+.note-text a {
+  color: #ccc !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.note-text a:hover {
+  color: #fff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .note {
+    background: #0a0a0a;
+    border-left-color: #888;
+  }
+  .note-label {
+    color: #fff;
+  }
+  .note-text {
+    color: #bbb;
+  }
+  .note-text a {
+    color: #bbb !important;
+  }
+  .note-text a:hover {
+    color: #fff !important;
+  }
+}

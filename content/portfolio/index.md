@@ -3,9 +3,10 @@ title: "Portfolio"
 description: "A showcase of my projects and experience"
 ---
 
-> [!NOTE]
->
-> This is my CV. You may want to view my [resume](./resume.pdf) instead.
+{{< note >}}
+This is my CV. You may want to view my [resume](./resume.pdf) instead.
+{{< /note >}}
+
 
 # Victor 
 Full-stack engineer · Backend architecture · Systems programming · Modern web
@@ -17,7 +18,7 @@ Full-stack engineer · Backend architecture · Systems programming · Modern web
 **Backend Engineer — {{< external url="https://itserviceafrica.com/" text="ITSA" >}}** `Hackathon`
 *TypeScript, Node.js, Backend Development, Testing*
 
-Competed in the IT Services Desk Africa hackathon, enhancing ITSA’s device health management system.
+Competed in the IT Services Desk Africa hackathon, enhancing ITSA's device health management system.
 
 * Collaborated with a cross-functional team to improve system performance
 * Diagnosed, reported, and resolved software issues

@@ -1,0 +1,5 @@
+{{ $inner := .Inner }}
+<div class="note">
+  <span class="note-label">NOTE</span>
+  <span class="note-text">{{ $inner | .Page.RenderString }}</span>
+</div>
