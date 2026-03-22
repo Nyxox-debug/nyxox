@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css3?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <header>
   {{ $img := resources.Get "KingSolomon.jpg" }}
   {{ $resized := $img.Resize "51x50 q80" }}
@@ -10,38 +10,30 @@
   <br>
   <div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
   <div class="links">
-    <!-- <a class="replace-email-link" href="mailto:junk@sumnerevans.com" target="_blank" title="Email"> -->
-    <!--   {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "envelope") }} -->
-    <!-- </a> -->
     <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "github") }}
     </a>
-    <!-- <a href="https://www.linkedin.com/in/sumnerevans" target="_blank" title="LinkedIn"> -->
-    <!--   {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "linkedin") }} -->
-    <!-- </a> -->
-    <!-- <a href="https://www.youtube.com/@sumnerevans" target="_blank" title="YouTube"> -->
-    <!--   {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "youtube") }} -->
-    <!-- </a> -->
-    <!-- <a href="/index.xml" target="_blank" title="RSS Feed"> -->
-    <!--   {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "rss") }} -->
-    <!-- </a> -->
+    {{ with .OutputFormats.Get "RSS" }}
+    <a href="{{ .RelPermalink }}" target="_blank" title="RSS Feed">
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "rss") }}
+    </a>
+    {{ end }}
   </div>
   <p>
   <nav>
-    <!-- <a href="/nyxox"><b>Start</b></a>ء -->
-    <a href="/nyxox/posts/"><b>
+    <a href="{{ "posts/" | relLangURL }}"><b>
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }}
       Posts</b></a>ء
-    <a href="/nyxox/categories/"><b>
+    <a href="{{ "categories/" | relLangURL }}"><b>
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
       Categories</b></a>ء
-    <a href="/nyxox/tags/"><b>
+    <a href="{{ "tags/" | relLangURL }}"><b>
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
       Tags</b></a>ء
-    <a href="/nyxox/about/"><b>
+    <a href="{{ "about/" | relLangURL }}"><b>
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
       About</b></a>ء
-    <a href="/nyxox/portfolio/"><b>
+    <a href="{{ "portfolio/" | relLangURL }}"><b>
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }}
       Portfolio</b></a>ء
   </nav>

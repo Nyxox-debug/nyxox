@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C&#43;&#43; on Nyxox</title>
-    <link>https://nyxox-debug.github.io/nyxox/tags/c&#43;&#43;/</link>
-    <description>Recent content in C&#43;&#43; on Nyxox</description>
+    <title>C++ on Nyxox</title>
+    <link>https://nyxox-debug.github.io/nyxox/tags/c++/</link>
+    <description>Recent content in C++ on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/c++/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building a Neural Network Framework from Scratch</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>

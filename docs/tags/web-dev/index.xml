@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/web-dev/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building a GitHub Analyzer with Go and Python</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>

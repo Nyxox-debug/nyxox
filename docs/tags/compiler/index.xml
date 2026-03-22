@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/compiler/index.xml" rel="self" type="application/xml" />
     <item>
       <title>I Built a Programming Language in Go</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</link>

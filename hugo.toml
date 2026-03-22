@@ -2,50 +2,65 @@ baseURL = 'https://nyxox-debug.github.io/nyxox/'
 # baseURL = 'http://localhost:1313/nyxox'
 languageCode = 'en-us'
 title = 'Nyxox'
-
 theme = 'smol'
 
-# Parameters
 [params]
     subtitle = "A Time for Every Purpose"
-    dateFmt = "02.01.2006 15:04"
-    [params.contact]
-        email = 'info@example.org'
-        phone = '+1 202-555-1212'
-    [params.icons]
-      throw_on_error = true # TODO: Remove this in prod
+    description = "Developer portfolio and blog - Systems programming, web development, and more"
+    author = "Nyxox"
+    dateFmt = "2 Jan 2006"
+    profileImage = "KingSolomon.jpg"
+    mainSections = ["posts"]
+    customCSS = ["css/custom.css"]
+    
+[params.icons]
+    throw_on_error = false
 
-# Header
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[mediaTypes]
+  [mediaTypes."application/xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/xml"
+    baseName = "index"
+    isPlainText = true
+
 [menu]
   [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 1 
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1 
 
   [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2 
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 2 
 
   [[menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 3
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
 
   [[menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about/"
-        weight = 4
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
 
   [[menu.main]]
-        identifier = "portfolio"
-        name = "Portfolio"
-        url = "/portfolio/"
-        weight = 5
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 5
 
 # Footer
   [[menu.footer]]
@@ -54,7 +69,7 @@ theme = 'smol'
         weight = 1 
 
 
-copyright = "Fuck'em"
+copyright = "© 2026 Nyxox"
 
 # Modules
 
