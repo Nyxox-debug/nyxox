@@ -3,7 +3,11 @@ title: "Portfolio"
 description: "A showcase of my projects and experience"
 ---
 
-# Nyxox
+> [!NOTE]
+>
+> This is my CV. You may want to view my [resume](./resume.pdf) instead.
+
+# Victor 
 Full-stack engineer · Backend architecture · Systems programming · Modern web
 
 ---

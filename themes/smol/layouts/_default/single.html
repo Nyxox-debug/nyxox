@@ -6,7 +6,7 @@
 			<b>Posted on {{ .Date.Format "2 Jan 2006" }}</b>
 			{{ end }}
 			{{ range .Params.tags }}
-			<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+			<a href="{{ "/nyxox/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 			{{ end }}
 			{{ with .Params.github }}
 			<span class="github-link">
