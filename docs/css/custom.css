@@ -44,16 +44,28 @@ p>code, code {
 
 pre {
   color: #fff;
-  background: #000;
+  background: #1a1a1a;
   padding: 16px;
   overflow-x: auto;
   font-size: 0.85em;
   margin: 16px 0;
+  border-radius: 4px;
 }
 
 pre code {
   color: #fff;
   background: transparent;
+}
+
+.chroma {
+  background-color: #1a1a1a !important;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.chroma code {
+  background: transparent !important;
 }
 
 article {

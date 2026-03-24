@@ -23,7 +23,8 @@
 	
 	
 	<link rel="stylesheet" href="/nyxox/css/style.css">
-	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774356908">
+	<link rel="stylesheet" href="/nyxox/css/chroma.css">
+	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774358216">
 	
 </head>
 <body>
@@ -147,28 +148,28 @@ fn(a, b) { ... }
 <li><code>SEMICOLON</code> &ldquo;;&rdquo; - delimiter</li>
 </ul>
 <p>The key insight is <strong>look-ahead</strong>. When the lexer sees <code>=</code>, it peeks at the next character. If it&rsquo;s another <code>=</code>, it knows it&rsquo;s <code>==</code> (equality), not assignment.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">peekChar</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;=&#39;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// It&#39;s == !</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">readChar</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tok</span> = <span style="color:#a6e22e">Token</span>{<span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">EQ</span>, <span style="color:#a6e22e">Literal</span>: <span style="color:#e6db74">&#34;==&#34;</span>}
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="2-parser-building-the-ast">2. Parser: Building the AST</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="nx">l</span><span class="p">.</span><span class="nf">peekChar</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;=&#39;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// It&#39;s == !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nf">readChar</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">tok</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Token</span><span class="p">{</span><span class="nx">Type</span><span class="p">:</span><span class="w"> </span><span class="nx">EQ</span><span class="p">,</span><span class="w"> </span><span class="nx">Literal</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;==&#34;</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="2-parser-building-the-ast">2. Parser: Building the AST</h3>
 <p>Tokens aren&rsquo;t enough - we need to understand structure. That&rsquo;s where the parser comes in.</p>
 <p>Bat uses <strong>Pratt parsing</strong> (top-down operator precedence). It&rsquo;s a clever technique where each token type knows how to parse itself:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Parser</span>) <span style="color:#a6e22e">parseExpression</span>(<span style="color:#a6e22e">precedence</span> <span style="color:#66d9ef">int</span>) <span style="color:#a6e22e">Expression</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Get the prefix parser for current token (e.g., number, identifier)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">prefixParseFns</span>[<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">curToken</span>.<span style="color:#a6e22e">Type</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">leftExp</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">prefix</span>()
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// While next operator binds tighter, let it consume more</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">precedence</span> &lt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">peekPrecedence</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">infix</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">infixParseFns</span>[<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">peekToken</span>.<span style="color:#a6e22e">Type</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">nextToken</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">leftExp</span> = <span style="color:#a6e22e">infix</span>(<span style="color:#a6e22e">leftExp</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">leftExp</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>For <code>2 + 3 * 4</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="o">*</span><span class="nx">Parser</span><span class="p">)</span><span class="w"> </span><span class="nf">parseExpression</span><span class="p">(</span><span class="nx">precedence</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Get the prefix parser for current token (e.g., number, identifier)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">prefix</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">prefixParseFns</span><span class="p">[</span><span class="nx">p</span><span class="p">.</span><span class="nx">curToken</span><span class="p">.</span><span class="nx">Type</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">leftExp</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">prefix</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// While next operator binds tighter, let it consume more</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">precedence</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nf">peekPrecedence</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">infix</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">infixParseFns</span><span class="p">[</span><span class="nx">p</span><span class="p">.</span><span class="nx">peekToken</span><span class="p">.</span><span class="nx">Type</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">p</span><span class="p">.</span><span class="nf">nextToken</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">leftExp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">infix</span><span class="p">(</span><span class="nx">leftExp</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">leftExp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>For <code>2 + 3 * 4</code>:</p>
 <ol>
 <li>Parse <code>2</code> as a number</li>
 <li>See <code>+</code> with lower precedence than <code>*</code></li>
@@ -178,38 +179,38 @@ fn(a, b) { ... }
 <p>The AST represents this hierarchy explicitly.</p>
 <h3 id="3-evaluator-running-the-ast">3. Evaluator: Running the AST</h3>
 <p>The evaluator recursively walks the tree:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span> <span style="color:#a6e22e">Node</span>) <span style="color:#a6e22e">Object</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">node</span>.(<span style="color:#66d9ef">type</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">IntegerLiteral</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Integer</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Value</span>}
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">InfixExpression</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">left</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">right</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">evalInfix</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Operator</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">LetStatement</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">val</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Value</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Name</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">val</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... and so on</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>It&rsquo;s surprisingly simple. Each node type knows how to evaluate itself. The evaluator just dispatches to the right function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">Eval</span><span class="p">(</span><span class="nx">node</span><span class="w"> </span><span class="nx">Node</span><span class="p">)</span><span class="w"> </span><span class="nx">Object</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">node</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">node</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">*</span><span class="nx">IntegerLiteral</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">Integer</span><span class="p">{</span><span class="nx">Value</span><span class="p">:</span><span class="w"> </span><span class="nx">node</span><span class="p">.</span><span class="nx">Value</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">*</span><span class="nx">InfixExpression</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">left</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">Eval</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Left</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">right</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">Eval</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Right</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">evalInfix</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Operator</span><span class="p">,</span><span class="w"> </span><span class="nx">left</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">*</span><span class="nx">LetStatement</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">Eval</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Value</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">env</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Name</span><span class="p">.</span><span class="nx">Value</span><span class="p">,</span><span class="w"> </span><span class="nx">val</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... and so on</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>It&rsquo;s surprisingly simple. Each node type knows how to evaluate itself. The evaluator just dispatches to the right function.</p>
 <h2 id="the-interesting-challenges">The Interesting Challenges</h2>
 <h3 id="handling-scope">Handling Scope</h3>
 <p>Bat uses a simple environment (symbol table):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Environment</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">store</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">Object</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Functions look up variables in this environment. True closures would require nested scopes - but for a minimal interpreter, a single global environment works.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span><span class="w"> </span><span class="nx">Environment</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">store</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">Object</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Functions look up variables in this environment. True closures would require nested scopes - but for a minimal interpreter, a single global environment works.</p>
 <h3 id="operator-precedence">Operator Precedence</h3>
 <p>Pratt parsing made this elegant, but getting it right took trial and error. Does <code>*</code> bind tighter than <code>+</code>? What about <code>==</code> vs <code>&lt;</code>? The precedence constants encode this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">LOWEST</span> = <span style="color:#66d9ef">iota</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">EQUALS</span>      <span style="color:#75715e">// ==</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">LESSGREATER</span> <span style="color:#75715e">// &lt; or &gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SUM</span>         <span style="color:#75715e">// + or -</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">PRODUCT</span>     <span style="color:#75715e">// * or /</span>
-</span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><h3 id="error-handling">Error Handling</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">const</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">LOWEST</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">EQUALS</span><span class="w">      </span><span class="c1">// ==</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">LESSGREATER</span><span class="w"> </span><span class="c1">// &lt; or &gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">SUM</span><span class="w">         </span><span class="c1">// + or -</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">PRODUCT</span><span class="w">     </span><span class="c1">// * or /</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><h3 id="error-handling">Error Handling</h3>
 <p>Errors can happen at any stage:</p>
 <ul>
 <li>Lexer: unknown character</li>

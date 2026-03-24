@@ -23,7 +23,8 @@
 	
 	
 	<link rel="stylesheet" href="/nyxox/css/style.css">
-	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774356908">
+	<link rel="stylesheet" href="/nyxox/css/chroma.css">
+	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774358216">
 	
 </head>
 <body>
@@ -137,22 +138,22 @@
 <p>The magic happens in the shaders - little programs that run on your GPU for each vertex and each pixel.</p>
 <h3 id="the-code">The Code</h3>
 <p>Here&rsquo;s how the main render loop looks:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>glfwWindowShouldClose(window)) {
-</span></span><span style="display:flex;"><span>    glClear(GL_COLOR_BUFFER_BIT <span style="color:#f92672">|</span> GL_DEPTH_BUFFER_BIT);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Calculate matrices
-</span></span></span><span style="display:flex;"><span>    glm<span style="color:#f92672">::</span>mat4 view <span style="color:#f92672">=</span> glm<span style="color:#f92672">::</span>lookAt(cameraPos, cameraPos <span style="color:#f92672">+</span> cameraFront, cameraUp);
-</span></span><span style="display:flex;"><span>    glm<span style="color:#f92672">::</span>mat4 projection <span style="color:#f92672">=</span> glm<span style="color:#f92672">::</span>perspective(<span style="color:#ae81ff">45.f</span>, ratio, <span style="color:#ae81ff">0.1f</span>, <span style="color:#ae81ff">100.f</span>);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Upload to GPU
-</span></span></span><span style="display:flex;"><span>    shader<span style="color:#f92672">-&gt;</span>setMat4(<span style="color:#e6db74">&#34;view&#34;</span>, view);
-</span></span><span style="display:flex;"><span>    shader<span style="color:#f92672">-&gt;</span>setMat4(<span style="color:#e6db74">&#34;projection&#34;</span>, projection);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Draw!
-</span></span></span><span style="display:flex;"><span>    model<span style="color:#f92672">-&gt;</span>Draw(<span style="color:#f92672">*</span>shader);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    glfwSwapBuffers(window);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="n">GL_DEPTH_BUFFER_BIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Calculate matrices
+</span></span></span><span class="line"><span class="cl">    <span class="n">glm</span><span class="o">::</span><span class="n">mat4</span> <span class="n">view</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">lookAt</span><span class="p">(</span><span class="n">cameraPos</span><span class="p">,</span> <span class="n">cameraPos</span> <span class="o">+</span> <span class="n">cameraFront</span><span class="p">,</span> <span class="n">cameraUp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">glm</span><span class="o">::</span><span class="n">mat4</span> <span class="n">projection</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">perspective</span><span class="p">(</span><span class="mf">45.f</span><span class="p">,</span> <span class="n">ratio</span><span class="p">,</span> <span class="mf">0.1f</span><span class="p">,</span> <span class="mf">100.f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Upload to GPU
+</span></span></span><span class="line"><span class="cl">    <span class="n">shader</span><span class="o">-&gt;</span><span class="n">setMat4</span><span class="p">(</span><span class="s">&#34;view&#34;</span><span class="p">,</span> <span class="n">view</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shader</span><span class="o">-&gt;</span><span class="n">setMat4</span><span class="p">(</span><span class="s">&#34;projection&#34;</span><span class="p">,</span> <span class="n">projection</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Draw!
+</span></span></span><span class="line"><span class="cl">    <span class="n">model</span><span class="o">-&gt;</span><span class="n">Draw</span><span class="p">(</span><span class="o">*</span><span class="n">shader</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>The key insight? Every frame, we&rsquo;re recalculating matrices based on camera position, then uploading them to the GPU as &ldquo;uniform variables&rdquo; - values that stay the same for all vertices in that frame.</p>
 <h3 id="the-camera-system">The Camera System</h3>
 <p>First-person camera control is actually pretty interesting math. You have:</p>
@@ -161,9 +162,9 @@
 <li><strong>Pitch</strong> - rotation up/down</li>
 </ul>
 <p>And you convert those angles into a direction vector using spherical coordinates:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>front.x <span style="color:#f92672">=</span> cos(yaw) <span style="color:#f92672">*</span> cos(pitch);
-</span></span><span style="display:flex;"><span>front.y <span style="color:#f92672">=</span> sin(pitch);  
-</span></span><span style="display:flex;"><span>front.z <span style="color:#f92672">=</span> sin(yaw) <span style="color:#f92672">*</span> cos(pitch);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">front</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">pitch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">front</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">pitch</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="n">front</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">pitch</span><span class="p">);</span>
 </span></span></code></pre></div><p>Simple, but it works perfectly for WASD movement.</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <p>Building this renderer taught me several important things:</p>

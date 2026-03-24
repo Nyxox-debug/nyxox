@@ -23,7 +23,8 @@
 	
 	
 	<link rel="stylesheet" href="/nyxox/css/style.css">
-	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774356908">
+	<link rel="stylesheet" href="/nyxox/css/chroma.css">
+	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774358216">
 	
 </head>
 <body>
@@ -154,20 +155,20 @@
 <h3 id="ast-analysis-with-tree-sitter">AST Analysis with tree-sitter</h3>
 <p>Tree-sitter is incredible. It generates precise Abstract Syntax Trees for code, which means you can actually understand code structure rather than just regex matching.</p>
 <p>For example, counting functions in Python:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_complexity</span>(node):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">in</span> node<span style="color:#f92672">.</span>type<span style="color:#f92672">.</span>lower():
-</span></span><span style="display:flex;"><span>        function_count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> node<span style="color:#f92672">.</span>children:
-</span></span><span style="display:flex;"><span>        calculate_complexity(child)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_complexity</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s1">&#39;function&#39;</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">function_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">calculate_complexity</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
 </span></span></code></pre></div><p>Simple recursive tree traversal. But it works across 25+ languages!</p>
 <h3 id="the-interface-between-languages">The Interface Between Languages</h3>
 <p>I kept the Go↔Python interface dead simple:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python outputs JSON to stdout</span>
-</span></span><span style="display:flex;"><span>print(json<span style="color:#f92672">.</span>dumps(report))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Go captures it</span>
-</span></span><span style="display:flex;"><span>cmd <span style="color:#f92672">:=</span> exec<span style="color:#f92672">.</span>Command(<span style="color:#e6db74">&#34;python3&#34;</span>, <span style="color:#e6db74">&#34;analyzer/main.py&#34;</span>)
-</span></span><span style="display:flex;"><span>output, _ <span style="color:#f92672">:=</span> cmd<span style="color:#f92672">.</span>CombinedOutput()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Python outputs JSON to stdout</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">report</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Go captures it</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmd</span> <span class="o">:=</span> <span class="n">exec</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span><span class="s2">&#34;python3&#34;</span><span class="p">,</span> <span class="s2">&#34;analyzer/main.py&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">output</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">CombinedOutput</span><span class="p">()</span>
 </span></span></code></pre></div><p>No sockets, no HTTP between them. Just stdout. This makes debugging easy too - you can run the Python script manually and see exactly what it outputs.</p>
 <h2 id="what-i-learned">What I Learned</h2>
 <ol>
