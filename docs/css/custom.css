@@ -562,3 +562,74 @@ main li .post-title a:hover {
     order: -1;
   }
 }
+
+/* Search Page */
+.search-page #search-form {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+
+.search-page #search-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.search-page #search-input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.search-page button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-page button:hover {
+  background: #555;
+}
+
+#search-results .no-results {
+  color: #888;
+  font-style: italic;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid #222;
+}
+
+.search-results-list li:last-child {
+  border-bottom: none;
+}
+
+.search-results-list h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.search-results-list .search-meta {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  color: #fff;
+  margin: 0;
+}

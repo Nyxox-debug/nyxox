@@ -25,9 +25,16 @@ theme = 'smol'
   [mediaTypes."application/xml"]
     suffixes = ["xml"]
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [outputFormats]
   [outputFormats.RSS]
     mediaType = "application/xml"
+    baseName = "index"
+    isPlainText = true
+  [outputFormats.JSON]
+    mediaType = "application/json"
     baseName = "index"
     isPlainText = true
 
@@ -61,6 +68,12 @@ theme = 'smol'
     name = "Portfolio"
     url = "/portfolio/"
     weight = 5
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 6
 
 # Footer
   [[menu.footer]]

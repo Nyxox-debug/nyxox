@@ -4,28 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Autograd</title>
+	<title>Search</title>
 	<link rel="icon" type="image/svg+xml" href="/nyxox/favicon.svg">
-	<link rel="canonical" href="https://nyxox-debug.github.io/nyxox/tags/autograd/">
+	<link rel="canonical" href="https://nyxox-debug.github.io/nyxox/search/">
 	<meta name="description" content="Developer portfolio and blog - Systems programming, web development, and more">
 	<meta name="author" content="Nyxox">
 	
-	<meta property="og:title" content="Autograd">
-	<meta property="og:description" content="Developer portfolio and blog - Systems programming, web development, and more">
-	<meta property="og:url" content="https://nyxox-debug.github.io/nyxox/tags/autograd/">
+	<meta property="og:title" content="Search">
+	<meta property="og:description" content="Search posts on this site">
+	<meta property="og:url" content="https://nyxox-debug.github.io/nyxox/search/">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Nyxox">
 	
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Autograd">
-	<meta name="twitter:description" content="Developer portfolio and blog - Systems programming, web development, and more">
+	<meta name="twitter:title" content="Search">
+	<meta name="twitter:description" content="Search posts on this site">
 	
 	
 	<link rel="stylesheet" href="/nyxox/css/style.css">
 	<link rel="stylesheet" href="/nyxox/css/chroma.css">
 	<link rel="stylesheet" href="/nyxox/css/custom.css?rnd=1774369264">
-	<link rel="alternate" type="application/xml" href="/nyxox/tags/autograd/index.xml" title="Nyxox">
+	<link rel="alternate" type="application/xml" href="/nyxox/search/index.xml" title="Nyxox">
 </head>
 <body>
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
 </svg>
     </a>
     
-    <a href="/nyxox/tags/autograd/index.xml" target="_blank" title="RSS Feed">
+    <a href="/nyxox/search/index.xml" target="_blank" title="RSS Feed">
       <svg aria-hidden="true" class="bi bi-rss hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
   <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
@@ -93,33 +93,17 @@
 </header>
 
 	
-	<main>
-		
-		
-		<div>
-			<h1>Autograd</h1>
-			
-		</div>
-		
-		
-		<ul>
-		    
-		    <li>
-		        <div class="post-title">
-				
-				    <a href="/nyxox/posts/projects/deep-learning-framework-scratch/">Building a Neural Network Framework from Scratch</a>
-				
-		        </div>
-		    </li>
-		    
-		</ul>
-		<div class="pagination">
-
-<span class="page-info">1 of 1</span>
-
-</div>
-
-	</main>
+<main>
+  <section class="search-page" data-baseurl="https://nyxox-debug.github.io/nyxox/">
+    <h1>Search</h1>
+    <form id="search-form" action="https://nyxox-debug.github.io/nyxox/search/" method="get">
+      <label for="search-input" class="sr-only">Search</label>
+      <input type="text" id="search-input" name="q" placeholder="Search posts..." autofocus>
+      <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+  </section>
+</main>
 
 	<footer>
   <p>&copy; 2026
@@ -130,5 +114,83 @@
 </footer>
 
 	
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+let searchIndex = null;
+let posts = null;
+
+async function loadIndex() {
+  const searchSection = document.querySelector('.search-page');
+  const baseURL = searchSection.dataset.baseurl;
+  const response = await fetch(baseURL + 'index.json');
+  posts = await response.json();
+  
+  searchIndex = lunr(function() {
+    this.ref('url');
+    this.field('title', { boost: 10 });
+    this.field('content');
+    this.field('tags');
+    this.field('categories');
+    
+    posts.forEach(doc => {
+      this.add(doc);
+    });
+  });
+}
+
+function displayResults(results) {
+  const container = document.getElementById('search-results');
+  
+  if (!results.length) {
+    container.innerHTML = '<p class="no-results">No results found.</p>';
+    return;
+  }
+  
+  let html = '<ul class="search-results-list">';
+  
+  results.forEach(result => {
+    const post = posts.find(p => p.url === result.ref);
+    if (post) {
+      const date = new Date(post.date * 1000).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+      html += `<li>
+        <a href="${post.url}"><h3>${post.title}</h3></a>
+        <p class="search-meta">${date}</p>
+      </li>`;
+    }
+  });
+  
+  html += '</ul>';
+  container.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadIndex();
+  
+  const query = new URLSearchParams(window.location.search).get('q');
+  const searchInput = document.getElementById('search-input');
+  
+  if (query && searchIndex) {
+    searchInput.value = query;
+    const results = searchIndex.search(query);
+    displayResults(results);
+  }
+  
+  const form = document.getElementById('search-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = document.getElementById('search-input').value;
+    if (query && searchIndex) {
+      const results = searchIndex.search(query);
+      displayResults(results);
+      window.history.pushState({}, '', `?q=${encodeURIComponent(query)}`);
+    }
+  });
+});
+</script>
+
 </body>
 </html>
