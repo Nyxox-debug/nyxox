@@ -446,6 +446,60 @@ main .content ul li a:hover {
   opacity: 0.7;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #222;
+  border-radius: 4px;
+  color: #fff !important;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.pagination a:hover {
+  background: #333;
+  opacity: 0.8;
+}
+
+.pagination .page-info {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  color: #fff;
+}
+
+main .post-title a:hover {
+  color: #888 !important;
+}
+
+main .content a:not(.btn) {
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+main .content a:not(.btn):hover {
+  opacity: 0.7;
+}
+
+main li .post-title a {
+  color: #fff !important;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+main li .post-title a:hover {
+  color: #888 !important;
+  opacity: 0.8;
+}
+
 @media (max-width: 480px) {
   body {
     padding: 16px 12px;
