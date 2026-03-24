@@ -6,8 +6,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<style type=text/css>body{font-family:monospace;}</style>
 	<title>{{ .Title }}</title>
+	<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+	<link rel="canonical" href="{{ .Permalink }}">
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	
+	<meta property="og:title" content="{{ .Title }}">
+	<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+	<meta property="og:site_name" content="{{ .Site.Title }}">
+	{{ with .Params.featured_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="{{ .Title }}">
+	<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+	{{ with .Params.featured_image }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+	
 	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 	{{ range .Site.Params.customCSS -}}
 		<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
