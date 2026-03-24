@@ -348,6 +348,104 @@ hr {
   margin: 24px 0;
 }
 
+main {
+  padding-top: 16px;
+}
+
+main > div:first-child {
+  margin-bottom: 32px;
+}
+
+main > div:first-child h1 {
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+main > div:first-child .description,
+main > div:first-child p {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main li {
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+main li:last-child {
+  border-bottom: none;
+}
+
+main .post-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+main .post-title a {
+  color: #fff !important;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+main .post-title a:hover {
+  opacity: 0.7;
+  text-decoration: none !important;
+}
+
+main .post-title span.date,
+main .post-title .date {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+main h2 {
+  margin: 24px 0 16px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+main .content > p {
+  margin: 8px 0 16px;
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+main .content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+main .content ul li {
+  padding: 4px 0;
+  border-bottom: none;
+  color: #ccc;
+}
+
+main .content ul li a {
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+main .content ul li a:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 480px) {
   body {
     padding: 16px 12px;
@@ -387,5 +485,14 @@ hr {
   pre {
     padding: 12px;
     font-size: 0.8em;
+  }
+  
+  main .post-title {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  main .post-title .date {
+    order: -1;
   }
 }
