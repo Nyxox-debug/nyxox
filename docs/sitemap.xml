@@ -3,7 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nyxox-debug.github.io/nyxox/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/categories/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/cpp/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/neural-networks/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/neuroevolution/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/opengl/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/categories/projects/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/posts/projects/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/simulation/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox-debug.github.io/nyxox/tags/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -22,37 +77,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/categories/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/tags/deep-learning/</loc>
     <lastmod>2026-02-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/posts/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/categories/projects/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/posts/projects/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/tags/python/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/tags/</loc>
     <lastmod>2026-02-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -68,11 +98,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox-debug.github.io/nyxox/tags/graphics/</loc>
-    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://nyxox-debug.github.io/nyxox/tags/opengl/</loc>
     <lastmod>2026-01-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

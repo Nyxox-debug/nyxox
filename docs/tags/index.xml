@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/tags/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Cpp</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/cpp/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neural-Networks</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/neural-networks/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/neural-networks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neuroevolution</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/neuroevolution/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/neuroevolution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opengl</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/opengl/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/opengl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simulation</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/simulation/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/simulation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Autograd</title>
       <link>https://nyxox-debug.github.io/nyxox/tags/autograd/</link>
@@ -48,13 +83,6 @@
       <link>https://nyxox-debug.github.io/nyxox/tags/graphics/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://nyxox-debug.github.io/nyxox/tags/graphics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Opengl</title>
-      <link>https://nyxox-debug.github.io/nyxox/tags/opengl/</link>
-      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/tags/opengl/</guid>
       <description></description>
     </item>
     <item>
