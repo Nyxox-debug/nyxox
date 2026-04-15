@@ -6,8 +6,15 @@
     <description>Recent content in Python on Nyxox</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/tags/python/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Building an Email Priority Classifier</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention &lt;em&gt;right now&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building a Neural Network Framework from Scratch</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>
