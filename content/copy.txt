@@ -1,0 +1,1175 @@
+# Prompt:
+My current content
+
+# File collection from: /home/nyxox/Documents/Projects/site/content
+# Generated: 2026-04-28 20:18:10
+------------------------------------------------------------
+
+## about.md
+
+---
+title: "About Me"
+description: "Learn more about me"
+---
+
+## Who Am I
+
+Hi! I'm Nyxox - a developer on a journey of continuous learning and building.
+
+## My Background
+
+I started my coding journey because I wanted to understand how things work under the hood. What started as curiosity has grown into a passion for building useful things.
+
+## What I Do
+
+- **Web Development** - Building modern, responsive websites
+- **Learning** - Always exploring new technologies and frameworks
+- **Problem Solving** - Breaking down complex problems into manageable pieces
+
+## Skills
+
+- JavaScript / TypeScript
+- Python
+- Hugo (this blog!)
+- HTML & CSS
+
+## Interests
+
+When I'm not coding, you can find me:
+- Reading about new technologies
+- Gaming
+- Exploring open source projects
+
+## Connect
+
+Feel free to reach out or follow my work on [GitHub](https://github.com/Nyxox-debug).
+
+Thanks for visiting!
+------------------------------------------------------------
+
+## categories/_index.md
+
+---
+title: "Categories"
+description: "Browse posts by category"
+---
+
+Browse posts organized by topic:
+
+- **Projects**: Technical deep-dives into my coding projects, from building interpreters from scratch to ML frameworks and 3D renderers.
+- **Life**: Personal thoughts, updates, and behind-the-scenes glimpses into my journey as a developer.
+
+Select a category above to explore posts.
+------------------------------------------------------------
+
+## _index.md
+
+# This is the index page
+------------------------------------------------------------
+
+## portfolio/index.md
+
+---
+title: "Portfolio"
+description: "A showcase of my projects and experience"
+---
+
+{{< note >}}
+This is my CV. You may want to view my [resume](./resume.pdf) instead.
+{{< /note >}}
+
+
+# Victor 
+Full-stack engineer · Backend architecture · Systems programming · Modern web
+
+---
+
+## Experience
+
+**Backend Engineer — {{< external url="https://itserviceafrica.com/" text="ITSA" >}}** `Hackathon`
+*TypeScript, Node.js, Backend Development, Testing*
+
+Competed in the IT Services Desk Africa hackathon, enhancing ITSA's device health management system.
+
+* Collaborated with a cross-functional team to improve system performance
+* Diagnosed, reported, and resolved software issues
+* Wrote, reviewed, and validated backend code and tests to ensure reliability
+
+---
+
+**Backend Engineer — {{< external url="https://hireuslogistics.ng/" text="HireusLogistic" >}}** `Recent`
+*TypeScript, MongoDB, Redis, OAuth 2.0, Docker, Kubernetes*
+
+Designed and implemented backend services for the HireusLogistic platform, supporting thousands of users with a robust rider dispatch and management system.
+
+- Scaled real-time rider tracking and dispatch system using WebSockets and Redis pub/sub
+- Implemented OAuth 2.0 authentication and role-based access control across all API surfaces
+- Designed MongoDB schemas optimized for geospatial queries and high-throughput rider matching
+- Containerized services with Docker and orchestrated deployments with Kubernetes
+
+---
+
+**Frontend Engineer — Uniskill** `Hackathon`
+*React, Next.js, TypeScript*
+
+Built a decentralized e-learning platform with blockchain-based certificate storage for a hackathon.
+
+- Developed an interactive frontend with **React** and **TypeScript**, leveraging reusable components to accelerate feature delivery
+- Integrated **Solana** smart contracts to securely store and verify course certificates on-chain
+- Implemented **Next.js App Router** for server-side rendering and static generation, optimizing performance
+- Managed complex client-side state and REST API interactions for real-time course progress tracking
+- Ensured **WCAG 2.1 accessibility** compliance and responsive cross-browser functionality
+
+---
+
+**Backend Developer — UNITE** `Hackathon`
+*IPFS, Decentralized Storage, Node.js, TypeScript*
+
+Worked on the backend team for UNITE, collaborating on the implementation of a decentralized file storage system using IPFS.
+
+* Designed and integrated IPFS-based storage for secure, distributed file management
+* Developed backend APIs for seamless file upload, retrieval, and indexing
+* Collaborated with the team to optimize data consistency and storage efficiency
+
+---
+
+## Education
+
+**B.Sc. Computer Science** {{< external url="https://futo.edu.ng/" text="FUTO" >}} `Ongoing`
+Notable coursework: Data Structures · Operating Systems · Computer Architecture · Compiler Design · Distributed Systems · Linear Algebra
+
+---
+
+## Selected Projects
+
+**[Bat (Interpreter from scratch)](https://github.com/Nyxox-debug/bat)** · Go,
+A complete interpreted language built from scratch — lexer, Pratt parser, AST evaluator, closures, and an interactive REPL. First-class functions with closures via environment capture.
+
+**[Synap (Autograd / ML Framework)](https://github.com/Nyxox-debug/Synap)** `Recent` · C++, Python, pybind11
+Minimal ML framework implementing tensors, reverse-mode autodiff, and MLP primitives from scratch. C++ core with Python bindings via pybind11. Zero-copy tensor views through shared storage.
+
+**[3d Model Renderer (OpenGL)](https://github.com/Nyxox-debug/Model-render)** `Recent` · C++, OpenGL, GLSL
+Real-time renderer with OBJ loading, multi-texture support, custom GLSL shaders, and a first-person camera. Full MVP transform pipeline, delta-time camera movement, no game engine.
+
+**[GitHub Code Analyzer](https://github.com/Nyxox-debug/repo-scan)** · Go, Python, tree-sitter
+Clones any public GitHub repo and performs static analysis using ASTs across 25+ languages — extracting complexity metrics, structure, and dependencies.
+
+**[Mini-Fig](https://github.com/Nyxox-debug/mini-fig)** · C++, TypeScript, Emscripten 
+A vector graphic editor and lightweight 2D drawing engine built with C++ and WebAssembly, backed by a React frontend.
+
+---
+
+## Hackathons
+
+**ITSA** `🥇 Grand Prize — Best Fintech Hack` · Node.js, TypeScript, MongoDB 
+Competed with 15 teams to identify issues and propose improvements on a live production codebase.
+
+**Hack4Futo 2023** `🥈 5th Place — 25+ teams` · Python, TypeScript, React, OpenAI API, Rust, Solana
+Built an AI-powered education platform that tracks learning progress and stores user certificates on-chain.
+
+---
+------------------------------------------------------------
+
+## posts/_index.md
+
+---
+title: "Posts"
+description: "Blog posts about my journey"
+---
+
+Welcome to my blog! Here I share what I'm building and learning.
+
+## Categories
+
+- [Projects](/nyxox/posts/projects/) - Things I built
+- [Life](/nyxox/posts/life/) - Personal posts
+------------------------------------------------------------
+
+## posts/life/_index.md
+
+---
+title: "Life"
+description: "Posts about other aspects of my life"
+---
+
+A collection of posts about life outside of code - hobbies, thoughts, and experiences.
+
+## Topics
+
+- Hobbies and interests
+- Personal growth
+- Random thoughts
+------------------------------------------------------------
+
+## posts/life/why-i-started-this-blog.md
+
+---
+title: "Why I Started This Blog"
+date: 2025-12-04
+slug: why-i-started-this-blog
+categories:
+  - life
+tags:
+  - personal
+  - blogging
+---
+
+## The Beginning
+
+I decided to start documenting my journey for a few reasons:
+
+1. **Retention** - Writing helps solidify what I learn
+2. **Share knowledge** - Maybe someone else finds it useful
+3. **Track progress** - Look back and see how far I've come
+
+## What's Coming
+
+Expect posts about:
+- Web development projects
+- Learning new technologies
+- Life updates and thoughts
+------------------------------------------------------------
+
+## posts/projects/3d-renderer.md
+
+---
+title: "Building a 3D Renderer from Scratch"
+date: 2026-01-27
+slug: 3d-renderer-scratch
+github: "https://github.com/Nyxox-debug/Model-render"
+categories:
+  - projects
+tags:
+  - c++
+  - opengl
+  - graphics
+  - shaders
+---
+
+I've always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what's actually happening on the GPU? That's exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.
+
+No engines. No magic. Just raw graphics programming.
+
+<!--more-->
+
+## Why Build a Renderer?
+
+Here's the thing - I've used game engines for years, but I never really understood how a 3D model actually gets converted into pixels on my screen. How do textures get applied? How does the camera move through space? 
+
+So I thought, why not build one myself? The goal wasn't to compete with Unity or Unreal. It was to understand the fundamentals - to demystify what's actually happening when you call `Draw()` on a mesh.
+
+## What I Built
+
+The result is a real-time 3D model renderer that can:
+
+- Load 3D models in OBJ format (using Assimp)
+- Apply textures - diffuse, specular, and normal maps
+- Compile custom GLSL shaders
+- Move around with WASD + mouse look (first-person camera)
+- Handle the complete rendering pipeline
+
+The renderer runs at 60 FPS and shows a textured 3D model. That's it. But the journey to get there taught me more about graphics programming than years of using game engines.
+
+## The Core Concepts
+
+Let me walk you through what I learned along the way.
+
+### How a 3D Model Gets Rendered
+
+It starts with vertices - points in 3D space that define a shape. These vertices get processed through what's called the **rendering pipeline**:
+
+1. **Model transformation** - Move vertices from model space to world space
+2. **View transformation** - Move vertices to camera space  
+3. **Projection transformation** - Apply perspective (things get smaller as they get farther)
+4. **Rasterization** - Convert those 3D points into 2D pixels on your screen
+
+The magic happens in the shaders - little programs that run on your GPU for each vertex and each pixel.
+
+### The Code
+
+Here's how the main render loop looks:
+
+```cpp
+while (!glfwWindowShouldClose(window)) {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    // Calculate matrices
+    glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+    glm::mat4 projection = glm::perspective(45.f, ratio, 0.1f, 100.f);
+    
+    // Upload to GPU
+    shader->setMat4("view", view);
+    shader->setMat4("projection", projection);
+    
+    // Draw!
+    model->Draw(*shader);
+    
+    glfwSwapBuffers(window);
+}
+```
+
+The key insight? Every frame, we're recalculating matrices based on camera position, then uploading them to the GPU as "uniform variables" - values that stay the same for all vertices in that frame.
+
+### The Camera System
+
+First-person camera control is actually pretty interesting math. You have:
+- **Yaw** - rotation left/right
+- **Pitch** - rotation up/down
+
+And you convert those angles into a direction vector using spherical coordinates:
+
+```cpp
+front.x = cos(yaw) * cos(pitch);
+front.y = sin(pitch);  
+front.z = sin(yaw) * cos(pitch);
+```
+
+Simple, but it works perfectly for WASD movement.
+
+## Key Takeaways
+
+Building this renderer taught me several important things:
+
+1. **OpenGL is just an API** - It's not magic, it's a standardized way to talk to your GPU. You give it data, it gives you pixels.
+
+2. **The rendering pipeline is everywhere** - Model→View→Projection isn't just for games. It's the foundation of all 3D graphics.
+
+3. **Shaders are powerful** - Those little GLSL programs are where all the visual magic happens.
+
+4. **Game engines hide a lot** - Unity and Unreal do incredible things, but they hide all this complexity. There's nothing wrong with that, but understanding it gives you more control.
+
+## What Would I Do Differently?
+
+If I were to build this again, I'd:
+- Add Blinn-Phong lighting earlier (makes models look much better)
+- Use a proper scene graph instead of single-model rendering
+- Add shadow mapping (still haven't tackled that!)
+
+## Final Thoughts
+
+This project took about 2 weeks of evenings to complete. It's not perfect, but it works - and more importantly, I now understand what's happening when I use any 3D engine.
+
+If you're curious about graphics programming, I'd highly recommend building something similar. You don't need to write a full engine. Just start with rendering a single triangle, then add textures, then add a camera. Each step teaches you something new.
+
+The code is available if you want to take a look. Happy rendering!
+------------------------------------------------------------
+
+## posts/projects/bat-language.md
+
+---
+title: "I Built a Programming Language in Go"
+date: 2025-12-29
+slug: programming-language-go
+github: "https://github.com/Nyxox-debug/bat"
+categories:
+  - projects
+tags:
+  - go
+  - interpreter
+  - compiler
+  - ast
+---
+
+I've always been fascinated by programming languages. How does code actually become a running program? What happens when you type `let x = 5;` in a REPL?
+
+So I built my own. Meet **Bat** - a tiny interpreted programming language written entirely in Go. It's not useful for production, but it taught me how interpreters actually work.
+
+<!--more-->
+
+## The Goal
+
+I didn't set out to create something practical. I wanted to understand:
+
+- How do lexers turn text into tokens?
+- How do parsers build syntax trees?
+- How does the evaluator actually run code?
+
+Building a language from scratch is the best way to answer these questions.
+
+## What Bat Looks Like
+
+It's a simple, Lisp-ish language with a REPL:
+
+```
+>> let x = 5;
+5
+>> let y = 3;
+3
+>> let add = fn(a, b) { return a + b; };
+fn(a, b) { ... }
+>> add(x, y);
+8
+>> if (x > 3) { 10 } else { 0 };
+10
+```
+
+You can define functions, use conditionals, do arithmetic. Pretty standard stuff - but all implemented from scratch.
+
+## The Three Stages
+
+Every interpreter has three stages:
+
+```
+Source Code → Lexer → Tokens → Parser → AST → Evaluator → Result
+```
+
+Let me walk through each one.
+
+### 1. Lexer: Breaking Text into Tokens
+
+The lexer reads character by character and groups them into meaningful tokens.
+
+For example, `let x = 5;` becomes:
+- `LET` - keyword
+- `IDENT` "x" - variable name
+- `ASSIGN` "=" - operator
+- `INT` "5" - number
+- `SEMICOLON` ";" - delimiter
+
+The key insight is **look-ahead**. When the lexer sees `=`, it peeks at the next character. If it's another `=`, it knows it's `==` (equality), not assignment.
+
+```go
+if l.peekChar() == '=' {
+    // It's == !
+    l.readChar()
+    tok = Token{Type: EQ, Literal: "=="}
+}
+```
+
+### 2. Parser: Building the AST
+
+Tokens aren't enough - we need to understand structure. That's where the parser comes in.
+
+Bat uses **Pratt parsing** (top-down operator precedence). It's a clever technique where each token type knows how to parse itself:
+
+```go
+func (p *Parser) parseExpression(precedence int) Expression {
+    // Get the prefix parser for current token (e.g., number, identifier)
+    prefix := p.prefixParseFns[p.curToken.Type]
+    leftExp := prefix()
+    
+    // While next operator binds tighter, let it consume more
+    for precedence < p.peekPrecedence() {
+        infix := p.infixParseFns[p.peekToken.Type]
+        p.nextToken()
+        leftExp = infix(leftExp)
+    }
+    return leftExp
+}
+```
+
+For `2 + 3 * 4`:
+1. Parse `2` as a number
+2. See `+` with lower precedence than `*`
+3. Parse `3 * 4` as a complete expression (multiplication binds tighter)
+4. Result: `Add(Int(2), Mul(Int(3), Int(4)))`
+
+The AST represents this hierarchy explicitly.
+
+### 3. Evaluator: Running the AST
+
+The evaluator recursively walks the tree:
+
+```go
+func Eval(node Node) Object {
+    switch node := node.(type) {
+    case *IntegerLiteral:
+        return &Integer{Value: node.Value}
+    case *InfixExpression:
+        left := Eval(node.Left)
+        right := Eval(node.Right)
+        return evalInfix(node.Operator, left, right)
+    case *LetStatement:
+        val := Eval(node.Value)
+        env.Set(node.Name.Value, val)
+    // ... and so on
+    }
+}
+```
+
+It's surprisingly simple. Each node type knows how to evaluate itself. The evaluator just dispatches to the right function.
+
+## The Interesting Challenges
+
+### Handling Scope
+
+Bat uses a simple environment (symbol table):
+
+```go
+type Environment struct {
+    store map[string]Object
+}
+```
+
+Functions look up variables in this environment. True closures would require nested scopes - but for a minimal interpreter, a single global environment works.
+
+### Operator Precedence
+
+Pratt parsing made this elegant, but getting it right took trial and error. Does `*` bind tighter than `+`? What about `==` vs `<`? The precedence constants encode this:
+
+```go
+const (
+    LOWEST = iota
+    EQUALS      // ==
+    LESSGREATER // < or >
+    SUM         // + or -
+    PRODUCT     // * or /
+)
+```
+
+### Error Handling
+
+Errors can happen at any stage:
+- Lexer: unknown character
+- Parser: unexpected token  
+- Evaluator: undefined variable
+
+Each stage collects and reports errors. The REPL shows them with a friendly message (and some ASCII art bat).
+
+## What I Learned
+
+1. **Interpreters are approachable** - I expected this to be complex, but the core ideas are actually simple
+
+2. **Pratt parsing is elegant** - No grammar files, no code generators. Just functions that know how to parse
+
+3. **Type switches are powerful** - Go's switch on types (not values) is perfect for the evaluator pattern
+
+4. **Separation of concerns** - Lexer doesn't know about parsing, parser doesn't know about evaluation. Clean interfaces.
+
+## The Code
+
+It's all in Go:
+
+- `lexer/` - tokenization
+- `parser/` - AST construction  
+- `evaluator/` - execution
+- `repl/` - the interactive prompt
+
+Clone it, run `go run main.go`, and you get a working REPL. Try defining functions, using variables, whatever.
+
+## Why This Matters
+
+You probably won't use Bat in production. But understanding how languages work changes how you think about code.
+
+Now when I write Python or JavaScript, I see the lexer, parser, and evaluator underneath. It's a different perspective - and a useful one.
+
+The bat flies at night, and now I know how it processes your code from start to finish.
+------------------------------------------------------------
+
+## posts/projects/email-scam-detector.md
+
+---
+title: "Building an Email Priority Classifier"
+date: 2026-04-14
+slug: email-scam-detector
+github: "https://github.com/Nyxox-debug/triageai"
+categories:
+  - projects
+tags:
+  - python
+  - machine-learning
+---
+
+I've always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention *right now*.
+
+<!--more-->
+
+## The Problem
+
+Support inboxes don't just get busy - they get noisy. Hundreds of emails coming in every day, and the real question isn't "how many emails" but "which ones matter?".
+
+I wanted to see if I could build something that could automatically sort emails by urgency, so support teams could focus on what actually needs attention first.
+
+## The Dataset
+
+Since I didn't have access to a real support inbox (that would be a privacy nightmare), I generated a synthetic dataset of ~800 emails that mimics real customer support patterns:
+
+- **Urgent** (10%): System down, critical bugs, payment issues
+- **High** (25%): Account problems, broken features, time-sensitive requests
+- **Medium** (40%): General inquiries, feature requests, follow-ups
+- **Low** (25%): Spam, newsletters, casual questions
+
+The key was making the emails feel realistic - different tones, lengths, and urgency signals that you'd actually see in a support inbox.
+
+## Feature Engineering
+
+This was the interesting part. I used two types of features:
+
+### 1. TF-IDF Features (300 features)
+Standard text vectorization to capture which words matter. The TF-IDF analysis showed clear patterns - urgent emails had words like "ASAP", "broken", "immediately", while low priority emails had "subscribe", "newsletter", "update".
+
+### 2. Custom Urgency Signals (9 features)
+These were the signals that actually made the difference:
+
+- **Exclamation marks** - "!!!" usually means urgency
+- **ALL CAPS words** - Shouting usually indicates frustration
+- **Urgency keywords** - "ASAP", "urgent", "critical", "down", "emergency"
+- **Sentiment** - TextBlob polarity score (more negative = more urgent)
+- **All-caps subject line** - A simple but effective signal
+
+```python
+# Example: extracting urgency signals
+def count_urgency_signals(text):
+    signals = {
+        'exclamation_count': text.count('!'),
+        'caps_words': sum(1 for word in text.split() if word.isupper() and len(word) > 1),
+        'urgency_keywords': sum(1 for word in ['asap', 'urgent', 'critical', 'down'] if word in text.lower()),
+        'sentiment': TextBlob(text).sentiment.polarity
+    }
+    return signals
+```
+
+## The Model
+
+I went with Logistic Regression. It might seem simple, but for this kind of classification problem, it's actually perfect - interpretable, fast, and works well with the feature set I had.
+
+One important detail: since Urgent emails are only 10% of the data, I used `class_weight='balanced'` to make sure the model didn't just learn to always predict "Medium" or "High".
+
+## Results
+
+The model achieved:
+
+- **82% overall accuracy**
+- **91% recall on Urgent emails** - This was the critical metric. Missing an urgent email is the actual failure case here.
+
+What surprised me was what didn't matter: **email length**. Urgent emails aren't longer - they're sharper. More direct. More aggressive. The model learned that it's not about how much someone writes, but how they write it.
+
+## What I Learned
+
+1. **Simple features work** - You don't need deep learning for this. The combination of TF-IDF plus custom urgency signals gave us solid results.
+
+2. **Domain knowledge helps** - Adding those custom features (exclamation marks, CAPS, urgency keywords) made a real difference. TF-IDF alone wouldn't have captured "!!!" as a signal.
+
+3. **Class imbalance matters** - The `class_weight='balanced'` was crucial. Without it, the model would just predict the majority classes and miss all the urgent emails.
+
+4. **Interpretability is valuable** - With Logistic Regression, I can actually explain why the model classified something as urgent. That's important for trust in a real support workflow.
+
+## What's Next
+
+This was a proof-of-concept, but there's room to grow:
+
+- Try on real data (with proper privacy handling)
+- Add more features (time of day, sender history)
+- Experiment with other models (Random Forest, XGBoost)
+- Build an actual integration with email providers
+
+The notebooks have all the details - data exploration and feature engineering are both available if you want to dig into the code:
+
+- [data-exploration.ipynb](/nyxox/docs/email-scam-detector/data-exploration.html)
+- [feature-engineering.ipynb](/nyxox/docs/email-scam-detector/feature-engineering.html)
+
+It works. It's not perfect. But it's a solid baseline for something that could actually help support teams prioritize what matters.
+------------------------------------------------------------
+
+## posts/projects/gpr-analyzer.md
+
+---
+title: "Building a GitHub Analyzer with Go and Python"
+date: 2025-12-05
+slug: github-analyzer-go-python
+github: "https://github.com/Nyxox-debug/repo-scan"
+categories:
+  - projects
+tags:
+  - go
+  - python
+  - ast
+  - tree-sitter
+  - web-dev
+---
+
+Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.
+
+The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.
+
+<!--more-->
+
+## The Idea
+
+I was working on a project and needed to understand a large open-source codebase quickly. Manually exploring files and trying to understand the architecture was tedious. 
+
+Wouldn't it be nice, I thought, if I could just paste a URL and get a report?
+
+- How many files? How many functions?
+- What's the language breakdown?
+- Where are the complex areas?
+
+So I built GPR-Analyzer - a web tool that clones a repo and runs static analysis on it.
+
+## Architecture: Go + Python
+
+Here's why I chose this hybrid approach:
+
+**Go** handles:
+- Web server (HTTP routing)
+- Repository cloning (using go-git)
+- Executing the Python analyzer as a subprocess
+- Parsing JSON responses
+
+**Python** handles:
+- File system traversal
+- AST generation (using tree-sitter)
+- Code analysis and metrics
+
+The key design decision was keeping them decoupled. Go just executes Python and reads JSON from stdout. This means you could swap Python for anything - Ruby, Node.js, whatever - without touching Go code.
+
+## How It Works
+
+Here's the flow:
+
+1. You paste a URL like `https://github.com/user/repo`
+2. Go validates it's a valid GitHub URL
+3. Go clones the repo to a temporary directory
+4. Go spawns Python to analyze it
+5. Python walks every file, parses ASTs, counts functions/classes
+6. Python outputs JSON
+7. Go parses JSON and sends it back to the browser
+
+The interface is dead simple - a text input and a submit button. That's it.
+
+## The Interesting Parts
+
+### AST Analysis with tree-sitter
+
+Tree-sitter is incredible. It generates precise Abstract Syntax Trees for code, which means you can actually understand code structure rather than just regex matching.
+
+For example, counting functions in Python:
+
+```python
+def calculate_complexity(node):
+    if 'function' in node.type.lower():
+        function_count += 1
+    for child in node.children:
+        calculate_complexity(child)
+```
+
+Simple recursive tree traversal. But it works across 25+ languages!
+
+### The Interface Between Languages
+
+I kept the Go↔Python interface dead simple:
+
+```python
+# Python outputs JSON to stdout
+print(json.dumps(report))
+
+# Go captures it
+cmd := exec.Command("python3", "analyzer/main.py")
+output, _ := cmd.CombinedOutput()
+```
+
+No sockets, no HTTP between them. Just stdout. This makes debugging easy too - you can run the Python script manually and see exactly what it outputs.
+
+## What I Learned
+
+1. **Language mixing is practical** - Using Go for orchestration and Python for analysis played to each language's strengths
+
+2. **tree-sitter is powerful** - It's not just for editors. Any code analysis tool can benefit from precise ASTs
+
+3. **Simple interfaces win** - The JSON-over-stdout pattern is nothing fancy, but it's robust and easy to debug
+
+## What's Missing
+
+There's a lot more I could add:
+- Cyclomatic complexity metrics
+- Coupling analysis between files
+- Visualization of code structure
+- Support for private repos
+
+Maybe version 2?
+
+## Check It Out
+
+The project is ready to use if you want to try it. Clone the repo, run `./run`, and open `http://localhost:8081`. Paste any public GitHub URL and see what it finds.
+
+It's fascinating to see what these tools reveal about different codebases!
+------------------------------------------------------------
+
+## posts/projects/_index.md
+
+---
+title: "Projects"
+description: "Posts about projects I built and what I learned"
+---
+
+This section documents the projects I've worked on, the problems I solved, and what I learned along the way.
+
+## Recent Projects
+
+Check out what I've been building!
+------------------------------------------------------------
+
+## posts/projects/okios.md
+
+---
+title: "I Built an Artificial Life Simulation in C++"
+date: 2026-04-04
+slug: artificial-life-simulation
+github: "https://github.com/Nyxox-debug/OKIOS"
+categories:
+  - projects
+tags:
+  - cpp
+  - opengl
+  - neural-networks
+  - simulation
+  - neuroevolution
+
+---
+
+I've always been curious about emergence. How does organized, purposeful behavior arise from simple rules? How does a colony of ants, with no central planner, manage to build complex structures and find food efficiently?
+
+So I built **OKIOS** — named after the Greek *οἶκος*, meaning home or habitat. It's a 3D artificial life simulation where creatures with neural-network brains learn to survive entirely on their own. No predefined roles. No hand-coded behaviors. Just pressure, time, and mutation.
+
+<!--more-->
+
+## The Idea
+
+The premise is simple: spawn a population of identical agents in a shared 3D environment. Each agent starts with no knowledge and the same capabilities. Food is scattered across the terrain. Eat enough, reproduce. Starve, die.
+
+Over time, behavioral patterns emerge. Not because I programmed them — but because survival pressure selects for them.
+
+The core question I wanted to explore:
+
+> How does organized structure emerge from decentralized, self-interested agents?
+
+## What It Looks Like
+
+The world is a procedurally generated terrain rendered with OpenGL. Creatures are small cubes with red tails — the tail tracks behind the body via a joint system. Food items are small golden cubes scattered across the map. The camera is free-fly so you can watch the simulation from any angle.
+
+Each frame runs 60 simulation steps at a fixed timestep, so the creatures are thinking and moving much faster than real time.
+
+## The Architecture
+
+The simulation is built around an **Entity-Component System (ECS)**. Every object in the world — creature, food, light source — is just an integer ID. Components attach data to that ID:
+
+- `TransformComponent` — position, rotation, scale
+- `VelocityComponent` — current velocity
+- `MeshComponent` — renderable geometry
+- `LifeComponent` — health, hunger, meals eaten
+- `BrainComponent` — the neural network
+- `JointComponent` — attaches a tail to a parent body
+
+Systems then operate on entities that have the right combination of components. `MovementSystem` reads velocity and writes position. `LifeSystem` drains health when hungry. `BrainSystem` runs the neural network and outputs a movement direction.
+
+The separation is clean. The brain doesn't know about rendering. The renderer doesn't know about physics.
+
+## The Brain
+
+Each creature has a small feedforward neural network:
+
+```
+Inputs (5) → Hidden Layer (8, tanh) → Outputs (2, tanh)
+```
+
+The inputs are:
+- Normalized health
+- Normalized hunger
+- Direction to nearest food (2D vector)
+- Distance to nearest food (normalized)
+
+The outputs are a 2D movement direction vector. The creature steers toward whatever the network says.
+
+```cpp
+output Brain::forward(const input &in) const {
+  const std::array<float, 5> inputs = {
+    in.health, in.hunger,
+    in.direction.x, in.direction.y,
+    in.distance
+  };
+  // hidden layer with tanh activation
+  for (int i = 0; i < 8; i++) {
+    float sum = biasHidden[i];
+    for (int j = 0; j < 5; j++)
+      sum += weightsInputHidden[i * 5 + j] * inputs[j];
+    hidden[i] = std::tanh(sum);
+  }
+  // output layer
+  for (int i = 0; i < 2; i++) {
+    float sum = biasOutput[i];
+    for (int j = 0; j < 8; j++)
+      sum += weightsHiddenOutput[i * 8 + j] * hidden[j];
+    out[i] = std::tanh(sum);
+  }
+  return {glm::vec2(out[0], out[1])};
+}
+```
+
+Simple. But what matters is *how the weights get trained* — and that's where the interesting journey happened.
+
+## The Training Journey: From REINFORCE to Neuroevolution
+
+This is the part that taught me the most.
+
+### First Attempt: REINFORCE
+
+My first instinct was to use the **REINFORCE algorithm** — a classic policy gradient method from reinforcement learning. The idea is straightforward: run the agent, collect rewards, and nudge the network weights in the direction that made good outcomes more likely.
+
+The reward signal was tied to health and hunger:
+
+```cpp
+life.reward = (life.health / life.maxHealth) - (life.hunger / life.maxHunger);
+life.cumulativeReward += life.reward * dt;
+```
+
+In theory, the agent should learn to keep its health high and its hunger low — which means finding food.
+
+In practice, it was a mess. The gradient estimates were extremely noisy. The network weights oscillated wildly. Agents would briefly stumble toward food, then forget. The population kept dying before anything useful could be learned. The fundamental problem with REINFORCE in this setting is that the reward signal is sparse and delayed — the agent doesn't know *which* of its many decisions actually led to finding food.
+
+### Second Attempt: Neuroevolution
+
+I went looking for alternatives and landed on **neuroevolution** — specifically, training the neural network through a genetic algorithm rather than gradient descent.
+
+The idea is to treat the network weights as a genome. Instead of computing gradients, you:
+
+1. Keep a population of agents with different weight configurations
+2. Let them run — survivors that eat more get to reproduce
+3. Offspring inherit the parent's weights with small random mutations
+4. Repeat
+
+```cpp
+Brain Brain::mutate(float mutationRate, std::mt19937 &rng) const {
+  std::uniform_real_distribution<float> dist(-1.0f, 1.0f);
+  Brain child = *this;
+  for (auto &w : child.weightsInputHidden)
+    w += dist(rng) * mutationRate;
+  for (auto &w : child.weightsHiddenOutput)
+    w += dist(rng) * mutationRate;
+  for (auto &b : child.biasHidden)
+    b += dist(rng) * mutationRate;
+  for (auto &b : child.biasOutput)
+    b += dist(rng) * mutationRate;
+  return child;
+}
+```
+
+Reproduction is gated behind eating 4 meals. The best-performing creatures (sorted by cumulative reward) reproduce first:
+
+```cpp
+std::sort(ranked.begin(), ranked.end(), std::greater<>());
+for (auto &[score, id] : ranked) {
+  if (life.mealAmount < 4) continue;
+  Brain childBrain = world.sentients.at(id).brain.mutate(0.1f, getRng());
+  spawnCreature(world, verts, idx, childBrain);
+}
+```
+
+This worked dramatically better. Within a few generations, creatures reliably navigate toward food. No gradient computation, no backprop — just selection pressure and noise.
+
+The key insight is that **neuroevolution sidesteps the credit assignment problem entirely**. You don't need to know which decision caused the reward. You just need to know which agent survived longer — and nature handles the rest.
+
+## Other Systems
+
+### Movement & Physics
+
+The movement system applies velocity, clamps speed, adds gravity, and snaps creatures to terrain height. Creatures can't walk off the map — boundary collision zeroes out the relevant velocity component.
+
+Rotation is handled by smoothly interpolating toward the direction of movement using `glm::mix`, so creatures naturally face where they're going.
+
+### Collision
+
+AABB collision detection between all non-tail entities. On overlap, the minimum penetration axis is resolved by pushing both bodies apart. If only one body is dynamic (e.g., a creature hitting a static object), the full penetration goes to the dynamic one. Velocities are swapped or zeroed accordingly.
+
+### Population Management
+
+A minimum population floor keeps the simulation alive. If the creature count drops below 6, the system spawns new creatures by mutating the best surviving brain — or a fresh random one if everyone is dead.
+
+```cpp
+if (creatureCount < MIN_POPULATION) {
+  Brain seedBrain = world.sentients.empty()
+    ? freshBrain
+    : world.sentients.begin()->second.brain.mutate(0.05f, getRng());
+  // spawn needed creatures from mutated seed
+}
+```
+
+## What I Learned
+
+**REINFORCE is hard to tune in sparse environments.** Policy gradient methods need dense, frequent reward signals to work well. A creature wandering a large terrain, eating occasionally, doesn't get that signal often enough.
+
+**Neuroevolution is surprisingly robust.** No learning rate, no gradient clipping, no replay buffer. Just mutation rate and selection pressure. For simulations where you can run many agents in parallel, it's a remarkably practical approach.
+
+**ECS makes simulation code clean.** Systems only care about the components they need. Adding a new behavior means adding a new system — nothing else changes.
+
+**Emergence is real and weird to watch.** Once the brains are even slightly trained, you start seeing group behavior that you never programmed. Clusters form around food. Some creatures patrol. It's not intelligence — but it looks like something.
+
+## What's Next
+
+OKIOS is still a work in progress. Some things I want to explore:
+
+- Agent-to-agent perception (can creatures detect each other?)
+- Predator/prey dynamics
+- More complex terrain with resource scarcity zones
+- Crossover between two parent brains, not just mutation
+
+The simulation currently answers a small version of the big question. But the bigger question — true emergent cooperation and specialization — is still ahead.
+
+The habitat is just getting started.
+------------------------------------------------------------
+
+## posts/projects/synap.md
+
+---
+title: "Building a Neural Network Framework from Scratch"
+date: 2026-02-24
+slug: deep-learning-framework-scratch
+github: "https://github.com/Nyxox-debug/Synap"
+categories:
+  - projects
+tags:
+  - c++
+  - python
+  - deep-learning
+  - autograd
+  - tensors
+---
+
+I use PyTorch every day at work. It's incredible - but I've always wondered: how does it actually work under the hood? How does `backward()` actually compute gradients through a neural network?
+
+So I built my own minimal deep learning framework called **Synap**. It's written in C++ for performance, with Python bindings via pybind11. No external ML libraries - just raw tensor operations and automatic differentiation from scratch.
+
+<!--more-->
+
+## Why Build Another Framework?
+
+This wasn't about competing with PyTorch. That would be insane.
+
+It was about understanding. I use `loss.backward()` without thinking, but the magic behind automatic differentiation always seemed mysterious. Building it myself was the best way to learn.
+
+Plus, Andrej Karpathy's micrograd inspired me. I wanted to do something similar but with C++ for the core operations - partly for performance, partly because I wanted to understand how to bridge C++ and Python.
+
+## What I Built
+
+Synap gives you:
+
+- **Tensors** - Multi-dimensional arrays with shape, stride, and offset
+- **Autograd** - Reverse-mode automatic differentiation
+- **Neural networks** - MLPs with layers and neurons
+- **Python API** - Clean Python interface to C++ core
+
+```python
+import synap as sp
+
+# Create tensors
+x = sp.Tensor([1, 4], requires_grad=True)
+x.set_values([1, 2, 3, 4])
+
+# Build a simple MLP
+model = nn.MLP(4, [8, 1])
+
+# Forward pass
+out = model(x)
+
+# Compute loss
+loss = sp.Tensor.mse(out, target)
+
+# Backward pass - the magic happens here
+loss.backward()
+```
+
+## How Autograd Works
+
+This was the most interesting part to implement.
+
+The key insight is that you build a **computation graph** as you do operations. Each tensor knows what created it - its parents and the operation that produced it.
+
+Here's how multiplication works:
+
+```cpp
+// Forward: c = a * b
+out->data()[i] = a->data()[i] * b->data()[i];
+
+// Backward: da = db * dout, db = da * dout  
+out->backward_fn_ = [out, a, b]() {
+    a->grad->data()[i] += b->data()[i] * out->grad->data()[i];
+    b->grad->data()[i] += a->data()[i] * out->grad->data()[i];
+};
+```
+
+Each operation captures its own backward logic in a closure. When you call `backward()`:
+
+1. Start with gradient = 1.0 at the loss
+2. Build topological order of the computation graph
+3. Traverse in reverse, calling each backward_fn
+
+The topological sort is crucial - you need to process operations in the right order so gradients flow correctly from output to input.
+
+## The C++ / Python Bridge
+
+Using pybind11 was surprisingly pleasant. Here's how I expose a tensor to Python:
+
+```cpp
+py::class_<Tensor>(m, "Tensor")
+    .def(py::init<std::vector<size_t>, bool>())
+    .def("set_values", &Tensor::set_values)
+    .def("backward", &Tensor::backward)
+    .def_property_readonly("shape", &Tensor::shape);
+```
+
+That's it. A few lines and I can use C++ tensors from Python. The performance-critical math runs in C++, but the API feels Pythonic.
+
+## Training a Neural Network
+
+The ultimate test - can Synap actually learn?
+
+```python
+# XOR dataset
+X = [[0,0], [0,1], [1,0], [1,1]]
+y = [[0], [1], [1], [0]]
+
+model = nn.MLP(2, [4, 1])
+
+for epoch in range(100):
+    for xi, yi in zip(X, y):
+        # Forward
+        out = model(xi)
+        loss = sp.Tensor.mse(out, yi)
+        
+        # Backward
+        model.zero_grad()
+        loss.backward()
+        
+        # Update weights
+        for param in model.parameters():
+            # gradient descent
+            ...
+```
+
+And it works! After training, the MLP correctly learns XOR. The gradients flow, the weights update, the loss decreases. Magic? No - just math.
+
+## What I Learned
+
+1. **Autograd is elegant** - The closure-based approach is clean. Each operation encapsulates its own gradient logic.
+
+2. **Dynamic graphs are easier** - Synap rebuilds the graph each forward pass (like PyTorch eager mode). Static graphs (like TensorFlow 1.x) are more complex but allow more optimization.
+
+3. **Broadcasting is tricky** - Supporting `[M,N] + [N]` operations means carefully tracking how gradients should reduce back.
+
+4. **C++/Python interop is practical** - pybind11 made this surprisingly smooth.
+
+## The Code
+
+It's all there if you want to explore. The C++ core is in `src/synap/`, the Python bindings in `bindings.cpp`, and the neural network modules in `python/nn.py`.
+
+Set it up with CMake, build, and you can import `synap` in Python. Try creating tensors, doing operations, calling backward() - see the gradients flow!
+
+## What's Next?
+
+There's plenty more to add:
+- More operations (convolution, pooling)
+- GPU support via CUDA
+- Optimizers beyond SGD
+- Batch training
+
+But for now, I'm happy with what Synap demonstrates: the core ideas behind deep learning frameworks, implemented from scratch.
+------------------------------------------------------------
+
+## search/_index.md
+
+---
+title: "Search"
+description: "Search posts on this site"
+layout: "search"
+---
+------------------------------------------------------------
+
