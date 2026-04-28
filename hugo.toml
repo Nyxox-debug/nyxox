@@ -1,12 +1,11 @@
 baseURL = 'https://nyxox-debug.github.io/nyxox/'
-# baseURL = 'http://localhost:1313/nyxox'
 languageCode = 'en-us'
-title = 'Nyxox'
+title = 'Victor'
 theme = 'smol'
 
 [params]
     subtitle = "A Time for Every Purpose"
-    description = "Developer portfolio and blog - Systems programming, web development, and more"
+    description = "Software engineer portfolio and blog focused on systems programming, web development, and backend engineering."
     author = "Nyxox"
     dateFmt = "2 Jan 2006"
     profileImage = "KingSolomon.jpg"
