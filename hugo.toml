@@ -4,7 +4,7 @@ title = 'Victor'
 theme = 'smol'
 
 [params]
-    subtitle = "// iron sharpens iron"
+    subtitle = "neural nets and chill"
     description = "Software engineer portfolio and blog focused on systems programming, web development, and backend engineering."
     author = "Nyxox"
     dateFmt = "2 Jan 2006"
