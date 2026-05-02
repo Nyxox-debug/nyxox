@@ -771,3 +771,57 @@ article .summary-text {
     border-radius: 4px;
   }
 }
+
+.term-line {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.term-path { color: #555; }
+.term-prompt { color: #fff; }
+
+.term-output {
+  margin: 0 0 16px 0;
+  padding-left: 0;
+}
+
+.term-output p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 2px 0;
+  line-height: 1.6;
+}
+
+.term-output p strong {
+  color: #fff;
+  font-weight: 400;
+}
+
+.term-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.term-tag {
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  background: #1a1a1a;
+  color: #888;
+  border-radius: 3px;
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  background: #fff;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

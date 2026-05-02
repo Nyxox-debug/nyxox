@@ -1,16 +1,31 @@
 {{ define "main" }}
 <main>
-	<section class="hero">
-		<h1>Hello, I'm <span class="highlight">Victor</span></h1>
-		<p class="hero-description">
-			Full-stack engineer passionate about systems programming, backend architecture, 
-			and building modern web applications. Currently studying Computer Science at FUTO.
-		</p>
-		<div class="hero-cta">
-			<a href="{{ "portfolio/" | relLangURL }}" class="btn btn-primary">View Portfolio</a>
-			<a href="{{ "posts/" | relLangURL }}" class="btn btn-secondary">Read Blog</a>
-		</div>
-	</section>
+<section class="hero">
+  <div class="term-line"><span class="term-path">~/victor</span> <span class="term-prompt">$</span> whoami</div>
+  <div class="term-output">
+    <p><strong>Victor</strong> — Full-stack &amp; systems engineer</p>
+    <p>Currently studying CS @ FUTO, Nigeria</p>
+  </div>
+
+  <div class="term-line"><span class="term-path">~/victor</span> <span class="term-prompt">$</span> cat stack.txt</div>
+  <div class="term-output term-tags">
+    <span class="term-tag">C++</span><span class="term-tag">Go</span><span class="term-tag">Python</span>
+    <span class="term-tag">Rust</span><span class="term-tag">OpenGL</span><span class="term-tag">PyTorch</span>
+  </div>
+
+  <div class="term-line"><span class="term-path">~/victor</span> <span class="term-prompt">$</span> cat interests.txt</div>
+  <div class="term-output">
+    <p>systems programming · backend architecture</p>
+    <p>neural networks · artificial life · compilers</p>
+  </div>
+
+  <div class="term-line"><span class="term-path">~/victor</span> <span class="term-prompt">$</span> <span class="term-cursor"></span></div>
+
+  <div class="hero-cta">
+    <a href="{{ "portfolio/" | relLangURL }}" class="btn btn-primary">./portfolio</a>
+    <a href="{{ "posts/" | relLangURL }}" class="btn btn-secondary">cat blog/</a>
+  </div>
+</section>
 
 	<section class="recent-posts">
 		<h2>Recent Posts</h2>
