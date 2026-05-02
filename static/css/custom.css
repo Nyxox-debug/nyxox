@@ -1000,3 +1000,12 @@ article:last-of-type {
   margin-left: 4px;
   font-weight: 400;
 }
+
+header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
