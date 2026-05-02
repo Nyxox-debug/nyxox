@@ -1,10 +1,10 @@
 baseURL = 'https://nyxox-debug.github.io/nyxox/'
 languageCode = 'en-us'
-title = 'Victor'
+title = 'Victor (Nyxox)'
 theme = 'smol'
 
 [params]
-    subtitle = "A Time for Every Purpose"
+    subtitle = "// iron sharpens iron"
     description = "Software engineer portfolio and blog focused on systems programming, web development, and backend engineering."
     author = "Nyxox"
     dateFmt = "2 Jan 2006"
