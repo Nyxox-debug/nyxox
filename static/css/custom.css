@@ -561,6 +561,18 @@ main li .post-title a:hover {
   main .post-title .date {
     order: -1;
   }
+
+ article .article-link {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  article .article-thumb {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
 }
 
 /* Search Page */
