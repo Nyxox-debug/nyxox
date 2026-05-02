@@ -1009,3 +1009,19 @@ header {
   flex-direction: column;
   gap: 10px;
 }
+
+.btn-secondary {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid #444;
+}
+
+.btn-secondary:hover {
+  border-color: #888;
+  color: #ccc !important;
+}
+
+article .article-link.no-thumb {
+  border-left: 2px solid #222;
+  padding-left: 12px;
+}
