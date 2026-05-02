@@ -993,3 +993,10 @@ article {
 article:last-of-type {
   border-bottom: none;
 }
+
+.header-handle {
+  font-size: 0.72rem;
+  opacity: 0.4;
+  margin-left: 4px;
+  font-weight: 400;
+}

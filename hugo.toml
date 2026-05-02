@@ -1,6 +1,6 @@
 baseURL = 'https://nyxox-debug.github.io/nyxox/'
 languageCode = 'en-us'
-title = 'Victor (Nyxox)'
+title = 'Victor'
 theme = 'smol'
 
 [params]

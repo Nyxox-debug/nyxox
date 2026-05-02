@@ -4,7 +4,7 @@
   <div class="header-top">
     <a href="{{ .Site.BaseURL }}" class="header-title">
       <img id="profile-img" src="{{ $resized.RelPermalink }}" alt="Profile">
-      {{ .Site.Title }}
+      {{ .Site.Title }}<span class="header-handle">(Nyxox)</span>
     </a>
     {{ with .Site.Params.subtitle }}
     <span class="header-subtitle">{{ . }}</span>
