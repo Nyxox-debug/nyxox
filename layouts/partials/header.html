@@ -1,19 +1,15 @@
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<meta property="og:title" content="{{ .Title | default .Site.Title }}" />
-<meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}" />
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image | default .Site.Params.image }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:type" content="website" />
 <header>
   {{ $img := resources.Get "KingSolomon.jpg" }}
   {{ $resized := $img.Resize "51x50 q80" }}
-  <span style="display: flex; align-items: center; justify-content: flex-start; width: 101%;">
-    <img id="profile-img" src='{{ $resized.RelPermalink }}' alt="Profile"
-      style="border-radius: 51%; margin-right: 10px; object-fit: cover;">
-    <a href="{{ .Site.BaseURL }}" style="line-height: 51px; text-decoration: none; color: white;">{{ .Site.Title }}</a>
-  </span>
-  <br>
-  <div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
+  <div class="header-top">
+    <a href="{{ .Site.BaseURL }}" class="header-title">
+      <img id="profile-img" src="{{ $resized.RelPermalink }}" alt="Profile">
+      {{ .Site.Title }}
+    </a>
+    {{ with .Site.Params.subtitle }}
+    <span class="header-subtitle">{{ . }}</span>
+    {{ end }}
+  </div>
   <div class="links">
     <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "github") }}
@@ -24,26 +20,12 @@
     </a>
     {{ end }}
   </div>
-  <p>
   <nav>
-    <a href="{{ "posts/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }}
-      Posts</b></a>ء
-    <a href="{{ "categories/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
-      Categories</b></a>ء
-    <a href="{{ "tags/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
-      Tags</b></a>ء
-    <a href="{{ "about/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
-      About</b></a>ء
-    <a href="{{ "portfolio/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }}
-      Portfolio</b></a>ء
-    <a href="{{ "search/" | relLangURL }}"><b>
-      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "search") }}
-      Search</b></a>ء
+    <a href="{{ "posts/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }} Posts</b></a>ء
+    <a href="{{ "categories/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }} Categories</b></a>ء
+    <a href="{{ "tags/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }} Tags</b></a>ء
+    <a href="{{ "about/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }} About</b></a>ء
+    <a href="{{ "portfolio/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }} Portfolio</b></a>ء
+    <a href="{{ "search/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "search") }} Search</b></a>ء
   </nav>
-  </p>
 </header>

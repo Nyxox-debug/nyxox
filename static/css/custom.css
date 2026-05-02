@@ -903,3 +903,82 @@ article .summary-text {
 .taxonomy-pill:hover .taxonomy-count {
   color: #aaa;
 }
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  color: #fff !important;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.header-title img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline !important;
+  margin: 0 !important;
+}
+
+.header-subtitle {
+  font-size: 0.82rem;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #fff !important;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.header-title img {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline !important;
+  margin: 0 !important;
+}
+
+.header-subtitle {
+  font-size: 0.78rem;
+  color: #fff;
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
+header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.links {
+  margin: 8px 0;
+}
+
+nav {
+  margin-top: 8px;
+}
