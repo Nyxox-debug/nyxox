@@ -825,3 +825,81 @@ article .summary-text {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+.list-content {
+  margin: 12px 0 24px 0;
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.8;
+}
+
+.list-content h2 {
+  font-size: 0.78rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 16px 0 8px 0;
+}
+
+.list-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.list-content ul li {
+  border: none;
+  padding: 0;
+}
+
+.list-content ul li a {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  color: #888 !important;
+  text-decoration: none !important;
+}
+
+.list-content ul li a:hover {
+  background: #333;
+  color: #fff !important;
+}
+
+.taxonomy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.taxonomy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  font-size: 0.82rem;
+  color: #888 !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.taxonomy-pill:hover {
+  background: #333;
+  color: #fff !important;
+}
+
+.taxonomy-count {
+  font-size: 0.68rem;
+  color: #555;
+}
+
+.taxonomy-pill:hover .taxonomy-count {
+  color: #aaa;
+}

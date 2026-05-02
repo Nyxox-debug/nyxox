@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+  <div>
+    <div class="term-line">
+      <span class="term-path">~/victor</span>
+      <span class="term-prompt"> $</span> ls {{ .Title | lower }}/
+    </div>
+  </div>
+
+  <div class="taxonomy-list">
+    {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="taxonomy-pill">
+      {{ .Page.Title }}
+      <span class="taxonomy-count">{{ .Count }}</span>
+    </a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
