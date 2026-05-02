@@ -568,9 +568,10 @@ main li .post-title a:hover {
   }
 
   article .article-thumb {
-    flex: none;
-    width: 100%;
-    height: 180px;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: 200px;
+    border-radius: 4px;
   }
 
 }
@@ -653,9 +654,9 @@ article .article-link {
 }
 
 article .article-thumb {
-  flex: 0 0 100px;
-  width: 100px;
-  height: 72px;
+  flex: 0 0 140px;
+  width: 140px;
+  height: 100px;
   overflow: hidden;
   border-radius: 4px;
   display: block;
@@ -727,4 +728,46 @@ article .summary-text {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Single post page */
+.post-hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 0 20px 0;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.78rem;
+  opacity: 0.5;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.post-meta .tag {
+  display: inline-block;
+  padding: 1px 5px;
+  background: #222;
+  border-radius: 3px;
+  font-size: 0.68rem;
+  color: #fff !important;
+  opacity: 1;
+}
+
+.post-meta .tag:hover {
+  background: #444;
+  text-decoration: none !important;
+}
+
+@media (max-width: 480px) {
+  .post-hero-image {
+    height: 200px;
+    border-radius: 4px;
+  }
 }

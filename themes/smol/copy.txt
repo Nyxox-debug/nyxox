@@ -1,8 +1,8 @@
 # Prompt:
-this is the theme I use
+this is the codebase of the theme I use
 
 # File collection from: /home/nyxox/Documents/Projects/site/themes/smol
-# Generated: 2026-04-28 20:19:41
+# Generated: 2026-05-02 20:06:22
 ------------------------------------------------------------
 
 ## archetypes/default.md
