@@ -1036,3 +1036,21 @@ article .article-link.no-thumb {
     height: 180px;
   }
 }
+
+@media (max-width: 480px) {
+  article .article-link {
+    flex-direction: column;
+  }
+
+  article .article-thumb {
+    width: 100% !important;
+    height: 180px;
+    order: 1;
+  }
+
+  article .article-body {
+    order: 0;
+  }
+}
+
+
