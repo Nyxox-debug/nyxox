@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main>
+  <article>
+    {{ with .Params.featured_image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="post-hero-image" loading="lazy" />
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="content">{{ .Content }}</div>
+  </article>
+</main>
+{{ end }}
