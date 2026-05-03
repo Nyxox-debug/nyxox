@@ -1,38 +1,16 @@
 ---
 title: "About Me"
-description: "Learn more about me"
+date: 2021-08-01 09:04:00
+aliases:
+  - /contact
 ---
 
-## Who Am I
+My name is Victor, and I'm a computer science student with a passion for
+building things that matter.
 
-Hi! I'm Nyxox - a developer on a journey of continuous learning and building.
+I enjoy working on software that solves real problems. Some of the projects
+I'm most proud of include [OKIOS](https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/) and [Synap](https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/) — you can read more about
+them on my [blog](https://nyxox-debug.github.io/nyxox/posts/projects/).
 
-## My Background
-
-I started my coding journey because I wanted to understand how things work under the hood. What started as curiosity has grown into a passion for building useful things.
-
-## What I Do
-
-- **Web Development** - Building modern, responsive websites
-- **Learning** - Always exploring new technologies and frameworks
-- **Problem Solving** - Breaking down complex problems into manageable pieces
-
-## Skills
-
-- JavaScript / TypeScript
-- Python
-- Hugo (this blog!)
-- HTML & CSS
-
-## Interests
-
-When I'm not coding, you can find me:
-- Reading about new technologies
-- Gaming
-- Exploring open source projects
-
-## Connect
-
-Feel free to reach out or follow my work on [GitHub](https://github.com/Nyxox-debug).
-
-Thanks for visiting!
+I'm always looking to grow as an engineer, explore new ideas, and connect
+with others who love what they build.
