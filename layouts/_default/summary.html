@@ -1,11 +1,9 @@
 <article>
   <div class="article-link">
-    {{ with .Params.featured_image }}
-    <a class="article-thumb" href="{{ $.Permalink }}">
-      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" />
-    </a>
-    {{ end }}
     <div class="article-body">
+      <a href="{{ .Permalink }}" class="article-title">
+        <h1>{{ .Title }}</h1>
+      </a>
       <div class="meta">
         <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
         {{ range .Params.tags }}
@@ -20,9 +18,11 @@
         </span>
         {{ end }}
       </div>
-      <a href="{{ .Permalink }}" class="article-title">
-        <h1>{{ .Title }}</h1>
+      {{ with .Params.featured_image }}
+      <a class="article-thumb" href="{{ $.Permalink }}" style="display: block; width: 100%; height: 180px; margin: 8px 0;">
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" />
       </a>
+      {{ end }}
       <div class="summary-text">
         {{ .Summary }}
         {{ if .Truncated }}<span class="read-more">Read more →</span>{{ end }}

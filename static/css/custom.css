@@ -1025,3 +1025,14 @@ article .article-link.no-thumb {
   border-left: 2px solid #222;
   padding-left: 12px;
 }
+
+@media (max-width: 480px) {
+  article .article-link {
+    flex-direction: column;
+  }
+
+  article .article-thumb {
+    width: 100% !important;
+    height: 180px;
+  }
+}
