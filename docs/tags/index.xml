@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Victor</title>
+    <link>https://nyxox-debug.github.io/nyxox/tags/</link>
+    <description>Recent content in Tags on Victor</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Machine-Learning</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/machine-learning/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/python/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cpp</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/cpp/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neural-Networks</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/neural-networks/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/neural-networks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neuroevolution</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/neuroevolution/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/neuroevolution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opengl</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/opengl/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/opengl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simulation</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/simulation/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/simulation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autograd</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/autograd/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/autograd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C++</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/c++/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/c++/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deep-Learning</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/deep-learning/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tensors</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/tensors/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/tensors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graphics</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/graphics/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/graphics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shaders</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/shaders/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/shaders/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ast</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/ast/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/ast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compiler</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/compiler/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/compiler/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/go/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interpreter</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/interpreter/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/interpreter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree-Sitter</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/tree-sitter/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/tree-sitter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web-Dev</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/web-dev/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/web-dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/blogging/</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal</title>
+      <link>https://nyxox-debug.github.io/nyxox/tags/personal/</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/tags/personal/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Victor</title>
+    <link>https://nyxox-debug.github.io/nyxox/</link>
+    <description>Recent content on Victor</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nyxox-debug.github.io/nyxox/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Logistic Nn</title>
+      <link>https://nyxox-debug.github.io/nyxox/quotes/logistic-nn/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/quotes/logistic-nn/</guid>
+      <description>&lt;p&gt;Logistic regression ≈ a neural network with no hidden layers and a sigmoid output neuron.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Quote</title>
+      <link>https://nyxox-debug.github.io/nyxox/quotes/some-quote/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/quotes/some-quote/</guid>
+      <description>&lt;p&gt;You have power over your mind, not outside events. Realize this, and you will find strength.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an Email Priority Classifier</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention &lt;em&gt;right now&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Built an Artificial Life Simulation in C++</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been curious about emergence. How does organized, purposeful behavior arise from simple rules? How does a colony of ants, with no central planner, manage to build complex structures and find food efficiently?&lt;/p&gt;&#xA;&lt;p&gt;So I built &lt;strong&gt;OKIOS&lt;/strong&gt; — named after the Greek &lt;em&gt;οἶκος&lt;/em&gt;, meaning home or habitat. It&amp;rsquo;s a 3D artificial life simulation where creatures with neural-network brains learn to survive entirely on their own. No predefined roles. No hand-coded behaviors. Just pressure, time, and mutation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a Neural Network Framework from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</guid>
+      <description>&lt;p&gt;I use PyTorch every day at work. It&amp;rsquo;s incredible - but I&amp;rsquo;ve always wondered: how does it actually work under the hood? How does &lt;code&gt;backward()&lt;/code&gt; actually compute gradients through a neural network?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own minimal deep learning framework called &lt;strong&gt;Synap&lt;/strong&gt;. It&amp;rsquo;s written in C++ for performance, with Python bindings via pybind11. No external ML libraries - just raw tensor operations and automatic differentiation from scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a 3D Renderer from Scratch</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what&amp;rsquo;s actually happening on the GPU? That&amp;rsquo;s exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.&lt;/p&gt;&#xA;&lt;p&gt;No engines. No magic. Just raw graphics programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Built a Programming Language in Go</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always been fascinated by programming languages. How does code actually become a running program? What happens when you type &lt;code&gt;let x = 5;&lt;/code&gt; in a REPL?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own. Meet &lt;strong&gt;Bat&lt;/strong&gt; - a tiny interpreted programming language written entirely in Go. It&amp;rsquo;s not useful for production, but it taught me how interpreters actually work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a GitHub Analyzer with Go and Python</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</guid>
+      <description>&lt;p&gt;Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.&lt;/p&gt;&#xA;&lt;p&gt;The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I Started This Blog</title>
+      <link>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</guid>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web development projects&lt;/li&gt;&#xA;&lt;li&gt;Learning new technologies&lt;/li&gt;&#xA;&lt;li&gt;Life updates and thoughts&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://nyxox-debug.github.io/nyxox/about/</link>
+      <pubDate>Sun, 01 Aug 2021 09:04:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/about/</guid>
+      <description>&lt;p&gt;My name is Victor, and I&amp;rsquo;m a computer science student with a passion for&#xA;building things that matter.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy working on software that solves real problems. Some of the projects&#xA;I&amp;rsquo;m most proud of include &lt;a href=&#34;https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/&#34;&gt;OKIOS&lt;/a&gt; and &lt;a href=&#34;https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/&#34;&gt;Synap&lt;/a&gt; — you can read more about&#xA;them on my &lt;a href=&#34;https://nyxox-debug.github.io/nyxox/posts/projects/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m always looking to grow as an engineer, explore new ideas, and connect&#xA;with others who love what they build.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>https://nyxox-debug.github.io/nyxox/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/portfolio/</guid>
+      <description>&lt;div class=&#34;note&#34;&gt;&#xA;  &lt;span class=&#34;note-label&#34;&gt;NOTE&lt;/span&gt;&#xA;  &lt;span class=&#34;note-text&#34;&gt;This is my CV. You may want to view my &lt;a href=&#34;./resume.pdf&#34;&gt;resume&lt;/a&gt; instead.&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;victor&#34;&gt;Victor&lt;/h1&gt;&#xA;&lt;p&gt;Full-stack engineer · Backend architecture · Systems programming · Modern web&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://itserviceafrica.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ITSA&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Hackathon&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, Node.js, Backend Development, Testing&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Competed in the IT Services Desk Africa hackathon, enhancing ITSA&amp;rsquo;s device health management system.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Collaborated with a cross-functional team to improve system performance&lt;/li&gt;&#xA;&lt;li&gt;Diagnosed, reported, and resolved software issues&lt;/li&gt;&#xA;&lt;li&gt;Wrote, reviewed, and validated backend code and tests to ensure reliability&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://hireuslogistics.ng/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;HireusLogistic&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Recent&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, MongoDB, Redis, OAuth 2.0, Docker, Kubernetes&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

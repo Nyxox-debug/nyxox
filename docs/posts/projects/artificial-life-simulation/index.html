@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>I Built an Artificial Life Simulation in C&#43;&#43;</title>
+	<link rel="icon" type="image/svg+xml" href="/nyxox/favicon.svg">
+	<link rel="canonical" href="https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/">
+	<meta name="description" content="Software engineer portfolio and blog focused on systems programming, web development, and backend engineering.">
+	<meta name="author" content="Nyxox">
+
+	<meta property="og:title" content="I Built an Artificial Life Simulation in C&#43;&#43;">
+	<meta property="og:description" content="Software engineer portfolio and blog focused on systems programming, web development, and backend engineering.">
+	<meta property="og:url" content="https://nyxox-debug.github.io/nyxox/posts/projects/artificial-life-simulation/">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Victor">
+	
+	<meta property="og:image" content="https://nyxox-debug.github.io/nyxox/images/okios.png">
+	
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="I Built an Artificial Life Simulation in C&#43;&#43;">
+	<meta name="twitter:description" content="Software engineer portfolio and blog focused on systems programming, web development, and backend engineering.">
+	
+	<meta name="twitter:image" content="https://nyxox-debug.github.io/nyxox/images/okios.png">
+	
+
+	<link rel="stylesheet" href="/nyxox/css/style.css">
+	<link rel="stylesheet" href="/nyxox/css/chroma.css">
+	<link rel="stylesheet" href="/nyxox/css/style.css?rnd=1779795842">
+	
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+  
+  
+  <div class="header-top">
+    <a href="https://nyxox-debug.github.io/nyxox/" class="header-title">
+      <img id="profile-img" src="/nyxox/KingSolomon_hu_8f44ae6565bcc694.jpg" alt="Profile">
+      Victor<span class="header-handle">(Nyxox)</span>
+    </a>
+    
+    <span class="header-subtitle">neural nets and chill</span>
+    
+  </div>
+  <div class="links">
+    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
+      <svg aria-hidden="true" class="bi bi-github hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+</svg>
+    </a>
+    
+  </div>
+  <nav>
+    <a href="/nyxox/posts/"><b><svg aria-hidden="true" class="bi bi-file-text hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+</svg> Posts</b></a>ء
+    <a href="/nyxox/categories/"><b><svg aria-hidden="true" class="bi bi-folder hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"/>
+</svg> Categories</b></a>ء
+    <a href="/nyxox/tags/"><b><svg aria-hidden="true" class="bi bi-tag hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+  <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+</svg> Tags</b></a>ء
+    <a href="/nyxox/about/"><b><svg aria-hidden="true" class="bi bi-person hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+</svg> About</b></a>ء
+    <a href="/nyxox/portfolio/"><b><svg aria-hidden="true" class="bi bi-briefcase hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+</svg> Portfolio</b></a>ء
+    <a href="/nyxox/search/"><b><svg aria-hidden="true" class="bi bi-search hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg> Search</b></a>ء
+    <a href="/nyxox/quotes/"><b><svg aria-hidden="true" class="bi bi-chat-quote hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+  <path d="M7.066 6.76A1.665 1.665 0 0 0 4 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+</svg> Quotes</b></a>ء
+  </nav>
+</header>
+
+	
+<main>
+  <article>
+    
+    <img src="/nyxox/images/okios.png" alt="I Built an Artificial Life Simulation in C&#43;&#43;" class="post-hero-image" loading="lazy" />
+    
+    <h1>I Built an Artificial Life Simulation in C&#43;&#43;</h1>
+    
+    <div class="post-meta">
+      <span class="date">4 Apr 2026</span>
+      
+      
+      <a href="/nyxox/tags/cpp" class="tag">cpp</a>
+      
+      <a href="/nyxox/tags/opengl" class="tag">opengl</a>
+      
+      <a href="/nyxox/tags/neural-networks" class="tag">neural-networks</a>
+      
+      <a href="/nyxox/tags/simulation" class="tag">simulation</a>
+      
+      <a href="/nyxox/tags/neuroevolution" class="tag">neuroevolution</a>
+      
+      
+      
+      <span class="github-link">
+        <a href="https://github.com/Nyxox-debug/OKIOS" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          View on GitHub
+        </a>
+      </span>
+      
+    </div>
+    
+    <div class="content"><p>I&rsquo;ve always been curious about emergence. How does organized, purposeful behavior arise from simple rules? How does a colony of ants, with no central planner, manage to build complex structures and find food efficiently?</p>
+<p>So I built <strong>OKIOS</strong> — named after the Greek <em>οἶκος</em>, meaning home or habitat. It&rsquo;s a 3D artificial life simulation where creatures with neural-network brains learn to survive entirely on their own. No predefined roles. No hand-coded behaviors. Just pressure, time, and mutation.</p>
+<h2 id="the-idea">The Idea</h2>
+<p>The premise is simple: spawn a population of identical agents in a shared 3D environment. Each agent starts with no knowledge and the same capabilities. Food is scattered across the terrain. Eat enough, reproduce. Starve, die.</p>
+<p>Over time, behavioral patterns emerge. Not because I programmed them — but because survival pressure selects for them.</p>
+<p>The core question I wanted to explore:</p>
+<blockquote>
+<p>How does organized structure emerge from decentralized, self-interested agents?</p>
+</blockquote>
+<h2 id="what-it-looks-like">What It Looks Like</h2>
+<p>The world is a procedurally generated terrain rendered with OpenGL. Creatures are small cubes with red tails — the tail tracks behind the body via a joint system. Food items are small golden cubes scattered across the map. The camera is free-fly so you can watch the simulation from any angle.</p>
+<p>Each frame runs 60 simulation steps at a fixed timestep, so the creatures are thinking and moving much faster than real time.</p>
+<h2 id="the-architecture">The Architecture</h2>
+<p>The simulation is built around an <strong>Entity-Component System (ECS)</strong>. Every object in the world — creature, food, light source — is just an integer ID. Components attach data to that ID:</p>
+<ul>
+<li><code>TransformComponent</code> — position, rotation, scale</li>
+<li><code>VelocityComponent</code> — current velocity</li>
+<li><code>MeshComponent</code> — renderable geometry</li>
+<li><code>LifeComponent</code> — health, hunger, meals eaten</li>
+<li><code>BrainComponent</code> — the neural network</li>
+<li><code>JointComponent</code> — attaches a tail to a parent body</li>
+</ul>
+<p>Systems then operate on entities that have the right combination of components. <code>MovementSystem</code> reads velocity and writes position. <code>LifeSystem</code> drains health when hungry. <code>BrainSystem</code> runs the neural network and outputs a movement direction.</p>
+<p>The separation is clean. The brain doesn&rsquo;t know about rendering. The renderer doesn&rsquo;t know about physics.</p>
+<h2 id="the-brain">The Brain</h2>
+<p>Each creature has a small feedforward neural network:</p>
+<pre tabindex="0"><code>Inputs (5) → Hidden Layer (8, tanh) → Outputs (2, tanh)
+</code></pre><p>The inputs are:</p>
+<ul>
+<li>Normalized health</li>
+<li>Normalized hunger</li>
+<li>Direction to nearest food (2D vector)</li>
+<li>Distance to nearest food (normalized)</li>
+</ul>
+<p>The outputs are a 2D movement direction vector. The creature steers toward whatever the network says.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">output</span> <span class="n">Brain</span><span class="o">::</span><span class="n">forward</span><span class="p">(</span><span class="k">const</span> <span class="n">input</span> <span class="o">&amp;</span><span class="n">in</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="mi">5</span><span class="o">&gt;</span> <span class="n">inputs</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">in</span><span class="p">.</span><span class="n">health</span><span class="p">,</span> <span class="n">in</span><span class="p">.</span><span class="n">hunger</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">in</span><span class="p">.</span><span class="n">direction</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">in</span><span class="p">.</span><span class="n">direction</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">in</span><span class="p">.</span><span class="n">distance</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// hidden layer with tanh activation
+</span></span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">biasHidden</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">sum</span> <span class="o">+=</span> <span class="n">weightsInputHidden</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">inputs</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hidden</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">tanh</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// output layer
+</span></span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">biasOutput</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">sum</span> <span class="o">+=</span> <span class="n">weightsHiddenOutput</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">hidden</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">tanh</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">])};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Simple. But what matters is <em>how the weights get trained</em> — and that&rsquo;s where the interesting journey happened.</p>
+<h2 id="the-training-journey-from-reinforce-to-neuroevolution">The Training Journey: From REINFORCE to Neuroevolution</h2>
+<p>This is the part that taught me the most.</p>
+<h3 id="first-attempt-reinforce">First Attempt: REINFORCE</h3>
+<p>My first instinct was to use the <strong>REINFORCE algorithm</strong> — a classic policy gradient method from reinforcement learning. The idea is straightforward: run the agent, collect rewards, and nudge the network weights in the direction that made good outcomes more likely.</p>
+<p>The reward signal was tied to health and hunger:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">life</span><span class="p">.</span><span class="n">reward</span> <span class="o">=</span> <span class="p">(</span><span class="n">life</span><span class="p">.</span><span class="n">health</span> <span class="o">/</span> <span class="n">life</span><span class="p">.</span><span class="n">maxHealth</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">life</span><span class="p">.</span><span class="n">hunger</span> <span class="o">/</span> <span class="n">life</span><span class="p">.</span><span class="n">maxHunger</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">life</span><span class="p">.</span><span class="n">cumulativeReward</span> <span class="o">+=</span> <span class="n">life</span><span class="p">.</span><span class="n">reward</span> <span class="o">*</span> <span class="n">dt</span><span class="p">;</span>
+</span></span></code></pre></div><p>In theory, the agent should learn to keep its health high and its hunger low — which means finding food.</p>
+<p>In practice, it was a mess. The gradient estimates were extremely noisy. The network weights oscillated wildly. Agents would briefly stumble toward food, then forget. The population kept dying before anything useful could be learned. The fundamental problem with REINFORCE in this setting is that the reward signal is sparse and delayed — the agent doesn&rsquo;t know <em>which</em> of its many decisions actually led to finding food.</p>
+<h3 id="second-attempt-neuroevolution">Second Attempt: Neuroevolution</h3>
+<p>I went looking for alternatives and landed on <strong>neuroevolution</strong> — specifically, training the neural network through a genetic algorithm rather than gradient descent.</p>
+<p>The idea is to treat the network weights as a genome. Instead of computing gradients, you:</p>
+<ol>
+<li>Keep a population of agents with different weight configurations</li>
+<li>Let them run — survivors that eat more get to reproduce</li>
+<li>Offspring inherit the parent&rsquo;s weights with small random mutations</li>
+<li>Repeat</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Brain</span> <span class="n">Brain</span><span class="o">::</span><span class="n">mutate</span><span class="p">(</span><span class="kt">float</span> <span class="n">mutationRate</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">mt19937</span> <span class="o">&amp;</span><span class="n">rng</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">uniform_real_distribution</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">dist</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0f</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Brain</span> <span class="n">child</span> <span class="o">=</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">w</span> <span class="p">:</span> <span class="n">child</span><span class="p">.</span><span class="n">weightsInputHidden</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span> <span class="o">+=</span> <span class="n">dist</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span> <span class="o">*</span> <span class="n">mutationRate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">w</span> <span class="p">:</span> <span class="n">child</span><span class="p">.</span><span class="n">weightsHiddenOutput</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">w</span> <span class="o">+=</span> <span class="n">dist</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span> <span class="o">*</span> <span class="n">mutationRate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">b</span> <span class="p">:</span> <span class="n">child</span><span class="p">.</span><span class="n">biasHidden</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">+=</span> <span class="n">dist</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span> <span class="o">*</span> <span class="n">mutationRate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">b</span> <span class="p">:</span> <span class="n">child</span><span class="p">.</span><span class="n">biasOutput</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">+=</span> <span class="n">dist</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span> <span class="o">*</span> <span class="n">mutationRate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">child</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Reproduction is gated behind eating 4 meals. The best-performing creatures (sorted by cumulative reward) reproduce first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">ranked</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">ranked</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">greater</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="p">[</span><span class="n">score</span><span class="p">,</span> <span class="n">id</span><span class="p">]</span> <span class="o">:</span> <span class="n">ranked</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">life</span><span class="p">.</span><span class="n">mealAmount</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Brain</span> <span class="n">childBrain</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">sentients</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">id</span><span class="p">).</span><span class="n">brain</span><span class="p">.</span><span class="n">mutate</span><span class="p">(</span><span class="mf">0.1f</span><span class="p">,</span> <span class="n">getRng</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="n">spawnCreature</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">verts</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">childBrain</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This worked dramatically better. Within a few generations, creatures reliably navigate toward food. No gradient computation, no backprop — just selection pressure and noise.</p>
+<p>The key insight is that <strong>neuroevolution sidesteps the credit assignment problem entirely</strong>. You don&rsquo;t need to know which decision caused the reward. You just need to know which agent survived longer — and nature handles the rest.</p>
+<h2 id="other-systems">Other Systems</h2>
+<h3 id="movement--physics">Movement &amp; Physics</h3>
+<p>The movement system applies velocity, clamps speed, adds gravity, and snaps creatures to terrain height. Creatures can&rsquo;t walk off the map — boundary collision zeroes out the relevant velocity component.</p>
+<p>Rotation is handled by smoothly interpolating toward the direction of movement using <code>glm::mix</code>, so creatures naturally face where they&rsquo;re going.</p>
+<h3 id="collision">Collision</h3>
+<p>AABB collision detection between all non-tail entities. On overlap, the minimum penetration axis is resolved by pushing both bodies apart. If only one body is dynamic (e.g., a creature hitting a static object), the full penetration goes to the dynamic one. Velocities are swapped or zeroed accordingly.</p>
+<h3 id="population-management">Population Management</h3>
+<p>A minimum population floor keeps the simulation alive. If the creature count drops below 6, the system spawns new creatures by mutating the best surviving brain — or a fresh random one if everyone is dead.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">creatureCount</span> <span class="o">&lt;</span> <span class="n">MIN_POPULATION</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Brain</span> <span class="n">seedBrain</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">sentients</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="o">?</span> <span class="nl">freshBrain</span>
+</span></span><span class="line"><span class="cl">    <span class="p">:</span> <span class="n">world</span><span class="p">.</span><span class="n">sentients</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">brain</span><span class="p">.</span><span class="n">mutate</span><span class="p">(</span><span class="mf">0.05f</span><span class="p">,</span> <span class="n">getRng</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// spawn needed creatures from mutated seed
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="what-i-learned">What I Learned</h2>
+<p><strong>REINFORCE is hard to tune in sparse environments.</strong> Policy gradient methods need dense, frequent reward signals to work well. A creature wandering a large terrain, eating occasionally, doesn&rsquo;t get that signal often enough.</p>
+<p><strong>Neuroevolution is surprisingly robust.</strong> No learning rate, no gradient clipping, no replay buffer. Just mutation rate and selection pressure. For simulations where you can run many agents in parallel, it&rsquo;s a remarkably practical approach.</p>
+<p><strong>ECS makes simulation code clean.</strong> Systems only care about the components they need. Adding a new behavior means adding a new system — nothing else changes.</p>
+<p><strong>Emergence is real and weird to watch.</strong> Once the brains are even slightly trained, you start seeing group behavior that you never programmed. Clusters form around food. Some creatures patrol. It&rsquo;s not intelligence — but it looks like something.</p>
+<h2 id="whats-next">What&rsquo;s Next</h2>
+<p>OKIOS is still a work in progress. Some things I want to explore:</p>
+<ul>
+<li>Agent-to-agent perception (can creatures detect each other?)</li>
+<li>Predator/prey dynamics</li>
+<li>More complex terrain with resource scarcity zones</li>
+<li>Crossover between two parent brains, not just mutation</li>
+</ul>
+<p>The simulation currently answers a small version of the big question. But the bigger question — true emergent cooperation and specialization — is still ahead.</p>
+<p>The habitat is just getting started.</p></div>
+  </article>
+</main>
+
+	<footer>
+  <p>&copy; 2026
+    
+    Nyxox.
+    <a href="https://github.com/Nyxox-debug"><b>Github</b></a>.
+  </p>
+</footer>
+
+	
+</body>
+</html>
