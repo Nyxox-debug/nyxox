@@ -10,7 +10,7 @@ theme = 'smol'
     dateFmt = "2 Jan 2006"
     profileImage = "KingSolomon.jpg"
     mainSections = ["posts"]
-    customCSS = ["css/custom.css"]
+    customCSS = ["css/style.css"]
     
 [params.icons]
     throw_on_error = false
