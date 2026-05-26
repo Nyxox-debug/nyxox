@@ -1,0 +1,17 @@
+{{ $quotes := where .Site.RegularPages "Type" "quotes" }}
+{{ if $quotes }}
+<section class="recent-quotes">
+  <div class="term-line">
+    <span class="term-path">~/victor</span>
+    <span class="term-prompt"> $</span> shuf -n 1 quotes.txt
+  </div>
+  {{ $random := index (shuffle $quotes) 0 }}
+  <blockquote class="quote-entry">
+    <div class="quote-text">{{ $random.Content }}</div>
+    <footer class="quote-attribution">
+      {{ with $random.Params.author }}<cite>— {{ . }}</cite>{{ end }}
+    </footer>
+  </blockquote>
+  <a href="{{ "quotes/" | relLangURL }}" class="view-all">cat all quotes/ →</a>
+</section>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main>
+  <div class="term-line">
+    <span class="term-path">~/victor</span>
+    <span class="term-prompt"> $</span> cat quotes.txt
+  </div>
+  <div class="quotes-list">
+    {{ range .Paginator.Pages }}
+    {{ $page := . }}
+    <a href="{{ .Permalink }}" class="quote-link">
+      <blockquote class="quote-entry">
+        <div class="quote-text">{{ .Content }}</div>
+        <footer class="quote-attribution">
+          {{ with .Params.author }}
+            {{ if $page.Params.author_url }}
+              <cite>— <a href="{{ $page.Params.author_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a></cite>
+            {{ else }}
+              <cite>— {{ . }}</cite>
+            {{ end }}
+          {{ end }}
+          {{ with .Params.source }}<span class="quote-source">{{ . }}</span>{{ end }}
+        </footer>
+      </blockquote>
+    </a>
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</main>
+{{ end }}

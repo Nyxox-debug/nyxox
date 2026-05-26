@@ -1,0 +1,4 @@
+---
+title: "Quotes"
+layout: "quotes"
+---

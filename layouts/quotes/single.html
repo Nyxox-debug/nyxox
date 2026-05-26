@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main>
+  <article>
+    <blockquote class="quote-entry quote-single">
+      <div class="quote-text">{{ .Content }}</div>
+      <footer class="quote-attribution">
+        {{ with .Params.author }}
+          {{ if $.Params.author_url }}
+            <cite>— <a href="{{ $.Params.author_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a></cite>
+          {{ else }}
+            <cite>— {{ . }}</cite>
+          {{ end }}
+        {{ end }}
+        {{ with .Params.source }}<span class="quote-source">{{ . }}</span>{{ end }}
+      </footer>
+    </blockquote>
+    <div class="post-meta">
+      <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
+    </div>
+  </article>
+</main>
+{{ end }}
