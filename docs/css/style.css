@@ -1,196 +1,69 @@
-html {
-  overflow-y: scroll
-}
-
-:root {
-  --bgcolor: white;
-  --fontcolor: #444;
-  --linkcolor: #00e;
-  --visitedcolor: #551a8b;
-  --precolor: #fff;
-  --prebgcolor: #000;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bgcolor: black;
-    --fontcolor: white;
-    --linkcolor: #5bf;
-    --visitedcolor: #ae5ee0;
-    --precolor: #fff;
-    --prebgcolor: #383838;
-  }
-}
-
-body {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 10px;
-  font: 14px/1.5 monospace;
-  color: var(--fontcolor);
-  background: var(--bgcolor);
-  font-family: 'JetBrains Mono', monospace !important;
-}
-
-a:link {
-  color: var(--linkcolor)
-}
-
-a:visited {
-  color: var(--visitedcolor)
-}
-
-a:active {
-  color: var(--visitedcolor)
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2
-}
-
-p>code {
-  color: var(--precolor);
-  background: var(--prebgcolor);
-  padding: 2px
-}
-
-code {
-  color: var(--precolor);
-  background: var(--prebgcolor);
-  padding: 2px
-}
-
-pre {
-  color: var(--precolor);
-  background: var(--prebgcolor);
-  padding: 24px;
-  overflow-x: auto
-}
-
-article {
-  padding: 24px 0
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-figcaption {
-  color: #888;
-  font: 12px/1.5 monospace;
-  text-align: center;
-}
-
-figure {
-  margin: auto
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto
-}
-
-header img {
-  display: inline !important;
-  margin: 0 10px 0 0 !important;
-}
-
-a {
-  color: #888888 !important;
-  text-decoration: none;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.links a {
-  display: inline-block;
-  margin-left: 10px;
-  color: white !important;
-}
-
-.links a svg {
-  width: 28px;
-  height: 28px;
-  fill: white;
-}
-
-.github-link {
-  display: inline-block;
-  margin-left: 12px;
-}
-
-.github-link a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  background: #24292e;
-  color: white !important;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.github-link a:hover {
-  background: #2f363d;
-  text-decoration: none;
-}
-
-.note {
-  background: #1a1a1a;
-  border-left: 4px solid #666;
+.quote-entry {
+  margin: 0 0 24px 0;
   padding: 16px 20px;
-  margin: 24px 0;
-  font-size: 14px;
-  line-height: 1.6;
+  border-left: 2px solid #333;
+  background: #000;
 }
 
-.note-label {
-  font-weight: 700;
-  margin-right: 10px;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
-.note-text {
+.quote-text {
+  font-size: 0.95rem;
   color: #ccc;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 10px 0;
 }
 
-.note-text a {
-  color: #ccc !important;
+.quote-attribution {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.quote-attribution cite {
+  font-style: normal;
+  color: #888;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  opacity: 0.6;
+}
+
+.quote-single {
+  margin-top: 24px;
+  padding: 24px 28px;
+}
+
+.recent-quotes {
+  margin-top: 32px;
+}
+
+.quote-link {
+  display: block;
+  text-decoration: none !important;
+}
+
+.quote-link:hover .quote-entry {
+  border-left-color: #555;
+}
+
+.quote-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.quote-link:hover .quote-entry {
+  border-left-color: #555;
+}
+
+.quote-attribution a {
+  color: #888 !important;
   text-decoration: underline !important;
   text-underline-offset: 3px;
 }
 
-.note-text a:hover {
-  color: #fff !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  .note {
-    background: #0a0a0a;
-    border-left-color: #888;
-  }
-  .note-label {
-    color: #fff;
-  }
-  .note-text {
-    color: #bbb;
-  }
-  .note-text a {
-    color: #bbb !important;
-  }
-  .note-text a:hover {
-    color: #fff !important;
-  }
+.quote-attribution a:hover {
+  color: #ccc !important;
 }

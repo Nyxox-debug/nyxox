@@ -6,8 +6,22 @@
     <description>Recent content on Victor</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox-debug.github.io/nyxox/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Logistic Nn</title>
+      <link>https://nyxox-debug.github.io/nyxox/quotes/logistic-nn/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/quotes/logistic-nn/</guid>
+      <description>&lt;p&gt;Logistic regression ≈ a neural network with no hidden layers and a sigmoid output neuron.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Quote</title>
+      <link>https://nyxox-debug.github.io/nyxox/quotes/some-quote/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox-debug.github.io/nyxox/quotes/some-quote/</guid>
+      <description>&lt;p&gt;You have power over your mind, not outside events. Realize this, and you will find strength.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building an Email Priority Classifier</title>
       <link>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</link>
