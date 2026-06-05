@@ -33,9 +33,6 @@
       {{ .Render "summary" }}
     {{ end }}
     {{ if gt $paginator.TotalPages 1 }}
-    <div class="pagination">
-      <a href="{{ "posts/" | relLangURL }}" class="view-all">View all posts →</a>
-    </div>
     {{ end }}
     {{ partial "pagination.html" . }}
   </section>

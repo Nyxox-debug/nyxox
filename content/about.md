@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About"
 date: 2021-08-01 09:04:00
 aliases:
   - /contact

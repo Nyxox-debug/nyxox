@@ -9,7 +9,7 @@
       Posted on <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
     </div>
     <div class="meta">
-        <span>Tags: </span>
+        <span style="color: #fff;">Tags: </span>
       {{ range .Params.tags }}
       <a href="{{ "/nyxox/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
       {{ end }}
