@@ -2,18 +2,20 @@
 <main>
   <div>
     <div class="term-line">
-      <span class="term-path">~/victor</span>
+      <span class="term-path">~/nyxox</span>
       <span class="term-prompt"> $</span> ls {{ .Title | lower }}/
     </div>
   </div>
 
   <div class="taxonomy-list">
-    {{ range .Data.Terms.Alphabetical }}
+    {{- range .Data.Terms.Alphabetical -}}
     <a href="{{ .Page.RelPermalink }}" class="taxonomy-pill">
       {{ .Page.Title }}
       <span class="taxonomy-count">{{ .Count }}</span>
     </a>
-    {{ end }}
+    {{- end -}}
   </div>
+
+  {{ partial "pagination.html" . }}
 </main>
 {{ end }}

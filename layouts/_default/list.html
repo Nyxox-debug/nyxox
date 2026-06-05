@@ -4,7 +4,7 @@
   <div>
     {{ with .Title }}
     <div class="term-line">
-      <span class="term-path">~/victor</span>
+      <span class="term-path">~/nyxox</span>
       <span class="term-prompt"> $</span> ls {{ . | lower }}/
     </div>
     {{ end }}
@@ -14,9 +14,18 @@
   </div>
   {{ end }}
 
-  {{ range .Paginator.Pages }}
-    {{ .Render "summary" }}
-  {{ end }}
+  <ul>
+    {{- range .Site.RegularPages -}}
+    {{- if hasPrefix .RelPermalink "/nyxox/posts/" -}}
+    <li>
+      <div class="post-title">
+        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        <a href="{{ .RelPermalink }}" style="text-decoration: none;">{{ .Title }}</a>
+      </div>
+    </li>
+    {{- end -}}
+    {{- end -}}
+  </ul>
 
   {{ partial "pagination.html" . }}
 </main>

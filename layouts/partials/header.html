@@ -1,18 +1,28 @@
 <header>
   {{ $img := resources.Get "KingSolomon.jpg" }}
-  {{ $resized := $img.Resize "51x50 q80" }}
-  <div class="header-top">
-    <a href="{{ .Site.BaseURL }}" class="header-title">
-      <img id="profile-img" src="{{ $resized.RelPermalink }}" alt="Profile">
-      {{ .Site.Title }}<span class="header-handle">(Nyxox)</span>
-    </a>
+  <div class="name-and-subtitle">
+    <div class="site-title">
+      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}<span class="header-handle"> (Nyxox)</span></a>
+    </div>
     {{ with .Site.Params.subtitle }}
-    <span class="header-subtitle">{{ . }}</span>
+    <div class="site-subtitle">{{ . }}</div>
     {{ end }}
   </div>
+  {{ with $img }}
+  <a href="{{ $.Site.BaseURL }}" class="site-image">
+    {{ $resized := .Resize "300x webp photo" }}
+    <img src="{{ $resized.RelPermalink }}" width="150" height="150" alt="{{ $.Site.Title }}">
+  </a>
+  {{ end }}
   <div class="links">
     <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "github") }}
+    </a>
+    <a href="mailto:numterminal@gmail.com" title="Email">
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "envelope") }}
+    </a>
+    <a href="https://linkedin.com/in/victor-c-6791692a6" target="_blank" title="LinkedIn">
+      {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "linkedin") }}
     </a>
     {{ with .OutputFormats.Get "RSS" }}
     <a href="{{ .RelPermalink }}" target="_blank" title="RSS Feed">
@@ -21,12 +31,41 @@
     {{ end }}
   </div>
   <nav>
-    <a href="{{ "posts/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }} Posts</b></a>ء
-    <a href="{{ "categories/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }} Categories</b></a>ء
-    <a href="{{ "tags/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }} Tags</b></a>ء
-    <a href="{{ "about/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }} About</b></a>ء
-    <a href="{{ "portfolio/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }} Portfolio</b></a>ء
-    <a href="{{ "search/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "search") }} Search</b></a>ء
-    <a href="{{ "quotes/" | relLangURL }}"><b>{{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "chat-quote") }} Quotes</b></a>ء
+    <div class="nav-links" style="border   ">
+      <a href="{{ "about/" | relLangURL }}" title="About">
+        {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
+        <span>About</span>
+      </a>
+      <a href="{{ "portfolio/" | relLangURL }}" title="Portfolio">
+        {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "briefcase") }}
+        <span>Portfolio</span>
+      </a>
+      <div class="posts">
+        <a href="{{ "posts/" | relLangURL }}" title="Posts">
+          {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "file-text") }}
+          <span>Posts</span>
+        </a>
+        <div class="categories-tags-collapsed">
+          (<a href="{{ "categories/" | relLangURL }}" title="Categories">
+            {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
+          </a>
+          <a href="{{ "tags/" | relLangURL }}" title="Tags">
+            {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
+          </a>)
+        </div>
+      </div>
+      <a href="{{ "categories/" | relLangURL }}" title="Categories" class="categories-link">
+        {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
+        <span>Categories</span>
+      </a>
+      <a href="{{ "tags/" | relLangURL }}" title="Tags" class="tags-link">
+        {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
+        <span>Tags</span>
+      </a>
+      <a href="{{ "search/" | relLangURL }}" title="Search" class="search-link">
+        {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "search") }}
+        <span>Search</span>
+      </a>
+    </div>
   </nav>
 </header>
