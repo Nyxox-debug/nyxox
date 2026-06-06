@@ -3,6 +3,7 @@ title: "Building a Neural Network Framework from Scratch"
 date: 2026-02-24
 slug: deep-learning-framework-scratch
 github: "https://github.com/Nyxox-debug/Synap"
+pinned: true
 categories:
   - projects
 tags:

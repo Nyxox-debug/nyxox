@@ -2,6 +2,7 @@
 title: "I Built a Programming Language in Go"
 date: 2025-12-29
 slug: programming-language-go
+pinned: true
 github: "https://github.com/Nyxox-debug/bat"
 categories:
   - projects
