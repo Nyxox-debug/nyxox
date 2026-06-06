@@ -31,7 +31,7 @@
     {{ end }}
   </div>
   <nav>
-    <div class="nav-links" style="border   ">
+    <div class="nav-links">
       <a href="{{ "about/" | relLangURL }}" title="About">
         {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "person") }}
         <span>About</span>
@@ -62,10 +62,14 @@
         {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
         <span>Tags</span>
       </a>
-      <a href="{{ "search/" | relLangURL }}" title="Search" class="search-link">
+      <a id="toggle-search" title="Search" href="#" class="search-link">
         {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "search") }}
         <span>Search</span>
       </a>
+    </div>
+    <div id="search-container" style="display:none; padding-top:0.75rem;">
+      <input id="search-query" type="search" placeholder="Loading..." disabled autocomplete="off">
+      <div id="search-results"></div>
     </div>
   </nav>
 </header>

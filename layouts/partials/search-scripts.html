@@ -1,0 +1,79 @@
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+(function () {
+  var base      = document.body.dataset.baseurl;
+  var toggle    = document.getElementById('toggle-search');
+  var container = document.getElementById('search-container');
+  var input     = document.getElementById('search-query');
+  var results   = document.getElementById('search-results');
+  var idx, posts, loaded = false;
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    var opening = container.style.display === 'none';
+    container.style.display = opening ? 'block' : 'none';
+    if (opening && !loaded) loadIndex();
+    else if (opening) input.focus();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') container.style.display = 'none';
+  });
+
+  function loadIndex() {
+    fetch(base + 'index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        posts = data;
+        idx = lunr(function () {
+          this.ref('url');
+          this.field('title', { boost: 10 });
+          this.field('contents');
+          this.field('tags');
+          this.field('categories');
+          data.forEach(function (doc) {
+            this.add({
+              url:        doc.url,
+              title:      doc.title,
+              contents:   doc.contents || '',
+              tags:       (doc.tags       || []).join(' '),
+              categories: (doc.categories || []).join(' ')
+            });
+          }, this);
+        });
+        loaded = true;
+        input.disabled    = false;
+        input.placeholder = 'Search posts...';
+        input.focus();
+      })
+      .catch(function () {
+        input.placeholder = 'Failed to load';
+      });
+  }
+
+  var timer;
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      var q = input.value.trim();
+      if (!q) { results.innerHTML = ''; return; }
+      var hits;
+      try { hits = idx.search(q); } catch (e) { hits = []; }
+      if (!hits.length) {
+        results.innerHTML = '<p style="color:var(--color-text-muted);font-size:0.85rem;margin:8px 0;">No results found.</p>';
+        return;
+      }
+      var html = '';
+      hits.slice(0, 8).forEach(function (hit) {
+        var post = posts.find(function (p) { return p.url === hit.ref; });
+        if (!post) return;
+        html += '<div style="padding:10px 0;border-bottom:1px solid var(--color-border-dim);">'
+              + '<a href="' + post.url + '" style="color:var(--color-text-bright);text-decoration:none;font-size:0.95rem;">' + post.title + '</a>'
+              + '<div style="font-size:0.75rem;color:var(--color-text-dim);margin-top:2px;">' + (post.date || '') + '</div>'
+              + '</div>';
+      });
+      results.innerHTML = html;
+    }, 200);
+  });
+})();
+</script>

@@ -68,12 +68,6 @@ theme = 'smol'
     url = "/portfolio/"
     weight = 5
 
-  [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 6
-
 # Footer
   [[menu.footer]]
         name = "Github"

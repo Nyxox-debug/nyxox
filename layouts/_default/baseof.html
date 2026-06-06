@@ -39,10 +39,11 @@
 	{{- end }}
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-	{{ partial "header" . }}
-	{{ block "main" . }}{{ end }}
-	{{ partial "footer" . }}
-	{{ block "scripts" . }}{{ end }}
+<body data-baseurl="{{ .Site.BaseURL }}">
+  {{ partial "header" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer" . }}
+  {{ block "scripts" . }}{{ end }}
+  {{ partial "search-scripts.html" . }}
 </body>
 </html>
