@@ -177,10 +177,6 @@ header .site-title a:hover {
   color: var(--color-text) !important;
 }
 
-header nav .nav-links .search-link {
-  margin-left: auto;
-}
-
 .header-handle {
   font-size: 1rem;
   color: var(--color-text-dim);
@@ -1042,7 +1038,7 @@ footer {
   header {
     --image-width: 80px;
     --col-gap: 0.5rem;
-    overflow: hidden; /* ← clips the nav from pushing outward */
+    overflow: hidden;
     width: 100%;
   }
 
@@ -1050,12 +1046,10 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* Hide all nav link icons on mobile */
   header nav .nav-links a svg {
     display: none;
   }
 
-  /* Hide categories and tags links — they appear in the collapsed brackets */
   header nav .nav-links .categories-link,
   header nav .nav-links .tags-link {
     display: none;
@@ -1068,7 +1062,6 @@ footer {
     gap: 0.3rem;
   }
 
-  /* But keep icons inside the collapsed bracket visible */
   header nav .nav-links .categories-tags-collapsed a svg {
     display: block;
   }
@@ -1115,14 +1108,14 @@ footer {
   }
 
   header nav .nav-links {
-    flex-wrap: nowrap; /* ← keep your single row */
-    overflow: hidden; /* ← clips any overflow within the nav */
-    gap: 0.4rem 0.8rem; /* ← tighten the gap so items fit better */
-    justify-content: flex-start; /* ← anchor to left */
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 0.4rem 0.8rem;
+    justify-content: flex-start;
   }
 
   header nav .nav-links .search-link {
-    margin-left: 0; /* ← remove auto-push since we're wrapping now */
+    margin-left: auto;
   }
 
   header nav .nav-links .search-link span {
