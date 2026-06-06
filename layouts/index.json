@@ -1,0 +1,13 @@
+{{- $pages := where .Site.RegularPages "Params.unlisted" "ne" true -}}
+{{- $result := slice -}}
+{{- range $pages -}}
+  {{- $result = $result | append (dict
+    "title"      .Title
+    "url"        .RelPermalink
+    "contents"   .Plain
+    "tags"       .Params.tags
+    "categories" .Params.categories
+    "date"       (.Date.Format "2006-01-02")
+  ) -}}
+{{- end -}}
+{{- $result | jsonify -}}
