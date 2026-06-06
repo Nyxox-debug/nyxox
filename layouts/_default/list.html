@@ -15,15 +15,13 @@
   {{ end }}
 
   <ul>
-    {{- range .Site.RegularPages -}}
-    {{- if hasPrefix .RelPermalink "/nyxox/posts/" -}}
+    {{- range .Pages -}}
     <li>
       <div class="post-title">
         <span class="date">{{ .Date.Format "2006-01-02" }}</span>
         <a href="{{ .RelPermalink }}" style="text-decoration: none;">{{ .Title }}</a>
       </div>
     </li>
-    {{- end -}}
     {{- end -}}
   </ul>
 
