@@ -1019,6 +1019,27 @@ footer {
   text-align: center;
 }
 
+#search-query {
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-bright);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+
+#search-query:focus {
+  outline: none;
+  border-color: var(--color-text-dim);
+}
+
+#search-results a {
+  text-decoration: none !important;
+}
+
 /* =====================
    MOBILE
    ===================== */

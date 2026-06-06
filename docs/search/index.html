@@ -27,12 +27,12 @@
 	
 
 	<link rel="stylesheet" href="/nyxox/css/style.css">
-	<link rel="stylesheet" href="/nyxox/css/style.css?rnd=1780742121">
+	<link rel="stylesheet" href="/nyxox/css/style.css?rnd=1780744043">
 	<link rel="alternate" type="application/xml" href="/nyxox/search/index.xml" title="Victor">
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-	<header>
+<body data-baseurl="https://nyxox-debug.github.io/nyxox/">
+  <header>
   
   <div class="name-and-subtitle">
     <div class="site-title">
@@ -74,7 +74,7 @@
     
   </div>
   <nav>
-    <div class="nav-links" style="border   ">
+    <div class="nav-links">
       <a href="/nyxox/about/" title="About">
         <svg aria-hidden="true" class="bi bi-person hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
   <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
@@ -122,30 +122,84 @@
 </svg>
         <span>Tags</span>
       </a>
-      <a href="/nyxox/search/" title="Search" class="search-link">
+      <a id="toggle-search" title="Search" href="#" class="search-link">
         <svg aria-hidden="true" class="bi bi-search hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
 </svg>
         <span>Search</span>
       </a>
     </div>
+    <div id="search-container" style="display:none; padding-top:0.75rem;">
+      <input id="search-query" type="search" placeholder="Loading..." disabled autocomplete="off">
+      <div id="search-results"></div>
+    </div>
   </nav>
 </header>
 
-	
+  
 <main>
-  <section class="search-page" data-baseurl="https://nyxox-debug.github.io/nyxox/">
-    <h1>Search</h1>
-    <form id="search-form" action="https://nyxox-debug.github.io/nyxox/search/" method="get">
-      <label for="search-input" class="sr-only">Search</label>
-      <input type="text" id="search-input" name="q" placeholder="Search posts..." autofocus>
-      <button type="submit">Search</button>
-    </form>
-    <div id="search-results"></div>
-  </section>
+  
+  <div>
+    
+    <div class="term-line">
+      <span class="term-path">~/nyxox</span>
+      <span class="term-prompt"> $</span> ls search/
+    </div>
+    
+    
+  </div>
+  
+
+  <ul><li>
+      <div class="post-title">
+        <span class="date">2026-04-14</span>
+        <a href="/nyxox/posts/projects/email-scam-detector/" style="text-decoration: none;">Building an Email Priority Classifier</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2026-04-04</span>
+        <a href="/nyxox/posts/projects/artificial-life-simulation/" style="text-decoration: none;">I Built an Artificial Life Simulation in C&#43;&#43;</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2026-02-24</span>
+        <a href="/nyxox/posts/projects/deep-learning-framework-scratch/" style="text-decoration: none;">Building a Neural Network Framework from Scratch</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2026-01-27</span>
+        <a href="/nyxox/posts/projects/3d-renderer-scratch/" style="text-decoration: none;">Building a 3D Renderer from Scratch</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2025-12-29</span>
+        <a href="/nyxox/posts/projects/programming-language-go/" style="text-decoration: none;">I Built a Programming Language in Go</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2025-12-05</span>
+        <a href="/nyxox/posts/projects/github-analyzer-go-python/" style="text-decoration: none;">Building a GitHub Analyzer with Go and Python</a>
+      </div>
+    </li><li>
+      <div class="post-title">
+        <span class="date">2025-12-04</span>
+        <a href="/nyxox/posts/life/why-i-started-this-blog/" style="text-decoration: none;">Why I Started This Blog</a>
+      </div>
+    </li></ul>
+
+  <div style="margin-top: 3rem;">
+
+  <span class="link disabled">« Previous Page</span>
+
+1 of 0
+
+  <span class="link disabled">Next Page »</span>
+
+</div>
+
 </main>
 
-	<footer>
+  <footer>
   <p>&copy; 2026
     
     Nyxox.
@@ -153,83 +207,85 @@
   </p>
 </footer>
 
-	
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+  
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
-let searchIndex = null;
-let posts = null;
+(function () {
+  var base      = document.body.dataset.baseurl;
+  var toggle    = document.getElementById('toggle-search');
+  var container = document.getElementById('search-container');
+  var input     = document.getElementById('search-query');
+  var results   = document.getElementById('search-results');
+  var idx, posts, loaded = false;
 
-async function loadIndex() {
-  const searchSection = document.querySelector('.search-page');
-  const baseURL = searchSection.dataset.baseurl;
-  const response = await fetch(baseURL + 'index.json');
-  posts = await response.json();
-  
-  searchIndex = lunr(function() {
-    this.ref('url');
-    this.field('title', { boost: 10 });
-    this.field('content');
-    this.field('tags');
-    this.field('categories');
-    
-    posts.forEach(doc => {
-      this.add(doc);
-    });
-  });
-}
-
-function displayResults(results) {
-  const container = document.getElementById('search-results');
-  
-  if (!results.length) {
-    container.innerHTML = '<p class="no-results">No results found.</p>';
-    return;
-  }
-  
-  let html = '<ul class="search-results-list">';
-  
-  results.forEach(result => {
-    const post = posts.find(p => p.url === result.ref);
-    if (post) {
-      const date = new Date(post.date * 1000).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      });
-      html += `<li>
-        <a href="${post.url}"><h3>${post.title}</h3></a>
-        <p class="search-meta">${date}</p>
-      </li>`;
-    }
-  });
-  
-  html += '</ul>';
-  container.innerHTML = html;
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-  await loadIndex();
-  
-  const query = new URLSearchParams(window.location.search).get('q');
-  const searchInput = document.getElementById('search-input');
-  
-  if (query && searchIndex) {
-    searchInput.value = query;
-    const results = searchIndex.search(query);
-    displayResults(results);
-  }
-  
-  const form = document.getElementById('search-form');
-  form.addEventListener('submit', (e) => {
+  toggle.addEventListener('click', function (e) {
     e.preventDefault();
-    const query = document.getElementById('search-input').value;
-    if (query && searchIndex) {
-      const results = searchIndex.search(query);
-      displayResults(results);
-      window.history.pushState({}, '', `?q=${encodeURIComponent(query)}`);
-    }
+    var opening = container.style.display === 'none';
+    container.style.display = opening ? 'block' : 'none';
+    if (opening && !loaded) loadIndex();
+    else if (opening) input.focus();
   });
-});
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') container.style.display = 'none';
+  });
+
+  function loadIndex() {
+    fetch(base + 'index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        posts = data;
+        idx = lunr(function () {
+          this.ref('url');
+          this.field('title', { boost: 10 });
+          this.field('contents');
+          this.field('tags');
+          this.field('categories');
+          data.forEach(function (doc) {
+            this.add({
+              url:        doc.url,
+              title:      doc.title,
+              contents:   doc.contents || '',
+              tags:       (doc.tags       || []).join(' '),
+              categories: (doc.categories || []).join(' ')
+            });
+          }, this);
+        });
+        loaded = true;
+        input.disabled    = false;
+        input.placeholder = 'Search posts...';
+        input.focus();
+      })
+      .catch(function () {
+        input.placeholder = 'Failed to load';
+      });
+  }
+
+  var timer;
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      var q = input.value.trim();
+      if (!q) { results.innerHTML = ''; return; }
+      var hits;
+      try { hits = idx.search(q); } catch (e) { hits = []; }
+      if (!hits.length) {
+        results.innerHTML = '<p style="color:var(--color-text-muted);font-size:0.85rem;margin:8px 0;">No results found.</p>';
+        return;
+      }
+      var html = '';
+      hits.slice(0, 8).forEach(function (hit) {
+        var post = posts.find(function (p) { return p.url === hit.ref; });
+        if (!post) return;
+        html += '<div style="padding:10px 0;border-bottom:1px solid var(--color-border-dim);">'
+              + '<a href="' + post.url + '" style="color:var(--color-text-bright);text-decoration:none;font-size:0.95rem;">' + post.title + '</a>'
+              + '<div style="font-size:0.75rem;color:var(--color-text-dim);margin-top:2px;">' + (post.date || '') + '</div>'
+              + '</div>';
+      });
+      results.innerHTML = html;
+    }, 200);
+  });
+})();
 </script>
 
 </body>
