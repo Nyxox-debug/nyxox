@@ -1147,3 +1147,29 @@ footer {
     display: block;
   }
 }
+
+@media (min-width: 481px) {
+  header nav {
+    display: grid;
+    grid-template:
+      "nav-links . search-link" auto
+      "search-container search-container search-container" auto
+      / auto 1fr auto;
+  }
+
+  header nav .nav-links {
+    grid-area: nav-links;
+  }
+
+  #toggle-search {
+    grid-area: search-link;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #search-container {
+    grid-area: search-container;
+  }
+}
