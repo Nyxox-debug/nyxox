@@ -15,17 +15,17 @@
   </a>
   {{ end }}
   <div class="links">
-    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub">
+    <a href="https://github.com/Nyxox-debug" target="_blank" title="GitHub" aria-label="GitHub">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "github") }}
     </a>
-    <a href="mailto:numterminal@gmail.com" title="Email">
+    <a href="mailto:numterminal@gmail.com" title="Email" aria-label="Email">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "envelope") }}
     </a>
-    <a href="https://linkedin.com/in/victor-c-6791692a6" target="_blank" title="LinkedIn">
+    <a href="https://linkedin.com/in/victor-c-6791692a6" target="_blank" title="LinkedIn" aria-label="LinkedIn">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "linkedin") }}
     </a>
     {{ with .OutputFormats.Get "RSS" }}
-    <a href="{{ .RelPermalink }}" target="_blank" title="RSS Feed">
+    <a href="{{ .RelPermalink }}" target="_blank" title="RSS Feed" aria-label="RSS Feed">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "rss") }}
     </a>
     {{ end }}
@@ -46,10 +46,10 @@
           <span>Posts</span>
         </a>
         <div class="categories-tags-collapsed">
-          (<a href="{{ "categories/" | relLangURL }}" title="Categories">
+          (<a href="{{ "categories/" | relLangURL }}" title="Categories" aria-label="Categories">
             {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "folder") }}
           </a>
-          <a href="{{ "tags/" | relLangURL }}" title="Tags">
+          <a href="{{ "tags/" | relLangURL }}" title="Tags" aria-label="Tags">
             {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "tag") }}
           </a>)
         </div>
