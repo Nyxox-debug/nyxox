@@ -1,52 +1,74 @@
-{{ $jobs := .Site.Data.experience }}
-{{ if $jobs }}
+{{ $jobs := .Site.Data.experience }} {{ if $jobs }}
 <section class="experience-section">
-
   <div class="experience-list">
     {{ range $i, $job := $jobs }}
-    <div class="exp-card">
-      <div class="exp-logo">
-        {{ if $job.logo }}
-        <img src="{{ "images/logos/" | relURL }}{{ $job.logo }}" alt="{{ $job.company }}" loading="lazy">
-        {{ else }}
-        <span class="exp-logo-fallback">{{ substr $job.company 0 1 }}</span>
-        {{ end }}
-      </div>
+    <details class="exp-card" {{ if eq $i 0 }}open{{ end }}>
+      <summary class="exp-summary">
+        <div class="exp-logo">
+          {{ if $job.logo }}
+          <img src="{{ "images/logos/" | relURL }}{{ $job.logo }}" alt="{{ $job.company }}" loading="lazy">
+          {{ else }}
+          <span class="exp-logo-fallback">{{ substr $job.company 0 1 }}</span>
+          {{ end }}
+        </div>
+        <div class="exp-summary-text">
+          <h3 class="exp-title">{{ $job.title }}</h3>
+          <!-- <div class="exp-meta-line">{{ $job.company }} · {{ $job.type }}</div> -->
+          <div class="exp-meta-line">
+    <a href="{{ $job.url }}" target="_blank" rel="noopener noreferrer">
+{{ $job.company }}
+    </a>
+· {{ $job.type }}
+          </div>
+          <div class="exp-meta-line exp-dates">
+            {{ $job.start }} - {{ $job.end }} · {{ $job.duration }}
+          </div>
+          {{ with $job.location }}
+          <div class="exp-meta-line exp-location">{{ . }}</div>
+          {{ end }}
+        </div>
+        <svg class="exp-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </summary>
 
       <div class="exp-body">
-        <h3 class="exp-title">{{ $job.title }}</h3>
-        <div class="exp-meta-line">{{ $job.company }} · {{ $job.type }}</div>
-        <div class="exp-meta-line exp-dates">
-          {{ $job.start }} - {{ $job.end }} · {{ $job.duration }}
-        </div>
-        {{ with $job.location }}
-        <div class="exp-meta-line exp-location">{{ . }}</div>
-        {{ end }}
-
         {{ if $job.description }}
-        <div class="exp-description" data-expanded="false">
+        <div class="exp-description">
           <ul class="exp-desc-list">
             {{ range $job.description }}
             <li>{{ . }}</li>
             {{ end }}
           </ul>
         </div>
-        {{ end }}
-
-        {{ if $job.skills }}
+        {{ end }} {{ if $job.skills }}
         <div class="exp-skills">
-          <svg class="exp-skill-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20.59 13.41L11 3.83V3a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.83l9.58 9.59a2 2 0 0 0 2.83 0l3.35-3.35a2 2 0 0 0 0-2.83z"/>
-            <circle cx="6.5" cy="6.5" r="1.5"/>
+          <svg
+            class="exp-skill-icon"
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.59 13.41L11 3.83V3a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.83l9.58 9.59a2 2 0 0 0 2.83 0l3.35-3.35a2 2 0 0 0 0-2.83z"
+            />
+            <circle cx="6.5" cy="6.5" r="1.5" />
           </svg>
           <span class="exp-skills-text">
-            {{ range $j, $skill := $job.skills }}{{ if $j }}, {{ end }}{{ $skill }}{{ end }}
+            {{ range $j, $skill := $job.skills }}{{ if $j }}, {{ end }}{{ $skill
+            }}{{ end }}
           </span>
         </div>
         {{ end }}
       </div>
-    </div>
-    <br />
+    </details>
     {{ end }}
   </div>
 </section>

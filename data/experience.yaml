@@ -1,24 +1,26 @@
 - title: "Full Stack Engineer"
   company: "Kyro"
   type: "Full-time"
-  start: "Nov 2025"
-  end: "Apr 2026"
-  duration: "6 mos"
+  start: "Apr 2026"
+  end: "Present"
+  duration: "Ongoing"
   location: "Remote"
   logo: "Kyro.svg"
+  url: "https://kyro-henna.vercel.app/"
   description:
-    - "Reducing technical debts in every way possible i.e refactoring hooks, global states etc."
-    - "Improving Typesafety of the codebase..."
-  skills: ["TypeScript", "SQL", "React", "Node.js"]
+    - "Building the backend, APIs, and developer SDKs for an open-source, self-hosted RAG platform focused on privacy, scalability, and enterprise-ready AI solutions."
+    - ""
+  skills: ["TypeScript", "Postgres", "Svelte", "Docker", "Redis", "LLMs"]
 
-- title: "Founding Engineer"
-  company: "Tarot Master"
+- title: "Internship (hackathon)"
+  company: "ITSA"
   type: "Full-time"
-  start: "Sep 2023"
-  end: "Jul 2025"
-  duration: "1 yr 11 mos"
-  location: "Remote"
-  logo: "Kyro.svg"
+  start: "Jun 2024"
+  end: "Aug 2024"
+  duration: "3 mos"
+  location: "Hybrid"
+  logo: "Itsa.png"
+  url: "https://itserviceafrica.com/"
   description:
-    - "Built and designed the infrastructure for distributed monolithic servers for different domains (web, mobile, tarot readings, Facebook, Reddit, & TikTok integrations, etc) using Nest.js and PostgreSQL..."
-  skills: ["TypeScript", "NestJS", "PostgreSQL", "Docker", "AWS", "Redis"]
+    - "Contributed to the development of backend services during an internship/hackathon program using TypeScript, implementing APIs and supporting core application functionality. Developed a lightweight system monitoring driver for tracking PC health metrics and service status as part of an experimental infrastructure initiative."
+  skills: ["TypeScript", "NestJS", "MongoDB", "C"]
