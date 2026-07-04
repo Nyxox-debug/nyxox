@@ -1041,6 +1041,25 @@ footer {
 }
 
 /* =====================
+   EXPERIENCE
+   ===================== */
+.exp-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.exp-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* =====================
    MOBILE
    ===================== */
 @media (max-width: 480px) {
