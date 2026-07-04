@@ -1,0 +1,24 @@
+- title: "Full Stack Engineer"
+  company: "Kyro"
+  type: "Full-time"
+  start: "Nov 2025"
+  end: "Apr 2026"
+  duration: "6 mos"
+  location: "Remote"
+  logo: "Kyro.svg"
+  description:
+    - "Reducing technical debts in every way possible i.e refactoring hooks, global states etc."
+    - "Improving Typesafety of the codebase..."
+  skills: ["TypeScript", "SQL", "React", "Node.js"]
+
+# - title: "Founding Engineer"
+#   company: "Tarot Master"
+#   type: "Full-time"
+#   start: "Sep 2023"
+#   end: "Jul 2025"
+#   duration: "1 yr 11 mos"
+#   location: "Remote"
+#   logo: "tarotmaster.png"
+#   description:
+#     - "Built and designed the infrastructure for distributed monolithic servers for different domains (web, mobile, tarot readings, Facebook, Reddit, & TikTok integrations, etc) using Nest.js and PostgreSQL..."
+#   skills: ["TypeScript", "NestJS", "PostgreSQL", "Docker", "AWS", "Redis"]

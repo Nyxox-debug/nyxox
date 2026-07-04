@@ -27,6 +27,12 @@
   <!--   </div> -->
   <!-- </section> -->
 
+  {{ partial "hero" . }}
+  {{ partial "experience" . }}
+
+  Projects
+  <br/>
+  <br/>
   {{ $pinned := where .Site.RegularPages "Params.pinned" true }}
   {{ if $pinned }}
   <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; align-items:center; gap:0.5rem;">
