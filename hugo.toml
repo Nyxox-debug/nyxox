@@ -1,4 +1,5 @@
-baseURL = 'https://nyxox-debug.github.io/nyxox/'
+# baseURL = 'https://nyxox-debug.github.io/nyxox/'
+baseURL = 'https://nyxox.dev/'
 languageCode = 'en-us'
 title = 'Victor (nyxox)'
 theme = 'smol'
