@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Search on Victor (nyxox)</title>
-    <link>https://nyxox-debug.github.io/nyxox/search/</link>
+    <link>https://nyxox.dev/search/</link>
     <description>Recent content in Search on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/search/index.xml" rel="self" type="application/xml" />
+    <atom:link href="https://nyxox.dev/search/index.xml" rel="self" type="application/xml" />
   </channel>
 </rss>

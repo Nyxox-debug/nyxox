@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Victor (nyxox)</title>
-    <link>https://nyxox-debug.github.io/nyxox/tags/go/</link>
+    <link>https://nyxox.dev/tags/go/</link>
     <description>Recent content in Go on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/go/index.xml" rel="self" type="application/xml" />
+    <atom:link href="https://nyxox.dev/tags/go/index.xml" rel="self" type="application/xml" />
     <item>
       <title>I Built a Programming Language in Go</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</link>
+      <link>https://nyxox.dev/posts/projects/programming-language-go/</link>
       <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/programming-language-go/</guid>
+      <guid>https://nyxox.dev/posts/projects/programming-language-go/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve always been fascinated by programming languages. How does code actually become a running program? What happens when you type &lt;code&gt;let x = 5;&lt;/code&gt; in a REPL?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own. Meet &lt;strong&gt;Bat&lt;/strong&gt; - a tiny interpreted programming language written entirely in Go. It&amp;rsquo;s not useful for production, but it taught me how interpreters actually work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a GitHub Analyzer with Go and Python</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>
+      <link>https://nyxox.dev/posts/projects/github-analyzer-go-python/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</guid>
+      <guid>https://nyxox.dev/posts/projects/github-analyzer-go-python/</guid>
       <description>&lt;p&gt;Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.&lt;/p&gt;&#xA;&lt;p&gt;The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graphics on Victor (nyxox)</title>
-    <link>https://nyxox-debug.github.io/nyxox/tags/graphics/</link>
+    <link>https://nyxox.dev/tags/graphics/</link>
     <description>Recent content in Graphics on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/graphics/index.xml" rel="self" type="application/xml" />
+    <atom:link href="https://nyxox.dev/tags/graphics/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building a 3D Renderer from Scratch</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</link>
+      <link>https://nyxox.dev/posts/projects/3d-renderer-scratch/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/3d-renderer-scratch/</guid>
+      <guid>https://nyxox.dev/posts/projects/3d-renderer-scratch/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve always been curious about what happens inside game engines when they render a 3D model. You know that feeling when you use Unity or Unreal without understanding what&amp;rsquo;s actually happening on the GPU? That&amp;rsquo;s exactly why I decided to build my own 3D renderer from scratch using C++ and OpenGL.&lt;/p&gt;&#xA;&lt;p&gt;No engines. No magic. Just raw graphics programming.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Victor (nyxox)</title>
-    <link>https://nyxox-debug.github.io/nyxox/tags/personal/</link>
+    <link>https://nyxox.dev/tags/personal/</link>
     <description>Recent content in Personal on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/personal/index.xml" rel="self" type="application/xml" />
+    <atom:link href="https://nyxox.dev/tags/personal/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Why I Started This Blog</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</link>
+      <link>https://nyxox.dev/posts/life/why-i-started-this-blog/</link>
       <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/life/why-i-started-this-blog/</guid>
+      <guid>https://nyxox.dev/posts/life/why-i-started-this-blog/</guid>
       <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web development projects&lt;/li&gt;&#xA;&lt;li&gt;Learning new technologies&lt;/li&gt;&#xA;&lt;li&gt;Life updates and thoughts&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

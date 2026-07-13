@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Victor (nyxox)</title>
-    <link>https://nyxox-debug.github.io/nyxox/tags/python/</link>
+    <link>https://nyxox.dev/tags/python/</link>
     <description>Recent content in Python on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nyxox-debug.github.io/nyxox/tags/python/index.xml" rel="self" type="application/xml" />
+    <atom:link href="https://nyxox.dev/tags/python/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building an Email Priority Classifier</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</link>
+      <link>https://nyxox.dev/posts/projects/email-scam-detector/</link>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/email-scam-detector/</guid>
+      <guid>https://nyxox.dev/posts/projects/email-scam-detector/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention &lt;em&gt;right now&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Neural Network Framework from Scratch</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</link>
+      <link>https://nyxox.dev/posts/projects/deep-learning-framework-scratch/</link>
       <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/deep-learning-framework-scratch/</guid>
+      <guid>https://nyxox.dev/posts/projects/deep-learning-framework-scratch/</guid>
       <description>&lt;p&gt;I use PyTorch every day at work. It&amp;rsquo;s incredible - but I&amp;rsquo;ve always wondered: how does it actually work under the hood? How does &lt;code&gt;backward()&lt;/code&gt; actually compute gradients through a neural network?&lt;/p&gt;&#xA;&lt;p&gt;So I built my own minimal deep learning framework called &lt;strong&gt;Synap&lt;/strong&gt;. It&amp;rsquo;s written in C++ for performance, with Python bindings via pybind11. No external ML libraries - just raw tensor operations and automatic differentiation from scratch.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a GitHub Analyzer with Go and Python</title>
-      <link>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</link>
+      <link>https://nyxox.dev/posts/projects/github-analyzer-go-python/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nyxox-debug.github.io/nyxox/posts/projects/github-analyzer-go-python/</guid>
+      <guid>https://nyxox.dev/posts/projects/github-analyzer-go-python/</guid>
       <description>&lt;p&gt;Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.&lt;/p&gt;&#xA;&lt;p&gt;The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.&lt;/p&gt;</description>
     </item>
   </channel>
