@@ -3,7 +3,7 @@ title: "I Built an Artificial Life Simulation in C++"
 date: 2026-04-04
 slug: artificial-life-simulation
 github: "https://github.com/Nyxox-debug/OKIOS"
-featured_image: /nyxox/images/okios.png
+featured_image: /images/okios.png
 categories:
   - projects
 tags:

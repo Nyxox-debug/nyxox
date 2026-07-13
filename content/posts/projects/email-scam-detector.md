@@ -95,7 +95,7 @@ This was a proof-of-concept, but there's room to grow:
 
 The notebooks have all the details - data exploration and feature engineering are both available if you want to dig into the code:
 
-- [data-exploration.ipynb](/nyxox/docs/email-scam-detector/data-exploration.html)
-- [feature-engineering.ipynb](/nyxox/docs/email-scam-detector/feature-engineering.html)
+- [data-exploration.ipynb](/docs/email-scam-detector/data-exploration.html)
+- [feature-engineering.ipynb](/docs/email-scam-detector/feature-engineering.html)
 
 It works. It's not perfect. But it's a solid baseline for something that could actually help support teams prioritize what matters.

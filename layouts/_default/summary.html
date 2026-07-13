@@ -11,7 +11,7 @@
     <div class="meta">
         <span style="color: #fff;">Tags: </span>
       {{ range .Params.tags }}
-      <a href="{{ "/nyxox/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
       {{ end }}
       {{ with .Params.github }}
       <span class="github-link">

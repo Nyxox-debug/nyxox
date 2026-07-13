@@ -5,12 +5,12 @@
     <img src="{{ . }}" alt="{{ $.Title }}" class="post-hero-image" loading="lazy" />
     {{ end }}
     <h1>{{ .Title }}</h1>
-    {{ if ne .RelPermalink "/nyxox/portfolio/" }}
+    {{ if ne .RelPermalink "/portfolio/" }}
     <div class="post-meta">
       <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
       {{ with .Params.tags }}
       {{ range . }}
-      <a href="{{ "/nyxox/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
       {{ end }}
       {{ end }}
       {{ with .Params.github }}
