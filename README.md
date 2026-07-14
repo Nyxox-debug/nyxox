@@ -1,1 +1,1 @@
-[My Website](https://nyxox-debug.github.io/nyxox/)
+[nyxox.dev](https://nyxox.dev/)
