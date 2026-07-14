@@ -1,12 +1,12 @@
 # baseURL = 'https://nyxox-debug.github.io/nyxox/'
 baseURL = 'https://nyxox.dev/'
-languageCode = 'en-us'
+locale = "en-US"
 title = 'Victor (nyxox)'
 theme = 'smol'
 
 [params]
     subtitle = "neural nets and chill"
-    description = "Software engineer portfolio and blog focused on systems programming, web development, and backend engineering."
+    description = "Portfolio and blog of Victor Chinekezi, focused on backend engineering, systems programming, AI infrastructure, and developer tooling."
     author = "Nyxox"
     dateFmt = "2 Jan 2006"
     profileImage = "KingSolomon.jpg"
