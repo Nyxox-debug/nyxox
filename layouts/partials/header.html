@@ -24,7 +24,7 @@
     <a href="https://www.linkedin.com/in/victorchinekezi" target="_blank" title="LinkedIn" aria-label="LinkedIn">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "linkedin") }}
     </a>
-    {{ with .OutputFormats.Get "RSS" }}
+    {{ with .Site.Home.OutputFormats.Get "RSS" }}
     <a href="{{ .RelPermalink }}" target="_blank" title="RSS Feed" aria-label="RSS Feed">
       {{ partial "icons/icon" (dict "vendor" "bootstrap" "name" "rss") }}
     </a>

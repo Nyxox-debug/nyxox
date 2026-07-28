@@ -1286,3 +1286,60 @@ footer {
     grid-area: search-container;
   }
 }
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-japanese-quote {
+  position: fixed;
+
+  /* Scales smoothly with screen size */
+  top: clamp(0.75rem, 2vw, 2rem);
+  left: clamp(0.4rem, 2vw, 2rem);
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    "MS Mincho",
+    serif;
+
+  font-size: clamp(0.75rem, 1.3vw, 1.15rem);
+  letter-spacing: clamp(0.08em, 0.3vw, 0.2em);
+  line-height: 1;
+
+  color: #fff;
+  white-space: nowrap;
+
+  pointer-events: none;
+  user-select: none;
+  z-index: 999;
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .fixed-japanese-quote {
+    top: 0.6rem;
+    left: 0.3rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 340px) {
+  .fixed-japanese-quote {
+    font-size: 0.6rem;
+    left: 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fixed-japanese-quote {
+    display: none;
+  }
+}

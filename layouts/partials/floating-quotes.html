@@ -1,0 +1,27 @@
+<div class="floating-quotes-layer" aria-hidden="true">
+  <span class="floating-quote">孤独もまた美しい</span>
+  <span class="floating-quote">静かな混沌</span>
+  <span class="floating-quote">夢の途中</span>
+  <span class="floating-quote">夜はまだ若い</span>
+  <span class="floating-quote">この世界は曖昧だ</span>
+  <span class="floating-quote">消えない余韻</span>
+  <span class="floating-quote">未完成のままでいい</span>
+  <span class="floating-quote">月が綺麗ですね</span>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const quotes = document.querySelectorAll(".floating-quote");
+
+    quotes.forEach((quote) => {
+      const top = Math.random() * 85;
+      const left = Math.random() * 85;
+      const rotate = Math.random() * 30 - 15;
+      const size = 0.9 + Math.random() * 1.1;
+
+      quote.style.top = `${top}%`;
+      quote.style.left = `${left}%`;
+      quote.style.transform = `scale(${size})`;
+    });
+  });
+</script>

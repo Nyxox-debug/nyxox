@@ -50,9 +50,11 @@
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body data-baseurl="{{ .Site.BaseURL }}">
+<div class="fixed-japanese-quote" lang="ja" aria-hidden="true">
+  孤独もまた美しい
+</div>
   {{ partial "header" . }}
   {{ block "main" . }}{{ end }}
   {{ partial "footer" . }}
