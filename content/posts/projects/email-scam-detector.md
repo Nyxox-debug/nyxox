@@ -1,13 +1,21 @@
 ---
 title: "Building an Email Priority Classifier"
+description: "How I combined TF-IDF, urgency signals, sentiment analysis, and logistic regression to classify support emails by priority."
 date: 2026-04-14
-slug: email-scam-detector
+slug: email-priority-classifier
 github: "https://github.com/Nyxox-debug/triageai"
+
+aliases:
+  - /posts/projects/email-scam-detector/
+
 categories:
   - projects
+
 tags:
   - python
   - machine-learning
+  - natural-language-processing
+  - logistic-regression
 ---
 
 I've always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention *right now*.

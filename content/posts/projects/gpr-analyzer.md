@@ -1,16 +1,19 @@
 ---
 title: "Building a GitHub Analyzer with Go and Python"
+description: "How I built a repository analyzer that combines Go, Python, tree-sitter, and AST traversal to report code structure and complexity."
 date: 2025-12-05
 slug: github-analyzer-go-python
 github: "https://github.com/Nyxox-debug/repo-scan"
+
 categories:
   - projects
+
 tags:
   - go
   - python
   - ast
   - tree-sitter
-  - web-dev
+  - developer-tools
 ---
 
 Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.
