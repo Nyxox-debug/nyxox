@@ -1,50 +1,120 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-      
-        
-          <title>Building a GitHub Analyzer with Go and Python - Victor (nyxox)</title>
-        
-      
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#000000">
-	<link rel="canonical" href="https://nyxox.dev/posts/projects/github-analyzer-go-python/">
-	<meta name="description" content="Portfolio and blog of Victor Chinekezi, focused on backend engineering, systems programming, AI infrastructure, and developer tooling.">
-	<meta name="author" content="Nyxox">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta property="og:title" content="Building a GitHub Analyzer with Go and Python">
-	<meta property="og:description" content="Portfolio and blog of Victor Chinekezi, focused on backend engineering, systems programming, AI infrastructure, and developer tooling.">
-	<meta property="og:url" content="https://nyxox.dev/posts/projects/github-analyzer-go-python/">
-	<meta property="og:type" content="article">
-	<meta property="og:site_name" content="Victor (nyxox)">
-	
-	<meta property="og:image" content="https://nyxox.dev/images/og-default.png">
-	
+  <title>Building a GitHub Analyzer with Go and Python | Victor (nyxox)</title>
 
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Building a GitHub Analyzer with Go and Python">
-	<meta name="twitter:description" content="Portfolio and blog of Victor Chinekezi, focused on backend engineering, systems programming, AI infrastructure, and developer tooling.">
-	
-	<meta name="twitter:image" content="https://nyxox.dev/images/og-default.png">
-	
+  <meta name="description" content="Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste …">
+  <meta name="author" content="Victor Chinekezi">
 
-	<link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
-	<link rel="stylesheet" href="/css/style.css?rnd=1785243780">
-	
-	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link rel="canonical" href="https://nyxox.dev/posts/projects/github-analyzer-go-python/">
+
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#000000">
+
+  
+  <meta property="og:title" content="Building a GitHub Analyzer with Go and Python | Victor (nyxox)">
+  <meta property="og:description" content="Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste …">
+  <meta property="og:url" content="https://nyxox.dev/posts/projects/github-analyzer-go-python/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Victor (nyxox)">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://nyxox.dev/images/og-default.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building a GitHub Analyzer with Go and Python | Victor (nyxox)">
+  <meta name="twitter:description" content="Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste …">
+  <meta name="twitter:image" content="https://nyxox.dev/images/og-default.png">
+  <meta
+    property="article:published_time"
+    content="2025-12-05T00:00:00Z"
+  >
+  <meta
+    property="article:modified_time"
+    content="2026-03-15T17:37:55&#43;01:00"
+  >
+  <meta property="article:tag" content="go">
+  <meta property="article:tag" content="python">
+  <meta property="article:tag" content="ast">
+  <meta property="article:tag" content="tree-sitter">
+  <meta property="article:tag" content="web-dev">
+
+  
+  
+  <link
+    rel="alternate"
+    type="application/xml"
+    href="/index.xml"
+    title="Victor (nyxox)"
+  >
+  
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css"
+  >
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Building a GitHub Analyzer with Go and Python",
+  "description": "Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste …",
+  "url": "https:\/\/nyxox.dev\/posts\/projects\/github-analyzer-go-python\/",
+  "mainEntityOfPage": "https:\/\/nyxox.dev\/posts\/projects\/github-analyzer-go-python\/",
+  "image": "https:\/\/nyxox.dev\/images\/og-default.png",
+  "datePublished": "2025-12-05T00:00:00Z",
+  "dateModified": "2026-03-15T17:37:55\u002b01:00",
+  "author": {
+    "@type": "Person",
+    "name": "Victor Chinekezi",
+    "url": "https:\/\/nyxox.dev\/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Victor Chinekezi",
+    "url": "https:\/\/nyxox.dev\/"
+  }
+}
+</script>
+
+
 </head>
+
 <body data-baseurl="https://nyxox.dev/">
-<div class="fixed-japanese-quote" lang="ja" aria-hidden="true">
-  孤独もまた美しい
-</div>
+  <div class="fixed-japanese-quote" lang="ja" aria-hidden="true">
+    孤独もまた美しい
+  </div>
+
   <header>
   
   <div class="name-and-subtitle">
@@ -149,38 +219,85 @@
   </nav>
 </header>
 
+
   
 <main>
   <article>
     
+
     <h1>Building a GitHub Analyzer with Go and Python</h1>
+
     
     <div class="post-meta">
       <span class="date">5 Dec 2025</span>
+
       
+        
+        <a
+          href="/tags/go/"
+          class="tag"
+        >
+          go
+        </a>
+        
+        <a
+          href="/tags/python/"
+          class="tag"
+        >
+          python
+        </a>
+        
+        <a
+          href="/tags/ast/"
+          class="tag"
+        >
+          ast
+        </a>
+        
+        <a
+          href="/tags/tree-sitter/"
+          class="tag"
+        >
+          tree-sitter
+        </a>
+        
+        <a
+          href="/tags/web-dev/"
+          class="tag"
+        >
+          web-dev
+        </a>
+        
       
-      <a href="/nyxox/tags/go" class="tag">go</a>
-      
-      <a href="/nyxox/tags/python" class="tag">python</a>
-      
-      <a href="/nyxox/tags/ast" class="tag">ast</a>
-      
-      <a href="/nyxox/tags/tree-sitter" class="tag">tree-sitter</a>
-      
-      <a href="/nyxox/tags/web-dev" class="tag">web-dev</a>
-      
-      
+
       
       <span class="github-link">
         <a href="https://github.com/Nyxox-debug/repo-scan" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+            <path d="M9 18c-4.51 2-5-2-7-2"/>
+          </svg>
+
           View on GitHub
         </a>
       </span>
       
     </div>
     
-    <div class="content"><p>Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.</p>
+
+    <div class="content">
+      <p>Ever wanted to quickly understand what a GitHub repository looks like without cloning and exploring it yourself? I built a tool that does exactly that - paste any GitHub URL, and it analyzes the entire codebase, extracting complexity metrics, code structure, and language distribution.</p>
 <p>The best part? It combines Go and Python in a way that showcases how to pick the right tool for each job.</p>
 <h2 id="the-idea">The Idea</h2>
 <p>I was working on a project and needed to understand a large open-source codebase quickly. Manually exploring files and trying to understand the architecture was tedious.</p>
@@ -261,19 +378,24 @@
 <p>Maybe version 2?</p>
 <h2 id="check-it-out">Check It Out</h2>
 <p>The project is ready to use if you want to try it. Clone the repo, run <code>./run</code>, and open <code>http://localhost:8081</code>. Paste any public GitHub URL and see what it finds.</p>
-<p>It&rsquo;s fascinating to see what these tools reveal about different codebases!</p></div>
+<p>It&rsquo;s fascinating to see what these tools reveal about different codebases!</p>
+    </div>
   </article>
 </main>
+
 
   <footer>
   <p>&copy; 2026
     
     Nyxox.
-    <a href="https://github.com/Nyxox-debug"><b>Github</b></a>.
+    <a href="https://github.com/Nyxox-debug"><b>GitHub</b></a>.
   </p>
 </footer>
 
+
   
+  
+
   <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
 (function () {

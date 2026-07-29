@@ -6,7 +6,6 @@
     <description>Recent content on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nyxox.dev/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Logistic Nn</title>
@@ -69,21 +68,21 @@
       <link>https://nyxox.dev/posts/life/why-i-started-this-blog/</link>
       <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://nyxox.dev/posts/life/why-i-started-this-blog/</guid>
-      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web development projects&lt;/li&gt;&#xA;&lt;li&gt;Learning new technologies&lt;/li&gt;&#xA;&lt;li&gt;Life updates and thoughts&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;I decided to start documenting my journey for a few reasons:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Retention&lt;/strong&gt; - Writing helps solidify what I learn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share knowledge&lt;/strong&gt; - Maybe someone else finds it useful&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Track progress&lt;/strong&gt; - Look back and see how far I&amp;rsquo;ve come&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;whats-coming&#34;&gt;What&amp;rsquo;s Coming&lt;/h2&gt;&#xA;&lt;p&gt;Expect posts about:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>About</title>
+      <title>About Victor Chinekezi</title>
       <link>https://nyxox.dev/about/</link>
       <pubDate>Sun, 01 Aug 2021 09:04:00 +0000</pubDate>
       <guid>https://nyxox.dev/about/</guid>
-      <description>&lt;p&gt;My name is Victor, and I&amp;rsquo;m a computer science student with a passion for&#xA;building things that matter.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy working on software that solves real problems. Some of the projects&#xA;I&amp;rsquo;m most proud of include &lt;a href=&#34;https://nyxox.dev/posts/projects/artificial-life-simulation/&#34;&gt;OKIOS&lt;/a&gt; and &lt;a href=&#34;https://nyxox.dev/posts/projects/deep-learning-framework-scratch/&#34;&gt;Synap&lt;/a&gt; — you can read more about&#xA;them on my &lt;a href=&#34;https://nyxox.dev/posts/projects/&#34;&gt;blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m always looking to grow as an engineer, explore new ideas, and connect&#xA;with others who love what they build.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m Victor Chinekezi, a computer science student and software engineer focused on backend systems, systems programming, AI infrastructure, and developer tooling.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy learning how software works beneath its abstractions. That curiosity has led me to build programming languages, automatic differentiation engines, rendering systems, repository analysis tools, and AI-powered infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Portfolio</title>
+      <title>Software Engineering Portfolio</title>
       <link>https://nyxox.dev/portfolio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nyxox.dev/portfolio/</guid>
-      <description>&lt;div class=&#34;note&#34;&gt;&#xA;  &lt;span class=&#34;note-label&#34;&gt;NOTE&lt;/span&gt;&#xA;  &lt;span class=&#34;note-text&#34;&gt;This is my CV. You may want to view my &lt;a href=&#34;./resume.pdf&#34;&gt;resume&lt;/a&gt; instead.&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;victor&#34;&gt;Victor&lt;/h1&gt;&#xA;&lt;p&gt;Full-stack engineer · Backend architecture · Systems programming · Modern web&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://itserviceafrica.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ITSA&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Hackathon&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, Node.js, Backend Development, Testing&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Competed in the IT Services Desk Africa hackathon, enhancing ITSA&amp;rsquo;s device health management system.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Collaborated with a cross-functional team to improve system performance&lt;/li&gt;&#xA;&lt;li&gt;Diagnosed, reported, and resolved software issues&lt;/li&gt;&#xA;&lt;li&gt;Wrote, reviewed, and validated backend code and tests to ensure reliability&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://hireuslogistics.ng/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;HireusLogistic&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Recent&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, MongoDB, Redis, OAuth 2.0, Docker, Kubernetes&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;note&#34;&gt;&#xA;  &lt;span class=&#34;note-label&#34;&gt;NOTE&lt;/span&gt;&#xA;  &lt;span class=&#34;note-text&#34;&gt;This is my CV. You may want to view my &lt;a href=&#34;./resume.pdf&#34;&gt;resume&lt;/a&gt; instead.&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h1 id=&#34;victor&#34;&gt;Victor&lt;/h1&gt;&#xA;&lt;p&gt;Full-stack engineer · Backend architecture · Systems programming · Modern web&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend Engineer — &lt;a href=&#34;https://itserviceafrica.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ITSA&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;Hackathon&lt;/code&gt;&#xA;&lt;em&gt;TypeScript, Node.js, Backend Development, Testing&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
