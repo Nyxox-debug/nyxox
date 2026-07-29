@@ -6,13 +6,13 @@
     <description>Recent content in Python on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 14 Jul 2026 00:57:36 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 23:44:20 +0100</lastBuildDate>
     <atom:link href="https://nyxox.dev/tags/python/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building an Email Priority Classifier</title>
-      <link>https://nyxox.dev/posts/projects/email-scam-detector/</link>
+      <link>https://nyxox.dev/posts/projects/email-priority-classifier/</link>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://nyxox.dev/posts/projects/email-scam-detector/</guid>
+      <guid>https://nyxox.dev/posts/projects/email-priority-classifier/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve always wondered: what actually makes an email urgent? Is it the length? The words? The tone? So I built TriageAI - a model that classifies incoming emails into priority levels (Urgent, High, Medium, Low) to figure out what deserves attention &lt;em&gt;right now&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>

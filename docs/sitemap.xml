@@ -12,28 +12,38 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://nyxox.dev/posts/projects/email-scam-detector/</loc>
-    <lastmod>2026-07-14T00:57:36+01:00</lastmod>
+    <loc>https://nyxox.dev/posts/projects/email-priority-classifier/</loc>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox.dev/tags/logistic-regression/</loc>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/machine-learning/</loc>
-    <lastmod>2026-07-14T00:57:36+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox.dev/tags/natural-language-processing/</loc>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/categories/projects/</loc>
-    <lastmod>2026-07-29T23:35:04+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/python/</loc>
-    <lastmod>2026-07-14T00:57:36+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/</loc>
-    <lastmod>2026-07-29T23:35:04+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -68,27 +78,27 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/autograd/</loc>
-    <lastmod>2026-06-06T12:35:24+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/posts/projects/deep-learning-framework-scratch/</loc>
-    <lastmod>2026-06-06T12:35:24+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/c&#43;&#43;/</loc>
-    <lastmod>2026-07-29T23:35:04+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/deep-learning/</loc>
-    <lastmod>2026-06-06T12:35:24+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/tensors/</loc>
-    <lastmod>2026-06-06T12:35:24+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -108,7 +118,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/ast/</loc>
-    <lastmod>2026-07-29T23:35:04+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -118,7 +128,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/go/</loc>
-    <lastmod>2026-07-29T23:35:04+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -133,37 +143,37 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/posts/projects/github-analyzer-go-python/</loc>
-    <lastmod>2026-03-15T17:37:55+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://nyxox.dev/tags/developer-tools/</loc>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/tree-sitter/</loc>
-    <lastmod>2026-03-15T17:37:55+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://nyxox.dev/tags/web-dev/</loc>
-    <lastmod>2026-03-15T17:37:55+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/blogging/</loc>
-    <lastmod>2026-03-15T15:38:37+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/categories/life/</loc>
-    <lastmod>2026-03-15T15:38:37+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/tags/personal/</loc>
-    <lastmod>2026-03-15T15:38:37+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/posts/life/why-i-started-this-blog/</loc>
-    <lastmod>2026-03-15T15:38:37+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -188,7 +198,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://nyxox.dev/posts/</loc>
-    <lastmod>2026-06-05T02:05:13+01:00</lastmod>
+    <lastmod>2026-07-29T23:44:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

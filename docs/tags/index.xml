@@ -6,13 +6,27 @@
     <description>Recent content in Tags on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 29 Jul 2026 23:35:04 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 23:44:20 +0100</lastBuildDate>
     <atom:link href="https://nyxox.dev/tags/index.xml" rel="self" type="application/xml" />
+    <item>
+      <title>Logistic-Regression</title>
+      <link>https://nyxox.dev/tags/logistic-regression/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox.dev/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Machine-Learning</title>
       <link>https://nyxox.dev/tags/machine-learning/</link>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://nyxox.dev/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Natural-Language-Processing</title>
+      <link>https://nyxox.dev/tags/natural-language-processing/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nyxox.dev/tags/natural-language-processing/</guid>
       <description></description>
     </item>
     <item>
@@ -128,17 +142,17 @@
       <description></description>
     </item>
     <item>
+      <title>Developer-Tools</title>
+      <link>https://nyxox.dev/tags/developer-tools/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nyxox.dev/tags/developer-tools/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Tree-Sitter</title>
       <link>https://nyxox.dev/tags/tree-sitter/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://nyxox.dev/tags/tree-sitter/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web-Dev</title>
-      <link>https://nyxox.dev/tags/web-dev/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nyxox.dev/tags/web-dev/</guid>
       <description></description>
     </item>
     <item>

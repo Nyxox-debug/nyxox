@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web-Dev on Victor (nyxox)</title>
-    <link>https://nyxox.dev/tags/web-dev/</link>
-    <description>Recent content in Web-Dev on Victor (nyxox)</description>
+    <title>Developer-Tools on Victor (nyxox)</title>
+    <link>https://nyxox.dev/tags/developer-tools/</link>
+    <description>Recent content in Developer-Tools on Victor (nyxox)</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 15 Mar 2026 17:37:55 +0100</lastBuildDate>
-    <atom:link href="https://nyxox.dev/tags/web-dev/index.xml" rel="self" type="application/xml" />
+    <lastBuildDate>Wed, 29 Jul 2026 23:44:20 +0100</lastBuildDate>
+    <atom:link href="https://nyxox.dev/tags/developer-tools/index.xml" rel="self" type="application/xml" />
     <item>
       <title>Building a GitHub Analyzer with Go and Python</title>
       <link>https://nyxox.dev/posts/projects/github-analyzer-go-python/</link>
