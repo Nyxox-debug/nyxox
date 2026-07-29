@@ -1,6 +1,6 @@
 ---
-title: "Portfolio"
-description: "A showcase of my projects and experience"
+title: "Software Engineering Portfolio"
+description: "Explore Victor Chinekezi's backend engineering experience, systems programming work, technical projects, education, and hackathon experience."
 ---
 
 {{< note >}}

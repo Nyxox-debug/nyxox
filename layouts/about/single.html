@@ -2,10 +2,20 @@
 <main>
   <article>
     {{ with .Params.featured_image }}
-    <img src="{{ . }}" alt="{{ $.Title }}" class="post-hero-image" loading="lazy" />
+    <img
+      src="{{ . }}"
+      alt="{{ $.Params.featured_image_alt | default $.Title }}"
+      class="post-hero-image"
+      loading="eager"
+      decoding="async"
+    >
     {{ end }}
+
     <h1>{{ .Title }}</h1>
-    <div class="content">{{ .Content }}</div>
+
+    <div class="content">
+      {{ .Content }}
+    </div>
   </article>
 </main>
 {{ end }}

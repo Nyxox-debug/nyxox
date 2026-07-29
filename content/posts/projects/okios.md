@@ -1,18 +1,23 @@
 ---
 title: "I Built an Artificial Life Simulation in C++"
+description: "How I built OKIOS, a 3D artificial life simulation where neural-network-driven creatures evolve survival behavior through neuroevolution."
 date: 2026-04-04
+lastmod: 2026-07-29
 slug: artificial-life-simulation
 github: "https://github.com/Nyxox-debug/OKIOS"
-featured_image: /images/okios.png
+
+featured_image: "/images/okios.png"
+featured_image_alt: "OKIOS 3D artificial life simulation showing autonomous creatures moving through a procedurally generated environment"
+
 categories:
   - projects
+
 tags:
   - cpp
   - opengl
   - neural-networks
   - simulation
   - neuroevolution
-
 ---
 
 I've always been curious about emergence. How does organized, purposeful behavior arise from simple rules? How does a colony of ants, with no central planner, manage to build complex structures and find food efficiently?

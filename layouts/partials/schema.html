@@ -1,0 +1,55 @@
+{{- $description := .Description | default (.Summary | plainify | truncate 160) -}}
+{{- $image := "images/og-default.png" | absURL -}}
+
+{{- with .Params.featured_image -}}
+  {{- $image = . | absURL -}}
+{{- end -}}
+
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Victor Chinekezi",
+  "alternateName": "Nyxox",
+  "url": "{{ .Site.BaseURL }}",
+  "image": "{{ "images/og-default.png" | absURL }}",
+  "jobTitle": "Software Engineer",
+  "sameAs": [
+    "https://github.com/Nyxox-debug",
+    "https://www.linkedin.com/in/victorchinekezi"
+  ],
+  "knowsAbout": [
+    "Backend engineering",
+    "Systems programming",
+    "Artificial intelligence infrastructure",
+    "Developer tooling",
+    "Distributed systems"
+  ]
+}
+</script>
+{{ else if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description": {{ $description | jsonify | safeJS }},
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": "{{ .Permalink }}",
+  "image": "{{ $image }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Victor Chinekezi",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Victor Chinekezi",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{ end }}

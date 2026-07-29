@@ -1,11 +1,11 @@
 ---
 title: "Categories"
-description: "Browse posts by category"
+description: "Browse Victor Chinekezi's technical articles and project write-ups by software engineering category."
 ---
 
-Browse posts organized by topic:
+Browse articles by category:
 
-- **Projects**: Technical deep-dives into my coding projects, from building interpreters from scratch to ML frameworks and 3D renderers.
-- **Life**: Personal thoughts, updates, and behind-the-scenes glimpses into my journey as a developer.
+- **Projects:** Technical breakdowns of compilers, machine-learning systems, graphics software, backend infrastructure, and developer tools.
+- **Life:** Personal writing about learning, growth, interests, and life outside software.
 
-Select a category above to explore posts.
+Select a category to explore its posts.

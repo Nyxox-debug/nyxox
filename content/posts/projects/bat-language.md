@@ -1,11 +1,14 @@
 ---
 title: "I Built a Programming Language in Go"
+description: "How I built Bat, an interpreted programming language in Go with a lexer, Pratt parser, abstract syntax tree, evaluator, closures, and REPL."
 date: 2025-12-29
 slug: programming-language-go
 pinned: true
 github: "https://github.com/Nyxox-debug/bat"
+
 categories:
   - projects
+
 tags:
   - go
   - interpreter
