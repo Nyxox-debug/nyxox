@@ -1,2 +1,8 @@
 .hugo_build.lock
 public
+# Hugo generated output
+/public/
+/docs/
+
+# Hugo generated resources
+/resources/_gen/
