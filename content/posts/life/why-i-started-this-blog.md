@@ -1,6 +1,6 @@
 ---
 title: "Why I Started This Blog"
-description: "Why I started documenting my software engineering journey, the projects I build, what I learn, and how my thinking changes over time."
+description: "A place to document what I build, learn, and figure out along the way."
 date: 2025-12-04
 slug: why-i-started-this-blog
 
@@ -12,17 +12,10 @@ tags:
   - blogging
 ---
 
-## The Beginning
+I started this blog to keep track of what I'm learning and building.
 
-I decided to start documenting my journey for a few reasons:
+A lot of things disappear from memory once you move on to the next project. Writing things down gives me a place to come back to — whether it's something I learned, a problem I spent hours debugging, or an idea I'm still figuring out.
 
-1. **Retention** - Writing helps solidify what I learn
-2. **Share knowledge** - Maybe someone else finds it useful
-3. **Track progress** - Look back and see how far I've come
+I'll mostly write about software engineering, projects I'm working on, things I'm learning, and occasionally whatever else I find worth sharing.
 
-## What's Coming
-
-Expect posts about:
-- Web development projects
-- Learning new technologies
-- Life updates and thoughts
+Nothing too polished. Just a record of the journey.
