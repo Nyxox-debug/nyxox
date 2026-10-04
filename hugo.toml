@@ -1,8 +1,8 @@
 baseURL = "https://nyxox.dev/"
-languageCode = "en-us"
 locale = "en-US"
 title = "Victor (nyxox)"
 theme = "smol"
+copyright = "© 2026 Victor Chinekezi"
 
 enableRobotsTXT = true
 enableGitInfo = true
@@ -24,6 +24,9 @@ images = ["images/og-default.png"]
 [params.icons]
 throw_on_error = false
 
+[params.contact]
+email= "numterminal@gmail.com"
+
 [pagination]
 pagerSize = 10
 
@@ -32,9 +35,9 @@ changefreq = "weekly"
 priority = 0.5
 filename = "sitemap.xml"
 
-[mediaTypes]
-[mediaTypes."application/xml"]
-suffixes = ["xml"]
+# [mediaTypes]
+# [mediaTypes."application/xml"]
+# suffixes = ["xml"]
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -42,11 +45,11 @@ section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML", "RSS"]
 
-[outputFormats]
-[outputFormats.RSS]
-mediaType = "application/xml"
-baseName = "index"
-isPlainText = true
+# [outputFormats]
+# [outputFormats.RSS]
+# mediaType = "application/xml"
+# baseName = "index"
+# isPlainText = true
 
 [outputFormats.JSON]
 mediaType = "application/json"
@@ -57,43 +60,6 @@ isPlainText = true
 category = "categories"
 tag = "tags"
 
-[menu]
-[[menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "/posts/"
-weight = 1
-
-[[menu.main]]
-identifier = "categories"
-name = "Categories"
-url = "/categories/"
-weight = 2
-
-[[menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-weight = 3
-
-[[menu.main]]
-identifier = "about"
-name = "About"
-url = "/about/"
-weight = 4
-
-[[menu.main]]
-identifier = "portfolio"
-name = "Portfolio"
-url = "/portfolio/"
-weight = 5
-
-[[menu.footer]]
-name = "GitHub"
-url = "https://github.com/Nyxox-debug"
-weight = 1
-
-copyright = "© 2026 Victor Chinekezi"
 
 [markup]
 [markup.highlight]
