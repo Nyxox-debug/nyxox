@@ -477,7 +477,7 @@ a.article-title {
   text-decoration: none !important;
 }
 
-a.article-title h1 {
+a.article-title h2 {
   font-size: 1.3rem;
   margin: 0;
   color: var(--color-text-bright);
@@ -585,7 +585,8 @@ article .summary-text {
 .note-label {
   font-weight: 700;
   margin-right: 10px;
-  color: var(--color-text-bright) !important;
+  /* color: var(--color-text-bright) !important; */
+  color: pink;
 }
 
 .note-text {

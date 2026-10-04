@@ -3,7 +3,7 @@
 
     {{/* Title and meta sit at the top, full width */}}
     <a href="{{ .Permalink }}" class="article-title">
-      <h1>{{ .Title }}</h1>
+      <h2>{{ .Title }}</h2>
     </a>
     <div>
       Posted on <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
@@ -11,7 +11,7 @@
     <div class="meta">
         <span style="color: #fff;">Tags: </span>
       {{ range .Params.tags }}
-      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+        <a href="{{ printf "tags/%s/" (. | urlize) | relLangURL }}" class="tag">{{ . }}</a>
       {{ end }}
       {{ with .Params.github }}
       <span class="github-link">
@@ -37,7 +37,7 @@
       {{ end }}
       <div class="article-body">
         <div class="summary">{{ .Summary }}</div>
-        <a href="{{ .Permalink }}" style="color: #bbf">Read more »</a>
+        <a href="{{ .Permalink }}" style="color: pink">Read more »</a>
       </div>
     </div>
 
