@@ -28,7 +28,7 @@
   ]
 }
 </script>
-{{ else if .IsPage }}
+{{ else if and .IsPage (eq .Section "posts") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
