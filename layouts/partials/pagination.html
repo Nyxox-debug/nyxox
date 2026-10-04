@@ -1,13 +1,13 @@
 <div style="margin-top: 3rem;">
 {{ if .Paginator.HasPrev }}
-  <a href="{{ .Paginator.Prev.URL }}">« Previous Page</a>
+  <a href="{{ .Paginator.Prev.URL }}">« </a>
 {{ else }}
-  <span class="link disabled">« Previous Page</span>
+  <span class="link disabled">« </span>
 {{ end }}
 {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
 {{ if .Paginator.HasNext }}
-  <a href="{{ .Paginator.Next.URL }}">Next Page »</a>
+  <a href="{{ .Paginator.Next.URL }}"> »</a>
 {{ else }}
-  <span class="link disabled">Next Page »</span>
+  <span class="link disabled"> »</span>
 {{ end }}
 </div>

@@ -3,10 +3,6 @@
   {{ if or .Title .Content }}
   <div>
     {{ with .Title }}
-    <div class="term-line">
-      <span class="term-path">~/nyxox</span>
-      <span class="term-prompt"> $</span> ls {{ . | lower }}/
-    </div>
     {{ end }}
     {{ with .Content }}
     <div class="list-content">{{ . }}</div>
@@ -25,6 +21,5 @@
     {{- end -}}
   </ul>
 
-  {{ partial "pagination.html" . }}
 </main>
 {{ end }}

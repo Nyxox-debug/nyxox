@@ -28,7 +28,7 @@
   <section class="recent-posts">
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in"
     .Site.Params.mainSections) 5 }} {{ range $paginator.Pages }} {{ .Render
-    "summary" }} {{ end }} {{ if gt $paginator.TotalPages 1 }} {{ end }} {{
+    "summary" }} {{ end }} {{
     partial "pagination.html" . }}
   </section>
 </main>
