@@ -1292,27 +1292,3 @@ header, main, footer {
   position: relative;
   z-index: 1;
 }
-
-/* Phones */
-@media (max-width: 480px) {
-  .fixed-japanese-quote {
-    top: 0.6rem;
-    left: 0.3rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-  }
-}
-
-/* Very small phones */
-@media (max-width: 340px) {
-  .fixed-japanese-quote {
-    font-size: 0.6rem;
-    left: 0.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .fixed-japanese-quote {
-    display: none;
-  }
-}
