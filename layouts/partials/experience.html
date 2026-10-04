@@ -1,4 +1,4 @@
-{{ $jobs := .Site.Data.experience }} {{ if $jobs }}
+{{ $jobs := hugo.Data.experience }} {{ if $jobs }}
 <section class="experience-section">
   <div class="experience-list">
     {{ range $i, $job := $jobs }}
