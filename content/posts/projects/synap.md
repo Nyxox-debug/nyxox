@@ -3,7 +3,7 @@ title: "Building a Neural Network Framework from Scratch"
 description: "How I built Synap, a minimal C++ deep-learning framework with tensors, reverse-mode automatic differentiation, neural networks, and Python bindings."
 date: 2026-02-24
 slug: deep-learning-framework-scratch
-github: "https://github.com/Nyxox-debug/Synap"
+github: "https://github.com/xoxyn/Synap"
 pinned: true
 
 categories:

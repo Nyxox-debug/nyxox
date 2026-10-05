@@ -1,4 +1,4 @@
-module github.com/Nyxox-debug/nyxox
+module github.com/xoxyn/nyxox
 
 go 1.26.1
 

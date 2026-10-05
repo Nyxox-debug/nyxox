@@ -3,7 +3,7 @@ title: "Building a 3D Renderer from Scratch"
 description: "How I built a real-time 3D renderer with C++, OpenGL, GLSL shaders, textured OBJ models, and a first-person camera."
 date: 2026-01-27
 slug: 3d-renderer-scratch
-github: "https://github.com/Nyxox-debug/Model-render"
+github: "https://github.com/xoxyn/Model-render"
 
 categories:
   - projects

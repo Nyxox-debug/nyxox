@@ -71,19 +71,19 @@ Notable coursework: Data Structures · Operating Systems · Computer Architectur
 
 ## Selected Projects
 
-**[Bat (Interpreter from scratch)](https://github.com/Nyxox-debug/bat)** · Go,
+**[Bat (Interpreter from scratch)](https://github.com/xoxyn/bat)** · Go,
 A complete interpreted language built from scratch — lexer, Pratt parser, AST evaluator, closures, and an interactive REPL. First-class functions with closures via environment capture.
 
-**[Synap (Autograd / ML Framework)](https://github.com/Nyxox-debug/Synap)** `Recent` · C++, Python, pybind11
+**[Synap (Autograd / ML Framework)](https://github.com/xoxyn/Synap)** `Recent` · C++, Python, pybind11
 Minimal ML framework implementing tensors, reverse-mode autodiff, and MLP primitives from scratch. C++ core with Python bindings via pybind11. Zero-copy tensor views through shared storage.
 
-**[3d Model Renderer (OpenGL)](https://github.com/Nyxox-debug/Model-render)** `Recent` · C++, OpenGL, GLSL
+**[3d Model Renderer (OpenGL)](https://github.com/xoxyn/Model-render)** `Recent` · C++, OpenGL, GLSL
 Real-time renderer with OBJ loading, multi-texture support, custom GLSL shaders, and a first-person camera. Full MVP transform pipeline, delta-time camera movement, no game engine.
 
-**[GitHub Code Analyzer](https://github.com/Nyxox-debug/repo-scan)** · Go, Python, tree-sitter
+**[GitHub Code Analyzer](https://github.com/xoxyn/repo-scan)** · Go, Python, tree-sitter
 Clones any public GitHub repo and performs static analysis using ASTs across 25+ languages — extracting complexity metrics, structure, and dependencies.
 
-**[Mini-Fig](https://github.com/Nyxox-debug/mini-fig)** · C++, TypeScript, Emscripten 
+**[Mini-Fig](https://github.com/xoxyn/mini-fig)** · C++, TypeScript, Emscripten 
 A vector graphic editor and lightweight 2D drawing engine built with C++ and WebAssembly, backed by a React frontend.
 
 ---

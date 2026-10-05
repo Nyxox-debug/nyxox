@@ -3,7 +3,7 @@ title: "Building an Email Priority Classifier"
 description: "How I combined TF-IDF, urgency signals, sentiment analysis, and logistic regression to classify support emails by priority."
 date: 2026-04-14
 slug: email-priority-classifier
-github: "https://github.com/Nyxox-debug/triageai"
+github: "https://github.com/xoxyn/triageai"
 
 aliases:
   - /posts/projects/email-scam-detector/

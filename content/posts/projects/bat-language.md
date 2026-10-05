@@ -4,7 +4,7 @@ description: "How I built Bat, an interpreted programming language in Go with a 
 date: 2025-12-29
 slug: programming-language-go
 pinned: true
-github: "https://github.com/Nyxox-debug/bat"
+github: "https://github.com/xoxyn/bat"
 
 categories:
   - projects

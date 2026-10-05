@@ -3,7 +3,7 @@ title: "Building a GitHub Analyzer with Go and Python"
 description: "How I built a repository analyzer that combines Go, Python, tree-sitter, and AST traversal to report code structure and complexity."
 date: 2025-12-05
 slug: github-analyzer-go-python
-github: "https://github.com/Nyxox-debug/repo-scan"
+github: "https://github.com/xoxyn/repo-scan"
 
 categories:
   - projects

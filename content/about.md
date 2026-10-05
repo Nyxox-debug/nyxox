@@ -21,4 +21,4 @@ Some of the projects I'm most proud of include:
 
 I use this site to document what I build, explain the ideas behind my projects, and share what I learn while becoming a better engineer.
 
-You can explore my [projects](/posts/projects/), view my [portfolio](/portfolio/), or find me on [GitHub](https://github.com/Nyxox-debug).
+You can explore my [projects](/posts/projects/), view my [portfolio](/portfolio/), or find me on [GitHub](https://github.com/xoxyn).

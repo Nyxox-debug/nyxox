@@ -4,7 +4,7 @@ description: "How I built OKIOS, a 3D artificial life simulation where neural-ne
 date: 2026-04-04
 lastmod: 2026-07-29
 slug: artificial-life-simulation
-github: "https://github.com/Nyxox-debug/OKIOS"
+github: "https://github.com/xoxyn/OKIOS"
 
 featured_image: "/images/okios.png"
 featured_image_alt: "OKIOS 3D artificial life simulation showing autonomous creatures moving through a procedurally generated environment"
